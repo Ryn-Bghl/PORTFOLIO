@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js"></script>
+
+    <link
+      rel="shortcut icon"
+      href="/assets/images/profile_picture.png"
+      type="image/x-icon"
+    />
+
+    <title>Rayan BOUGHALIA / Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <h1>Rayan BOUGHALIA <span>/ Portfolio</span></h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact-me">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="main-hero">
+        <div id="hero-info">
+          <h2>
+            Hi! I'm <span>Rayan</span>,<span>Web Development</span> Student in
+            MMI
+          </h2>
+          <p>
+            Passionate about building clean, interactive, and user-friendly
+            websites. Looking for a web development apprenticeship to grow my
+            skills
+          </p>
+          <a class="cta" id="hire-me" href="#contact-me">Hire me</a>
+        </div>
+        <figure id="hero-img">
+          <img
+            src="/assets/images/profile_picture.png"
+            alt="Profile picture of Rayan Boughalia"
+          />
+        </figure>
+      </section>
+      <section id="about-me">
+        <div id="about_me-info">
+          <h2 class="title">About me</h2>
+          <h3>My name is Rayan BOUGHALIA.</h3>
+          <p>
+            I’m a college student that study in BUT MMI, passionate about web
+            development and eager to apply my skills in a real-world setting. I
+            enjoy solving problems, creating user-friendly websites, and
+            learning new technologies. Currently looking for an apprenticeship
+            where I can grow, contribute, and collaborate with a team.
+          </p>
+          <div id="hard-skills">
+            <div id="back-end">
+              <h3><span class="jam--database"></span>Back End</h3>
+              <p>
+                Developing efficient backend systems, leveraging PHP and SQL to
+                manage data and optimize performance.
+              </p>
+            </div>
+            <div id="front-end">
+              <h3><span class="tabler--code"></span>Front End</h3>
+              <p>
+                Building structured and responsive interfaces, applying HTML,
+                CSS, and JavaScript to craft seamless user experiences.
+              </p>
+            </div>
+            <div id="problem-solving">
+              <h3><span class="mdi--brain"></span>Problem Solving</h3>
+              <p>
+                Approaching each challange methodically, breaking down, complex
+                requirements into actionable solutions.
+              </p>
+            </div>
+          </div>
+          <a class="cta" href="aboutme.html">Learn more about me</a>
+        </div>
+        <figure>
+          <img src="assets/images/photo pro prise taille bobg.png" alt="" />
+        </figure>
+      </section>
+      <section id="projects">
+        <h2 class="title">My Projects</h2>
+        <div class="project-preview">
+          <figure><img src="" alt="" /></figure>
+          <h3>Diversiterre</h3>
+          <p>
+            For a university project, I created a website to help the
+            Diversiterre assiocation expand its media reach.
+          </p>
+        </div>
+        <div class="project-preview">
+          <figure><img src="" alt="" /></figure>
+          <h3></h3>
+          <p></p>
+        </div>
+        <div class="project-preview">
+          <figure><img src="" alt="" /></figure>
+          <h3></h3>
+          <p></p>
+        </div>
+      </section>
+      <section id="contact-me">
+        <h2 class="title">Contact me</h2>
+        <div id="github"></div>
+        <div id="linkedin"></div>
+        <div id="codepen"></div>
+        <form <!-- action="https://mail.google.com/mail/?view=cm&fs=1&" -->
+          onsubmite="" method="get" class="form-example" target="_blank" >
+          <input type="text" name="view" value="cm" style="display: none" />
+          <input
+            type="email"
+            name="to"
+            value="rayan.boughalia@gmail.com"
+            id="name"
+            style="display: none"
+          />
+          <div class="form-example">
+            <label for="to">Email</label>
+            <input type="email" name="to" id="name" required />
+          </div>
+          <div class="form-example" style="display: none">
+            <label for="su">subject</label>
+            <input
+              type="text"
+              name="su"
+              id="email"
+              value="Portfolio CONTACT FORM MSG"
+            />
+          </div>
+          <div class="form-example">
+            <label for="body">Message</label>
+            <textarea name="body" id="msg" required></textarea>
+          </div>
+          <div class="form-example">
+            <input type="submit" value="Send a mail" />
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
