@@ -89,7 +89,9 @@
               </p>
             </div>
           </div>
-          <a class="cta" href="aboutme.html">Learn more about me</a>
+          <a class="cta" onclick="alert('Comming Soon 😁!')"
+            >Learn more about me</a
+          >
         </div>
         <figure>
           <img src="assets/images/photo pro prise taille bobg.png" alt="" />
@@ -120,8 +122,8 @@
             </figure>
             <h3>Symphony</h3>
             <p>
-              I also created symphony for a university project to promote a brand
-              of craft beer brewed at the university.
+              I also created symphony for a university project to promote a
+              brand of craft beer brewed at the university.
             </p>
           </div>
           <div class="project-preview">
@@ -140,12 +142,37 @@
         </div>
       </section>
       <section id="contact-me">
-        <h2 class="title">Contact me</h2>
-        <div id="github"></div>
-        <div id="linkedin"></div>
-        <div id="codepen"></div>
-        <form <!-- action="https://mail.google.com/mail/?view=cm&fs=1&" -->
-          onsubmite="" method="get" class="form-example" target="_blank" >
+        <div id="left">
+          <h2 class="title">Contact me</h2>
+          <div id="github">
+            <a target="_blank" href="https://github.com/Ryn-Bghl">
+              <span class="mdi--github"></span>Github
+              <span class="solar--arrow-right-up-linear"></span>
+            </a>
+          </div>
+          <div id="linkedin">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/rayan-boughalia"
+            >
+              <span class="mdi--linkedin"></span>Linkedin
+              <span class="solar--arrow-right-up-linear"></span>
+            </a>
+          </div>
+          <div id="codepen">
+            <a target="_blank" href="https://codepen.io/_Duck-Noris_">
+              <span class="mdi--codepen"></span>CodePen
+              <span class="solar--arrow-right-up-linear"></span>
+            </a>
+          </div>
+        </div>
+        <form
+          action="https://mail.google.com/mail/?view=cm&fs=1&"
+          onsubmite=""
+          method="get"
+          class="form-example"
+          target="_blank"
+        >
           <input type="text" name="view" value="cm" style="display: none" />
           <input
             type="email"
@@ -155,11 +182,7 @@
             style="display: none"
           />
           <div class="form-example">
-            <label for="to">Email</label>
-            <input type="email" name="to" id="name" required />
-          </div>
-          <div class="form-example" style="display: none">
-            <label for="su">subject</label>
+            <label for="su">Full Name:</label>
             <input
               type="text"
               name="su"
@@ -168,15 +191,53 @@
             />
           </div>
           <div class="form-example">
-            <label for="body">Message</label>
+            <label for="to">Email:</label>
+            <input type="email" name="to" id="name" required />
+          </div>
+          <div class="form-example">
+            <label for="body">Message:</label>
             <textarea name="body" id="msg" required></textarea>
           </div>
           <div class="form-example">
-            <input type="submit" value="Send a mail" />
+            <input onclick="alert('Comming Soon 😁!')" type="button" value="Send a mail" />
+            <!-- <input type="submit" value="Send a mail" /> -->
           </div>
         </form>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div id="networks">
+        <ul>
+          <li>
+            <a target="_blank" href="https://github.com/Ryn-Bghl"
+              ><span class="mdi--github"></span
+            ></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/rayan-boughalia"
+              ><span class="mdi--linkedin"></span
+            ></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://codepen.io/_Duck-Noris_"
+              ><span class="mdi--codepen"></span
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div id="usefull-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div id="bottom">
+        <p>© 2025 Rayan BOUGHALIA. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
