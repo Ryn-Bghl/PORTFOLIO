@@ -39,7 +39,7 @@
         <div id="hero-info">
           <h2>
             Hi! I'm <span>Rayan</span>,<span>Web Development</span> Student in
-            MMI
+            <abbr title="Métier du Multimédia et de l'Internet">MMI</abbr>
           </h2>
           <p>
             Passionate about building clean, interactive, and user-friendly
@@ -52,6 +52,7 @@
           <img
             src="/assets/images/profile_picture.png"
             alt="Profile picture of Rayan Boughalia"
+            loading="lazy"
           />
         </figure>
       </section>
@@ -94,7 +95,11 @@
           >
         </div>
         <figure>
-          <img src="assets/images/photo pro prise taille bobg.png" alt="" />
+          <img
+            src="assets/images/photo pro prise taille bobg.png"
+            alt=""
+            loading="lazy"
+          />
         </figure>
       </section>
       <section id="projects">
@@ -103,6 +108,7 @@
           <div class="project-preview">
             <figure>
               <img
+                loading="lazy"
                 src="assets/images/Screenshot 2025-03-21 at 21-49-03 DiversiTerre.png"
                 alt=""
               />
@@ -116,6 +122,7 @@
           <div class="project-preview">
             <figure>
               <img
+                loading="lazy"
                 src="assets/images/Capture d'écran 2025-03-21 215159.png"
                 alt=""
               />
@@ -129,6 +136,7 @@
           <div class="project-preview">
             <figure>
               <img
+                loading="lazy"
                 src="assets/images/Screenshot 2025-03-21 at 21-53-25 Mortgify.png"
                 alt=""
               />
@@ -142,8 +150,8 @@
         </div>
       </section>
       <section id="contact-me">
-        <div id="left">
-          <h2 class="title">Contact me</h2>
+        <h2 class="title">Contact me</h2>
+        <div id="contact-links">
           <div id="github">
             <a target="_blank" href="https://github.com/Ryn-Bghl">
               <span class="mdi--github"></span>Github
@@ -170,7 +178,7 @@
           action="https://mail.google.com/mail/?view=cm&fs=1&"
           onsubmite=""
           method="get"
-          class="form-example"
+          class="form-example hidden"
           target="_blank"
         >
           <input type="text" name="view" value="cm" style="display: none" />
@@ -199,11 +207,7 @@
             <textarea name="body" id="msg" required></textarea>
           </div>
           <div class="form-example">
-            <input
-              onclick="alert('Comming Soon 😁!')"
-              type="button"
-              value="Send a mail"
-            />
+            <input onclick="sendMail()" type="button" value="Send a mail" />
             <!-- <input type="submit" value="Send a mail" /> -->
           </div>
         </form>
