@@ -68,8 +68,18 @@ h6 {
 
 :root {
     /* COLORS */
-    /* neutrals */
-    --cls-white: #ffff;
+    /* Neutrals */
+    --anti-flash-white: #eeeeee;
+    --night: #0f0f0f;
+    --eerie-black: #171717;
+    --light-eerie-black: #1f1f1f;
+
+    /* Primary Colors */
+    --saturate-electric-indigo: #6721ef;
+    --electric-indigo: #6d28d9;
+    --blue-violet: #7c3aed;
+    --tropical-indigo: #a78bfa;
+    --periwinkle: #c4b5fd;
 
     /* TYPOGRAPHY */
     --ff-primary: 'Roboto Mono', sans-serif;
@@ -88,14 +98,15 @@ h6 {
 }
 
 * {
-    color: var(--cls-white);
+    color: var(--anti-flash-white);
     font-family: var(--ff-primary);
 }
 
 body {
-    background-image: url("../assets/images/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-image: url("../assets/images/bg.jpg"); */
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #000;
 }
 
 header {
@@ -133,6 +144,11 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover {
+    text-decoration: underline;
+    color: var(--blue-violet);
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -160,6 +176,7 @@ main section {
 
 #hero-img {
     width: 35%;
+    border-radius: 50%;
 }
 
 #hero-info {
@@ -174,12 +191,14 @@ main section {
 }
 
 #hero-info span {
-    font-family: var(--ff-second);
+    /* font-family: var(--ff-second); */
     font-size: 3.75rem;
-    background-image: linear-gradient(90deg, #AF4BF2, #49C2F2);
+    /* background-image: linear-gradient(90deg, #AF4BF2, #49C2F2);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
+    color: var(--blue-violet);
+
 }
 
 .cta,
@@ -212,7 +231,8 @@ main section {
     text-align: center;
     font-family: var(--ff-primary);
     font-size: 3.125rem;
-    background-image: linear-gradient(180deg, #AF4BF2, #49C2F2);
+    background-color: var(--blue-violet);
+    /* background-image: linear-gradient(180deg, #AF4BF2, #49C2F2); */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -313,7 +333,7 @@ form input[type="button"] {
     border-radius: .5rem;
     background-color: #6721ef;
     text-decoration: underline;
-    color: var(--cls-white);
+    color: var(--anti-flash-white);
     border: none;
     cursor: pointer;
 }
@@ -388,7 +408,7 @@ footer #bottom {
     justify-content: center;
     align-items: center;
     padding: .5rem;
-    background-color: #020726;
+    background-color: hsl(260, 87%, 53%);
     width: 100vw;
 }
 
