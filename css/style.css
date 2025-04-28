@@ -420,3 +420,9 @@ footer #bottom {
 footer #bottom p {
     font-size: .75rem;
 }
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+}
