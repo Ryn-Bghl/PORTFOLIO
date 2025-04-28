@@ -103,9 +103,6 @@ h6 {
 }
 
 body {
-    /* background-image: url("../assets/images/bg.jpg"); */
-    /* background-repeat: no-repeat;
-    background-size: cover; */
     background-color: #000;
 }
 
@@ -200,12 +197,7 @@ main section {
 }
 
 #hero-info span {
-    /* font-family: var(--ff-second); */
     font-size: 3.75rem;
-    /* background-image: linear-gradient(90deg, #AF4BF2, #49C2F2);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
     color: var(--blue-violet);
 
 }
@@ -240,11 +232,7 @@ main section {
     text-align: center;
     font-family: var(--ff-primary);
     font-size: 3.125rem;
-    background-color: var(--blue-violet);
-    /* background-image: linear-gradient(180deg, #AF4BF2, #49C2F2); */
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--blue-violet);
 }
 
 #hard-skills {
@@ -447,19 +435,59 @@ footer #bottom p {
 }
 
 @media screen and (max-width: 768px) {
+    header {
+        justify-content: center;
+    }
+
     nav {
         display: none;
     }
 
     #main-hero {
-        margin-top: auto;
+        margin-top: 0;
         height: auto;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-direction: column-reverse;
-
     }
 
+    #hero-info {
+        width: 100%;
+        align-items: center;
+    }
 
+    #hero-info h2,
+    #hero-info p {
+        text-align: center;
+    }
+
+    #hero-info h2,
+    #hero-info span {
+        font-size: 2rem;
+    }
+
+    #hero-img {
+        width: 80%;
+    }
+
+    #hard-skills {
+        flex-wrap: wrap;
+    }
+
+    .cta {
+        margin: auto;
+        ;
+    }
+
+    .title,
+    #about-me h2 {
+        font-size: 2.5rem;
+    }
+
+    #about-me,
+    #projects,
+    #contact-me {
+        height: auto;
+    }
 }
