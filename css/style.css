@@ -109,6 +109,10 @@ body {
     background-color: #000;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -286,7 +290,7 @@ main section {
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(90deg, rgba(0, 2, 13, 0.75), rgba(2, 7, 38, 0.75));
+    background-image: linear-gradient(90deg, hsla(262, 100%, 3%, 0.75), hsla(262, 90%, 8%, 0.75));
 }
 
 #project-previews {
@@ -304,11 +308,18 @@ main section {
     padding: 1rem;
     border-radius: 5px;
     background-color: #131520;
+    border: 2px solid #282828;
+    text-decoration: none;
 }
 
 .project-preview img {
     width: 100%;
+    height: 100%;
     border-radius: 5px;
+}
+
+.project-preview figure {
+    height: 100%;
 }
 
 #contact-me {
@@ -319,7 +330,7 @@ main section {
     gap: 2rem;
     justify-content: space-around;
     align-items: center;
-    background-image: linear-gradient(90deg, rgba(0, 2, 13, 0.75), rgba(2, 7, 38, 0.75));
+    background-image: linear-gradient(90deg, hsla(262, 100%, 3%, 0.75), hsla(262, 90%, 8%, 0.75));
 }
 
 form {
