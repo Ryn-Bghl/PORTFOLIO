@@ -301,7 +301,6 @@ main section {
 }
 
 .project-preview {
-    max-width: 20%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -310,6 +309,7 @@ main section {
     background-color: #131520;
     border: 2px solid #282828;
     text-decoration: none;
+    width: 250px;
 }
 
 .project-preview img {
@@ -432,8 +432,34 @@ footer #bottom p {
     font-size: .75rem;
 }
 
+@media screen and (max-width: 1024px) {
+    #about-me img {
+        display: none;
+    }
+
+    #hard-skills {
+        justify-content: space-evenly;
+    }
+
+    #about_me-info {
+        max-width: 100%;
+    }
+}
+
 @media screen and (max-width: 768px) {
     nav {
         display: none;
     }
+
+    #main-hero {
+        margin-top: auto;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column-reverse;
+
+    }
+
+
 }
