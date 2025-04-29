@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+
     <script src="js/main.js"></script>
 
     <link
@@ -22,26 +27,35 @@
 
     <title>Rayan BOUGHALIA / Portfolio</title>
   </head>
+
   <body>
     <header>
       <h1>Rayan BOUGHALIA <span>/ Portfolio</span></h1>
+
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="./index.html#about-me">About</a></li>
-          <li><a href="./index.html#projects">Projects</a></li>
+          <li><a href="#">Accueil</a></li>
+
+          <li><a href="./index.html#about-me">À propos</a></li>
+
+          <li><a href="./index.html#projects">Projets</a></li>
+
           <li><a href="./index.html#contact-me">Contact</a></li>
+
           <li id="traduction">
-            <a class="current" href="#">EN</a>|<a href="./fr/index.html">FR</a>
+            <a href="../index.html">EN</a>|<a class="current" href="#">FR</a>
           </li>
         </ul>
       </nav>
     </header>
+
     <main>
       <section id="main-hero">
         <div id="hero-info">
           <h2>
-            Hi! I'm <span>Rayan</span>,<span>Web Development</span> Student in
+            Bonjour ! Je suis <span>Rayan</span>, étudiant en
+            <span>développement web</span> en
+
             <a
               id="mmi_abbr"
               href="https://www.onisep.fr/ressources/univers-formation/formations/post-bac/but-metiers-du-multimedia-et-de-l-internet-parcours-developpement-web-et-dispositifs-interactifs"
@@ -50,69 +64,87 @@
               >MMI</a
             >
           </h2>
+
           <p>
-            Passionate about building clean, interactive, and user-friendly
-            websites. Looking for a web development apprenticeship to grow my
-            skills
+            Passionné par la création de sites web propres, interactifs et
+            conviviaux. À la recherche d'un apprentissage en développement web
+            pour développer mes compétences.
           </p>
-          <a class="cta" id="hire-me" href="#contact-me">Hire me</a>
+
+          <a class="cta" id="hire-me" href="#contact-me">Engagez-moi</a>
         </div>
+
         <figure id="hero-img">
           <img
-            src="./assets/images/profile_picture_V2.png"
-            alt="Profile picture of Rayan Boughalia"
+            src="../assets/images/profile_picture_V2.png"
+            alt="Photo de profil de Rayan Boughalia"
             loading="lazy"
           />
         </figure>
       </section>
+
       <section id="about-me">
         <div id="about_me-info">
-          <h2 class="title">About me</h2>
-          <h3>My name is Rayan BOUGHALIA.</h3>
+          <h2 class="title">À propos de moi</h2>
+
+          <h3>Je m'appelle Rayan BOUGHALIA.</h3>
+
           <p>
-            I’m a college student that study in BUT MMI, passionate about web
-            development and eager to apply my skills in a real-world setting. I
-            enjoy solving problems, creating user-friendly websites, and
-            learning new technologies. Currently looking for an apprenticeship
-            where I can grow, contribute, and collaborate with a team.
+            Je suis un étudiant en BUT MMI, passionné par le développement web
+            et désireux d'appliquer mes compétences dans un cadre réel. J'aime
+            résoudre des problèmes, créer des sites web conviviaux et apprendre
+            de nouvelles technologies. Actuellement à la recherche d'un
+            apprentissage où je peux grandir, contribuer et collaborer avec une
+            équipe.
           </p>
+
           <div id="hard-skills">
             <div id="back-end">
               <h3><span class="jam--database"></span>Back End</h3>
+
               <p>
-                Developing efficient backend systems, leveraging PHP and SQL to
-                manage data and optimize performance.
+                Développement de systèmes backend efficaces, utilisant PHP et
+                SQL pour gérer les données et optimiser les performances.
               </p>
             </div>
+
             <div id="front-end">
               <h3><span class="tabler--code"></span>Front End</h3>
+
               <p>
-                Building structured and responsive interfaces, applying HTML,
-                CSS, and JavaScript to craft seamless user experiences.
+                Création d'interfaces structurées et réactives, appliquant HTML,
+                CSS et JavaScript pour créer des expériences utilisateur
+                fluides.
               </p>
             </div>
+
             <div id="problem-solving">
-              <h3><span class="mdi--brain"></span>Problem Solving</h3>
+              <h3><span class="mdi--brain"></span>Résolution de problèmes</h3>
+
               <p>
-                Approaching each challange methodically, breaking down, complex
-                requirements into actionable solutions.
+                Aborder chaque défi de manière méthodique, décomposant des
+                exigences complexes en solutions exploitables.
               </p>
             </div>
           </div>
+
           <a class="cta" onclick="alert('Comming Soon 😁!')"
-            >Learn more about me</a
+            >En savoir plus sur moi</a
           >
         </div>
+
         <figure>
           <img
-            src="assets/images/photo pro prise taille bobg.png"
+            src="../assets/images/photo pro prise taille bobg.png"
             alt=""
             loading="lazy"
           />
         </figure>
       </section>
+
       <section id="projects">
-        <h2 class="title">My Projects</h2>
+        <h2 class="title">Mes Projets</h2>
+
         <div id="project-previews">
           <a
             class="project-preview"
@@ -122,44 +154,37 @@
             <figure>
               <img
                 loading="lazy"
-                src="assets/images/Screenshot 2025-03-21 at 21-49-03 DiversiTerre.png"
+                src="../assets/images/Screenshot 2025-03-21 at 21-49-03 DiversiTerre.png"
                 alt=""
               />
             </figure>
+
             <h3>Diversiterre</h3>
+
             <p>
-              For a university project, I created a website to help the
-              Diversiterre assiocation expand its media reach.
+              Pour un projet universitaire, j'ai créé un site web pour aider
+              l'association Diversiterre à élargir sa portée médiatique.
             </p>
           </a>
+
           <a
             class="project-preview"
             href="https://boughalia.alwaysdata.net/TP_WEB/"
             target="_blank"
           >
             <figure>
-              <img loading="lazy" src="assets/images/chucky.png" alt="" />
+              <img loading="lazy" src="../assets/images/chucky.png" alt="" />
             </figure>
-            <h3>Chucky's Origins</h3>
+
+            <h3>Les Origines de Chucky</h3>
+
             <p>
-              I also created the Chucky's Origins website for a university
-              project to learn how to self host our website.
+              J'ai également créé le site web des Origines de Chucky pour un
+              projet universitaire afin d'apprendre à auto-héberger notre site
+              web.
             </p>
           </a>
-          <!-- <a class="project-preview" href="./projects/" target="_blank">
-            <figure>
-              <img
-                loading="lazy"
-                src="assets/images/Capture d'écran 2025-03-21 215159.png"
-                alt=""
-              />
-            </figure>
-            <h3>Symphony</h3>
-            <p>
-              I also created symphony for a university project to promote a
-              brand of craft beer brewed at the university.
-            </p>
-          </a> -->
+
           <a
             class="project-preview"
             href="https://mortgify.netlify.app"
@@ -168,43 +193,53 @@
             <figure>
               <img
                 loading="lazy"
-                src="assets/images/Screenshot 2025-03-21 at 21-53-25 Mortgify.png"
+                src="../assets/images/Screenshot 2025-03-21 at 21-53-25 Mortgify.png"
                 alt=""
               />
             </figure>
+
             <h3>Mortgify</h3>
+
             <p>
-              Mortgify is a website I developed to improve my FrontEnd web
-              development skills, (HTML / CSS(Flexbox) / JS)
+              Mortgify est un site web que j'ai développé pour améliorer mes
+              compétences en développement FrontEnd (HTML / CSS(Flexbox) / JS).
             </p>
           </a>
         </div>
       </section>
+
       <section id="contact-me">
-        <h2 class="title">Contact me</h2>
+        <h2 class="title">Contactez-moi</h2>
+
         <div id="contact-links">
           <div id="github">
             <a target="_blank" href="https://github.com/Ryn-Bghl">
               <span class="mdi--github"></span>Github
+
               <span class="solar--arrow-right-up-linear"></span>
             </a>
           </div>
+
           <div id="linkedin">
             <a
               target="_blank"
               href="https://www.linkedin.com/in/rayan-boughalia"
             >
               <span class="mdi--linkedin"></span>Linkedin
+
               <span class="solar--arrow-right-up-linear"></span>
             </a>
           </div>
+
           <div id="codepen">
             <a target="_blank" href="https://codepen.io/_Duck-Noris_">
               <span class="mdi--codepen"></span>CodePen
+
               <span class="solar--arrow-right-up-linear"></span>
             </a>
           </div>
         </div>
+
         <form
           action="https://mail.google.com/mail/?view=cm&fs=1&"
           onsubmite=""
@@ -213,6 +248,7 @@
           target="_blank"
         >
           <input type="text" name="view" value="cm" style="display: none" />
+
           <input
             type="email"
             name="to"
@@ -220,30 +256,37 @@
             id="name"
             style="display: none"
           />
+
           <div class="form-example">
-            <label for="su">Full Name:</label>
+            <label for="su">Nom complet :</label>
+
             <input
               type="text"
               name="su"
               id="email"
-              value="Portfolio CONTACT FORM MSG"
+              value="PORTFOLIO CONTACT FORM MSG"
             />
           </div>
+
           <div class="form-example">
-            <label for="to">Email:</label>
+            <label for="to">Email :</label>
+
             <input type="email" name="to" id="name" required />
           </div>
+
           <div class="form-example">
-            <label for="body">Message:</label>
+            <label for="body">Message :</label>
+
             <textarea name="body" id="msg" required></textarea>
           </div>
+
           <div class="form-example">
-            <input onclick="sendMail()" type="button" value="Send a mail" />
-            <!-- <input type="submit" value="Send a mail" /> -->
+            <input onclick="sendMail()" type="button" value="Envoyer un mail" />
           </div>
         </form>
       </section>
     </main>
+
     <footer>
       <div id="networks">
         <ul>
@@ -252,6 +295,7 @@
               ><span class="mdi--github"></span
             ></a>
           </li>
+
           <li>
             <a
               target="_blank"
@@ -259,6 +303,7 @@
               ><span class="mdi--linkedin"></span
             ></a>
           </li>
+
           <li>
             <a target="_blank" href="https://codepen.io/_Duck-Noris_"
               ><span class="mdi--codepen"></span
@@ -266,16 +311,21 @@
           </li>
         </ul>
       </div>
+
       <div id="usefull-links">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#about-me">About</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#">Accueil</a></li>
+
+          <li><a href="#about-me">À propos</a></li>
+
+          <li><a href="#projects">Projets</a></li>
+
           <li><a href="#contact-me">Contact</a></li>
         </ul>
       </div>
+
       <div id="bottom">
-        <p>© 2025 Rayan BOUGHALIA. All rights reserved.</p>
+        <p>© 2025 Rayan BOUGHALIA. Tous droits réservés.</p>
       </div>
     </footer>
   </body>

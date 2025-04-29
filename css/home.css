@@ -97,6 +97,11 @@ h6 {
     display: none !important;
 }
 
+.current {
+    text-decoration: underline;
+    color: var(--blue-violet);
+}
+
 * {
     color: var(--anti-flash-white);
     font-family: var(--ff-primary);
@@ -108,7 +113,11 @@ body {
 
 html {
     scroll-behavior: smooth;
+    scrollbar-color: var(--blue-violet) var(--night);
+    scrollbar-width: thin;
 }
+
+/* Header */
 
 header {
     display: flex;
@@ -125,6 +134,7 @@ header nav {
 
 header h1 {
     font-weight: var(--fw-regular);
+    width: max-content;
 }
 
 header span {
@@ -148,6 +158,10 @@ nav a {
 nav a:hover {
     text-decoration: underline;
     color: var(--blue-violet);
+}
+
+#traduction {
+    width: max-content;
 }
 
 main {
@@ -459,9 +473,15 @@ footer #bottom p {
 @media screen and (max-width: 768px) {
     header {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
-    nav {
+    #traduction {
+        margin: auto;
+    }
+
+    nav ul li:not(#traduction) {
         display: none;
     }
 
