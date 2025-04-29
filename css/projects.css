@@ -1,0 +1,221 @@
+@import url('./icon.css');
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+    font-size: 1rem;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+    /* COLORS */
+    /* Neutrals */
+    --anti-flash-white: #eeeeee;
+    --night: #0f0f0f;
+    --eerie-black: #171717;
+    --light-eerie-black: #1f1f1f;
+
+    /* Primary Colors */
+    --saturate-electric-indigo: #6721ef;
+    --electric-indigo: #6d28d9;
+    --blue-violet: #7c3bed;
+    --tropical-indigo: #a78bfa;
+    --periwinkle: #c4b5fd;
+
+    /* TYPOGRAPHY */
+    --ff-primary: 'Roboto Mono', sans-serif;
+    --ff-second: 'Source Serif 4', sans-serif;
+
+    /* font weight */
+    --fw-thin: 300;
+    --fw-regular: 500;
+
+}
+
+/* Pseudo Classes */
+
+.hidden {
+    display: none !important;
+}
+
+* {
+    color: var(--anti-flash-white);
+    font-family: var(--ff-primary);
+}
+
+body {
+    background-color: #000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    padding: 1.5rem 3rem;
+}
+
+header h1,
+header nav {
+    width: fit-content;
+}
+
+header h1 {
+    font-weight: var(--fw-regular);
+}
+
+header span {
+    font-weight: var(--fw-thin);
+}
+
+nav ul {
+    display: flex;
+    gap: 5rem;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--blue-violet);
+}
+
+/* Main */
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: #131520;
+    position: absolute;
+    bottom: 0;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+footer li {
+    list-style: none;
+}
+
+#networks {
+    padding: .5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+#usefull-links {
+    padding: .5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+footer #bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    background-color: hsl(260, 87%, 53%);
+    width: 100vw;
+}
+
+footer #bottom p {
+    font-size: .75rem;
+}
+
+/* Tablet Format */
+
+@media screen and (max-width: 1024px) {}
+
+/* Phone Format */
+
+@media screen and (max-height: 375px) {}
+
+@media screen and (max-width: 768px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        display: none;
+    }
+}
