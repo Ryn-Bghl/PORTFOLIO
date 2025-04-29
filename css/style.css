@@ -440,6 +440,22 @@ footer #bottom p {
 
 /* Phone Format */
 
+@media screen and (max-height: 375px) {
+    main {
+        margin: 2rem 1rem;
+    }
+
+    #main-hero {
+        margin-top: auto;
+    }
+
+    #about-me,
+    #projects,
+    #contact-me {
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 768px) {
     header {
         justify-content: center;
