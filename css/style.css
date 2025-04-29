@@ -193,11 +193,13 @@ main section {
 }
 
 #hero-info h2 {
-    font-size: 3.125rem;
+    /* font-size: 3.125rem; */
+    font-size: 3.125vw;
 }
 
 #hero-info span {
-    font-size: 3.75rem;
+    /* font-size: 3.75rem; */
+    font-size: 3.75vw;
     color: var(--blue-violet);
 
 }
@@ -420,6 +422,8 @@ footer #bottom p {
     font-size: .75rem;
 }
 
+/* Tablet Format */
+
 @media screen and (max-width: 1024px) {
     #about-me img {
         display: none;
@@ -433,6 +437,8 @@ footer #bottom p {
         max-width: 100%;
     }
 }
+
+/* Phone Format */
 
 @media screen and (max-width: 768px) {
     header {
