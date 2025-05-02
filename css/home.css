@@ -251,7 +251,7 @@ main section {
     color: var(--blue-violet);
 }
 
-#hard-skills {
+#soft-skills {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -259,7 +259,8 @@ main section {
 
 #back-end,
 #front-end,
-#problem-solving {
+#problem-solving,
+#skills {
     max-width: 14.25rem;
     padding: 1rem;
     border-radius: 5px;
@@ -269,7 +270,9 @@ main section {
 
 #back-end h3,
 #front-end h3,
-#problem-solving h3 {
+#problem-solving h3,
+#skills h3 {
+    padding-bottom: 1rem;
     display: flex;
     gap: .5rem;
     align-items: center;
@@ -278,11 +281,24 @@ main section {
 
 #back-end p,
 #front-end p,
-#problem-solving p {
+#problem-solving p,
+#skills p {
     opacity: 80%;
 }
 
-#hard-skills {
+#skills {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+#technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+#soft-skills {
     margin: 1.5rem 0;
 }
 
@@ -443,7 +459,7 @@ footer #bottom p {
         display: none;
     }
 
-    #hard-skills {
+    #soft-skills {
         justify-content: space-evenly;
     }
 
@@ -513,7 +529,7 @@ footer #bottom p {
         width: 80%;
     }
 
-    #hard-skills {
+    #soft-skills {
         flex-wrap: wrap;
     }
 
