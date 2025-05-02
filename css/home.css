@@ -315,7 +315,6 @@ main section {
 
 #project-previews {
     display: flex;
-    flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
 }
@@ -329,7 +328,6 @@ main section {
     background-color: #131520;
     border: 2px solid #282828;
     text-decoration: none;
-    width: 250px;
 }
 
 .project-preview img {
@@ -466,6 +464,10 @@ footer #bottom p {
     #about_me-info {
         max-width: 100%;
     }
+
+    #project-preview {
+        flex-wrap: wrap;
+    }
 }
 
 /* Phone Format */
@@ -483,6 +485,10 @@ footer #bottom p {
     #projects,
     #contact-me {
         height: auto;
+    }
+
+    #project-previews {
+        flex-wrap: wrap;
     }
 }
 
@@ -530,6 +536,10 @@ footer #bottom p {
     }
 
     #soft-skills {
+        flex-wrap: wrap;
+    }
+
+    #project-previews {
         flex-wrap: wrap;
     }
 
