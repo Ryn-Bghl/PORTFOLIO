@@ -340,13 +340,6 @@ main section {
     height: 100%;
 }
 
-#more-projects {
-    padding: .5rem 2rem;
-    border-radius: .5rem;
-    background-color: #6721ef;
-    text-decoration: none;
-}
-
 #contact-me {
     height: 50vh;
     padding: 1rem;
