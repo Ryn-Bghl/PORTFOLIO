@@ -69,17 +69,13 @@ h6 {
 :root {
     /* COLORS */
     /* Neutrals */
-    --anti-flash-white: #eeeeee;
-    --night: #0f0f0f;
+    --cls-fg: #ebdbb2;
+    --cls-bg: #282828;
     --eerie-black: #171717;
     --light-eerie-black: #1f1f1f;
 
     /* Primary Colors */
-    --saturate-electric-indigo: #6721ef;
-    --electric-indigo: #6d28d9;
-    --blue-violet: #7c3bed;
-    --tropical-indigo: #a78bfa;
-    --periwinkle: #c4b5fd;
+    --yellow: hsl(40, 73%, 49%);
 
     /* TYPOGRAPHY */
     --ff-primary: 'Roboto Mono', sans-serif;
@@ -99,21 +95,25 @@ h6 {
 
 .current {
     text-decoration: underline;
-    color: var(--blue-violet);
+    color: var(--yellow);
 }
 
 * {
-    color: var(--anti-flash-white);
+    color: var(--cls-fg);
     font-family: var(--ff-primary);
 }
 
 body {
-    background-color: #000;
+    /* background-color: #000; */
+    background-image: url("/assets/images/honey_comb_wallpaper.webp");
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
 }
 
 html {
     scroll-behavior: smooth;
-    scrollbar-color: var(--blue-violet) var(--night);
+    scrollbar-color: var(--yellow) var(--cls-bg);
     scrollbar-width: thin;
 }
 
@@ -125,6 +125,7 @@ header {
     position: relative;
     z-index: 1;
     padding: 1.5rem 3rem;
+    backdrop-filter: blur(10px);
 }
 
 header h1,
@@ -157,7 +158,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: var(--blue-violet);
+    color: var(--yellow);
 }
 
 #traduction {
@@ -191,7 +192,7 @@ main section {
 
 #mmi_abbr {
     text-decoration: none;
-    border-bottom: dotted 3px var(--blue-violet);
+    border-bottom: dotted 3px var(--yellow);
 }
 
 #hero-img {
@@ -214,7 +215,7 @@ main section {
 #hero-info span {
     /* font-size: 3.75rem; */
     font-size: 3.75vw;
-    color: var(--blue-violet);
+    color: var(--yellow);
 
 }
 
@@ -225,7 +226,7 @@ main section {
     align-items: center;
     padding: .5rem 2rem;
     border-radius: .5rem;
-    background-color: #6721ef;
+    background-color: var(--yellow);
     width: fit-content;
 }
 
@@ -236,7 +237,7 @@ main section {
     grid-template-columns: auto auto;
     align-items: center;
     justify-content: space-around;
-    background-image: linear-gradient(90deg, hsla(262, 100%, 3%, 0.75), hsla(262, 90%, 8%, 0.75));
+    background-image: linear-gradient(90deg, hsl(0, 0%, 16%, 0.5), hsl(40, 73%, 49%, 0.1));
 }
 
 #about_me-info {
@@ -248,7 +249,7 @@ main section {
     text-align: center;
     font-family: var(--ff-primary);
     font-size: 3.125rem;
-    color: var(--blue-violet);
+    color: var(--yellow);
 }
 
 #soft-skills {
@@ -264,8 +265,8 @@ main section {
     max-width: 14.25rem;
     padding: 1rem;
     border-radius: 5px;
-    background-color: #131520;
-    border: 2px solid #282828;
+    background-color: #282828;
+    border: 1px solid #3c3836;
 }
 
 #back-end h3,
@@ -310,7 +311,7 @@ main section {
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(90deg, hsla(262, 100%, 3%, 0.75), hsla(262, 90%, 8%, 0.75));
+    background-image: linear-gradient(90deg, hsl(0, 0%, 16%, 0.5), hsl(40, 73%, 49%, 0.1));
 }
 
 #project-previews {
@@ -325,8 +326,8 @@ main section {
     gap: 1rem;
     padding: 1rem;
     border-radius: 5px;
-    background-color: #131520;
-    border: 2px solid #282828;
+    background-color: #282828;
+    border: 1px solid #3c3836;
     text-decoration: none;
 }
 
@@ -343,7 +344,7 @@ main section {
 #more-projects {
     padding: .5rem 2rem;
     border-radius: .5rem;
-    background-color: #6721ef;
+    background-color: var(--yellow);
     text-decoration: none;
 }
 
@@ -355,7 +356,7 @@ main section {
     gap: 2rem;
     justify-content: space-around;
     align-items: center;
-    background-image: linear-gradient(90deg, hsla(262, 100%, 3%, 0.75), hsla(262, 90%, 8%, 0.75));
+    background-image: linear-gradient(90deg, hsl(0, 0%, 16%, 0.5), hsl(40, 73%, 49%, 0.1));
 }
 
 form {
@@ -372,9 +373,9 @@ form {
 form input[type="button"] {
     padding: .5rem 1rem;
     border-radius: .5rem;
-    background-color: #6721ef;
+    background-color: var(--yellow);
     text-decoration: underline;
-    color: var(--anti-flash-white);
+    color: var(--cls-fg);
     border: none;
     cursor: pointer;
 }
@@ -419,7 +420,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: fit-content;
-    background-color: #131520;
+    background-color: #282828;
 }
 
 footer ul {
@@ -449,7 +450,7 @@ footer #bottom {
     justify-content: center;
     align-items: center;
     padding: .5rem;
-    background-color: hsl(260, 87%, 53%);
+    background-color: var(--yellow);
     width: 100vw;
 }
 
