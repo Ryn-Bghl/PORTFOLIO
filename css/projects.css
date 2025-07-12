@@ -69,8 +69,8 @@ h6 {
 :root {
     /* COLORS */
     /* Neutrals */
-    --anti-flash-white: #eeeeee;
-    --night: #0f0f0f;
+    --cls-fg: #eeeeee;
+    --cls-bg: #0f0f0f;
     --eerie-black: #171717;
     --light-eerie-black: #1f1f1f;
 
@@ -98,7 +98,7 @@ h6 {
 }
 
 * {
-    color: var(--anti-flash-white);
+    color: var(--cls-fg);
     font-family: var(--ff-primary);
 }
 
