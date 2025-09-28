@@ -4,7 +4,7 @@ This is the repository for my personal portfolio website. It showcases my skills
 
 ## 🚀 Live Demo
 
-You can view the live version of my portfolio [here](https://ryn-bghl.github.io/PORTFOLIO/).
+You can view the live version of my portfolio [here](https://rayan-boughalia.netlify.app).
 
 ## 📖 About
 
@@ -24,7 +24,6 @@ This portfolio is a static website built with HTML, CSS, and JavaScript. It is d
 *   **CSS3**
 *   **JavaScript (ES6)**
 *   **Git**
-*   **GitHub Pages**
 
 ## 📂 Projects
 
