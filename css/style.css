@@ -42,6 +42,11 @@
     overflow: hidden;
 }
 
+.close .prev-btn,
+.close .next-btn {
+    display: none;
+}
+
 .open {
     height: 100dvh;
     overflow-x: hidden;
@@ -213,7 +218,9 @@ main h1 {
     width: 50%;
 }
 
-#cta_contact {
+.cta {
+    background-color: var(--fg-black);
+    color: var(--bg-white);
     cursor: pointer;
     text-decoration: underline;
 }

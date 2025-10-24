@@ -67,13 +67,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // CTA contact event listener avec stopPropagation
-    document
-        .querySelector("#cta_contact")
-        .addEventListener("click", (event) => {
+    // Event listeners for CTA buttons with stop propagation
+    document.querySelectorAll("a.cta").forEach((ctaButton) => {
+        ctaButton.addEventListener("click", (event) => {
             event.stopPropagation(); // Empêche la propagation vers la section parent
-            openSection("contact");
+            event.preventDefault(); // Prevent default link behavior
+            openSection(ctaButton.getAttribute("data-section-id"));
         });
+    });
 
     const carouselSlide = document.querySelector(".carousel-slide");
     const projects = document.querySelectorAll(".project");
