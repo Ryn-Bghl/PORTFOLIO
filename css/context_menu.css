@@ -1,0 +1,31 @@
+#context_menu {
+    position: relative;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 2;
+    -webkit-box-shadow: 5px 5px 0px 0px #000000;
+    box-shadow: 5px 5px 0px 0px #000000;
+}
+
+#context_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#context_menu li {
+    cursor: pointer;
+}
+
+#context_menu button {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: "Cossette Titre", sans-serif;
+}
+
+#context_menu button:hover {
+    text-decoration: underline;
+}

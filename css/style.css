@@ -1,0 +1,215 @@
+/* CSS RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+    --bg-white: white;
+    --fg-black: black;
+    --border-bottom-black: black;
+    --border-bottom-width: 0.05px
+}
+
+/* PSEUDO CLASS */
+
+.close {
+    height: 56px;
+    overflow-x: hidden;
+    background-color: var(--bg-white);
+    color: var(--fg-black);
+    font-family: "Cossette Titre", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    animation: closeSection 0.7s ease-in-out forwards;
+    overflow: hidden;
+}
+
+.open {
+    height: 100dvh;
+    overflow-x: hidden;
+    /* background-color: var(--bg-white); */
+    color: var(--fg-black);
+    font-family: "Cossette Titre", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    animation: openSection 0.7s ease-in-out forwards;
+}
+
+@keyframes openSection {
+    from {
+        height: 56px;
+    }
+
+    to {
+        height: 100dvh;
+    }
+}
+
+@keyframes closeSection {
+    from {
+        height: 100dvh;
+    }
+
+    to {
+        height: 56px;
+    }
+}
+
+.monospace {
+    font-family: monospace;
+}
+
+/* CSS */
+
+::selection {
+    background-color: var(--fg-black);
+    color: var(--bg-white);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100dvh;
+    overflow-x: hidden;
+    background-color: var(--bg-white);
+    color: var(--fg-black);
+    font-family: "Cossette Titre", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    background-color: var(--bg-white);
+    color: var(--fg-black);
+    padding: 1rem;
+    border-bottom: var(--border-bottom-width) solid var(--border-bottom-black);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header li {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--fg-black);
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+main h1 {
+    padding: 0.5rem;
+}
+
+#ascii_star {
+    user-select: none;
+    width: min-content;
+    background-color: #fff;
+    margin: auto;
+    z-index: -1;
+    position: relative;
+    font-size: 1vw;
+}
+
+#me {
+    width: 75%;
+    margin: auto;
+    text-align: left;
+    padding: 2rem;
+}
+
+#cta_contact {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+main #home,
+main #about,
+main #projects,
+main #contact {
+    border-bottom: var(--border-bottom-width) solid var(--border-bottom-black);
+    align-items: center;
+    scroll-margin-top: 52px;
+}
+
+main #home h1:first-child,
+main #about h1:first-child,
+main #projects h1:first-child,
+main #contact h1:first-child {
+    cursor: pointer;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+}
+
+.project {
+    flex: 0 0 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+footer {
+    bottom: 0;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
