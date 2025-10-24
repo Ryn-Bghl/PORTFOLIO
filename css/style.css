@@ -186,21 +186,19 @@ main h1 {
     text-align: left;
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 2rem;
     padding: 2rem;
 }
 
 #me-photo {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #me-picture {
-    width: 33vw;
+    min-width: 200px;
     aspect-ratio: 1/1;
 }
 
@@ -208,6 +206,10 @@ main h1 {
     filter: saturate(0);
     width: 100%;
     height: auto;
+}
+
+#me-information {
+    width: 50%;
 }
 
 #cta_contact {
@@ -296,4 +298,25 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    header nav p {
+        display: none;
+    }
+
+    header nav ul:first-child {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    #me {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #me-information {
+        width: 100%;
+        margin-top: 1rem;
+    }
 }
