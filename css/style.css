@@ -12,7 +12,20 @@
     --bg-white: white;
     --fg-black: black;
     --border-bottom-black: black;
-    --border-bottom-width: 0.05px
+    --border-bottom-width: 0.05px;
+
+    /* TYPOGRAPHY */
+    /* Cossette Titre */
+    --ff-header: "Cossette Titre", sans-serif;
+    --fw-header: 400;
+    --fs-header: normal;
+    --fz-header: 1rem;
+
+    /* monospace */
+    --ff-body: monospace;
+    --fw-body: 400;
+    --fs-body: normal;
+    --fz-body: 1rem;
 }
 
 /* PSEUDO CLASS */
@@ -22,9 +35,9 @@
     overflow-x: hidden;
     background-color: var(--bg-white);
     color: var(--fg-black);
-    font-family: "Cossette Titre", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: var(--ff-header);
+    font-weight: var(--fw-header);
+    font-style: var(--fs-header);
     animation: closeSection 0.7s ease-in-out forwards;
     overflow: hidden;
 }
@@ -34,9 +47,9 @@
     overflow-x: hidden;
     /* background-color: var(--bg-white); */
     color: var(--fg-black);
-    font-family: "Cossette Titre", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: var(--ff-header);
+    font-weight: var(--fw-header);
+    font-style: var(--fs-header);
     animation: openSection 0.7s ease-in-out forwards;
 }
 
@@ -88,9 +101,9 @@ body {
     overflow-x: hidden;
     background-color: var(--bg-white);
     color: var(--fg-black);
-    font-family: "Cossette Titre", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: var(--ff-header);
+    font-weight: var(--fw-header);
+    font-style: var(--fs-header);
 }
 
 section {
