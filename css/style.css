@@ -153,6 +153,12 @@ header a {
     }
 }
 
+header nav p {
+    font-family: var(--ff-body);
+    font-size: var(--fz-body);
+    align-self: center;
+}
+
 main h1 {
     padding: 0.5rem;
     position: sticky;
@@ -187,8 +193,13 @@ main #about,
 main #projects,
 main #contact {
     border-bottom: var(--border-bottom-width) solid var(--border-bottom-black);
-    align-items: center;
     scroll-margin-top: 52px;
+}
+
+main #projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 main #home h1:first-child,
@@ -216,9 +227,19 @@ main #contact h1:first-child {
     text-align: center;
 }
 
+.project h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .project img {
-    width: 100%;
+    width: 75%;
     height: auto;
+    position: relative;
+    background-color: white;
+    border: 1px solid black;
+    -webkit-box-shadow: 5px 5px 0px 0px #000000;
+    box-shadow: 5px 5px 0px 0px #000000;
 }
 
 .prev-btn,
