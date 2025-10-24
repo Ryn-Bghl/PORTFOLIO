@@ -93,6 +93,12 @@ body {
     font-style: normal;
 }
 
+section {
+    position: relative;
+    background-color: var(--bg-white);
+    z-index: 1;
+}
+
 header {
     position: sticky;
     top: 0;
