@@ -25,7 +25,7 @@
     --ff-body: monospace;
     --fw-body: 400;
     --fs-body: normal;
-    --fz-body: 1rem;
+    --fz-body: 14px;
 }
 
 /* PSEUDO CLASS */
@@ -110,6 +110,11 @@ section {
     position: relative;
     background-color: var(--bg-white);
     z-index: 1;
+}
+
+main p {
+    font-family: var(--ff-body);
+    font-size: var(--fz-body);
 }
 
 header {
