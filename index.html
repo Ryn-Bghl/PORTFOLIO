@@ -15,7 +15,7 @@
 
     <script src="app.js" defer></script>
     <script src="./js/web3form.js" defer></script>
-    <title>Brutalism</title>
+    <title>Rayan BOUGHALIA * Portfolio </title>
 </head>
 
 <body>
@@ -123,33 +123,46 @@
         </section>
         <section class="close" id="contact">
             <h1>CONTACT</h1>
-            <!-- Form action API Endpoint  -->
-            <form action="https://api.web3forms.com/submit" method="POST" id="form">
+            <h2 id="contact-title">Contact me</h2>
+            <div id="contact-container">
+                <!-- <div id="contact-information">
+                    <p>rayan.boughalia.pro@gmail.com</p>
+                </div> -->
+                <div id="contact-form">
+                    <!-- Form action API Endpoint  -->
+                    <form action="https://api.web3forms.com/submit" method="POST" id="form">
 
-                <!-- Your Access key here. Don't worry this can be public -->
-                <input type="hidden" name="access_key" value="a15cba09-9215-4a5a-bb02-900e97e37695">
+                        <!-- Your Access key here. Don't worry this can be public -->
+                        <input type="hidden" name="access_key" value="a15cba09-9215-4a5a-bb02-900e97e37695">
 
-                <!-- Optional: Can be type="hidden" or type="text" for subject -->
-                <input type="hidden" name="subject" value="New Submission from Web3Forms">
+                        <!-- Optional: Can be type="hidden" or type="text" for subject -->
+                        <input type="hidden" name="subject" value="New Submission from Web3Forms">
 
-                <!-- Optional: From Name you want to see in the email
+                        <!-- Optional: From Name you want to see in the email
           Default is "Notifications". you can overwrite here -->
-                <input type="hidden" name="from_name" value="Your Website Name">
+                        <input type="hidden" name="from_name" value="Your Website Name">
 
-                <!-- Optional: Redirect URL after form submission -->
-                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <!-- Optional: Redirect URL after form submission -->
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
-                <!-- Optional: Add botcheck for basic spam protection. captcha is recommened -->
-                <input type="checkbox" name="botcheck" id="" style="display: none;">
+                        <!-- Optional: Add botcheck for basic spam protection. captcha is recommened -->
+                        <input type="checkbox" name="botcheck" id="" style="display: none;">
 
-                <!-- Add your form fields here -->
-                <input type="text" name="name" required>
-                <input type="email" name="email" required>
-                <textarea name="message" required></textarea>
+                        <!-- Add your form fields here -->
+                        <label for="name" id="name-label">Name (required)</label>
+                        <label for="name">First Name & Last Name</label>
+                        <input type="text" name="name" required>
+                        <label for="email">Email (required)</label>
+                        <input type="email" name="email" required>
+                        <label for="message">Message (required)</label>
+                        <textarea name="message" required rows="4"></textarea>
 
-                <button type="submit">Submit Form</button>
+                        <button type="submit">Submit Form</button>
 
-            </form>
+                    </form>
+                </div>
+            </div>
+
         </section>
     </main>
     <footer>
