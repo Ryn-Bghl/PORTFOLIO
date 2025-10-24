@@ -66,6 +66,14 @@
 
 /* CSS */
 
+img {
+    filter: saturate(0);
+}
+
+img:hover {
+    filter: saturate(1);
+}
+
 ::selection {
     background-color: var(--fg-black);
     color: var(--bg-white);
@@ -191,6 +199,7 @@ main #contact h1:first-child {
 
 .prev-btn,
 .next-btn {
+    font-family: monospace;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
