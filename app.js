@@ -100,4 +100,27 @@ document.addEventListener("DOMContentLoaded", () => {
         currentIndex--;
         showProject(currentIndex);
     });
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carouselSlide.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+    });
+
+    carouselSlide.addEventListener("touchmove", (e) => {
+        touchEndX = e.touches[0].clientX;
+    });
+
+    carouselSlide.addEventListener("touchend", () => {
+        if (touchStartX - touchEndX > 50) {
+            currentIndex++;
+            showProject(currentIndex);
+        }
+
+        if (touchStartX - touchEndX < -50) {
+            currentIndex--;
+            showProject(currentIndex);
+        }
+    });
 });
