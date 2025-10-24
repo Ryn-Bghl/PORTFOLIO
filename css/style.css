@@ -106,17 +106,6 @@ body {
     font-style: var(--fs-header);
 }
 
-section {
-    position: relative;
-    background-color: var(--bg-white);
-    z-index: 1;
-}
-
-main p {
-    font-family: var(--ff-body);
-    font-size: var(--fz-body);
-}
-
 header {
     position: sticky;
     top: 0;
@@ -159,11 +148,27 @@ header nav p {
     align-self: center;
 }
 
+section {
+    position: relative;
+    background-color: var(--bg-white);
+    z-index: 1;
+}
+
+main p {
+    font-family: var(--ff-body);
+    font-size: var(--fz-body);
+}
+
 main h1 {
     padding: 0.5rem;
     position: sticky;
     top: 0;
     background-color: var(--bg-white);
+}
+
+#name {
+    background-color: var(--fg-black);
+    color: var(--bg-white);
 }
 
 #ascii_star {
