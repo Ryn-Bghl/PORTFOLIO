@@ -49,7 +49,6 @@
 .open {
     height: 100dvh;
     overflow-x: hidden;
-    /* background-color: var(--bg-white); */
     color: var(--fg-black);
     font-family: var(--ff-header);
     font-weight: var(--fw-header);
@@ -229,7 +228,6 @@ main h1 {
 
 #about-picture img:hover {
     filter: saturate(1);
-    /* Saturate on hover */
 }
 
 .cta {
@@ -276,65 +274,49 @@ main #contact h1:first-child {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    /* Increase gap for better readability */
     padding: 1rem;
-    /* Add some padding */
     border: 1px solid var(--fg-black);
-    /* Add a border for brutalist aesthetic */
     box-shadow: 5px 5px 0px 0px var(--fg-black);
-    /* Add box shadow */
-    /* Make the description column stretch to the full grid height */
     height: 100%;
-    /* Allow content to layout and shrink without forcing overflow on the grid */
     min-height: 0;
 }
 
 #about-description h2,
 #skills h2 {
     margin-bottom: 0.8rem;
-    /* Space below headings */
     font-size: 1.5rem;
-    /* Slightly larger headings */
     border-bottom: 1px solid var(--fg-black);
-    /* Underline headings */
     padding-bottom: 0.5rem;
 }
 
 #skills ul {
     list-style: none;
     padding-left: 0;
-    /* Remove default padding */
 }
 
 #skills li {
     margin-bottom: 0.5rem;
-    /* Reduce margin for tighter list */
     font-family: var(--ff-body);
-    /* Use body font for skills list */
     font-size: var(--fz-body);
 }
 
 #skills li strong {
     color: var(--fg-black);
-    /* Emphasize skill categories */
 }
 
 @media screen and (max-width: 768px) {
     #about-container {
         grid-template-columns: 1fr;
-        /* Stack columns on smaller screens */
         padding: 1rem;
     }
 
     #about-photo {
         padding: 1rem 0;
-        /* Remove padding on small screens */
     }
 
     #about-me {
         padding: 1rem;
         margin: 0 1rem;
-        /* Add horizontal margin on small screens */
     }
 }
 
@@ -367,7 +349,6 @@ main #contact h1:first-child {
 #contact-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 40%));
-    /* grid-template-columns: 40dvw; */
     justify-content: space-evenly;
     align-items: start;
     padding: 2rem 1rem;
@@ -412,8 +393,6 @@ main #contact h1:first-child {
     background-color: var(--fg-black);
     color: var(--bg-white);
     cursor: pointer;
-    /* width: fit-content; */
-    /* text-transform: uppercase; */
 }
 
 .h-captcha {
