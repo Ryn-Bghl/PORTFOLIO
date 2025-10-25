@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/context_menu.css">
-    <link rel="stylesheet" href="css/popup.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +17,38 @@
     <script src="./js/popup.js" defer></script>
     <!-- Step 2: Add the Web3Forms script -->
     <script src="https://web3forms.com/client/script.js" async defer></script>
+    <meta name="description" content="Portfolio of Rayan BOUGHALIA, a MMI student passionate about web development, graphic design and audiovisual.">
+    <meta property="og:title" content="Rayan BOUGHALIA * Portfolio" />
+    <meta property="og:description" content="Portfolio of Rayan BOUGHALIA, a MMI student passionate about web development, graphic design and audiovisual." />
+    <meta property="og:image" content="https://rayan-boughalia.com/assets/full_rayan_boughalia.png" />
+    <meta property="og:url" content="https://rayan-boughalia.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rayan BOUGHALIA * Portfolio" />
+    <meta name="twitter:description" content="Portfolio of Rayan BOUGHALIA, a MMI student passionate about web development, graphic design and audiovisual." />
+    <meta name="twitter:image" content="https://rayan-boughalia.com/assets/full_rayan_boughalia.png" />
     <title>Rayan BOUGHALIA * Portfolio </title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Rayan BOUGHALIA * Portfolio",
+      "url": "https://rayan-boughalia.com/"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rayan BOUGHALIA",
+      "url": "https://rayan-boughalia.com/",
+      "sameAs": [
+        "https://www.linkedin.com/in/rayan-boughalia/",
+        "https://github.com/Ryn-Bghl",
+        "https://leetcode.com/u/Duck_Noris/"
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -131,24 +160,25 @@
             <h1>PROJECTS</h1>
             <div class="carousel-container">
                 <div class="carousel-slide">
-                    <div class="project">
-                        <!-- <img src="https://picsum.photos/600/400?random=1" alt="Project 1"> -->
-                        <img src="./assets/portfolio.png" alt="Project 1">
+                    <article class="project">
+                        <img src="./assets/portfolio.png" alt="Brutalist Portfolio project screenshot">
                         <h3>Brutalist Portfolio</h3>
                         <p>This is a brutalist-inspired portfolio website, designed to showcase my work in a raw and
                             unapologetic way. The website is built using HTML, CSS, and JavaScript, and features a
                             custom context menu, expanding sections, and a simple carousel to showcase projects.</p>
-                    </div>
-                    <div class="project">
+                    </article>
+                    <article class="project">
+                        <!-- TODO: Replace with a real project image and update the alt text -->
                         <img src="https://picsum.photos/600/400?random=2" alt="Project 2">
                         <h3>Project 2</h3>
                         <p>Description of Project 2.</p>
-                    </div>
-                    <div class="project">
+                    </article>
+                    <article class="project">
+                        <!-- TODO: Replace with a real project image and update the alt text -->
                         <img src="https://picsum.photos/600/400?random=3" alt="Project 3">
                         <h3>Project 3</h3>
                         <p>Description of Project 3.</p>
-                    </div>
+                    </article>
                 </div>
                 <button class="prev-btn">Prev</button>
                 <button class="next-btn">Next</button>
