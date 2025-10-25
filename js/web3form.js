@@ -1,10 +1,21 @@
-// Form submission with JavaScript
 document.getElementById("form").addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const formData = new FormData(this);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
     const submitButton = this.querySelector('button[type="submit"]');
     const originalText = submitButton.textContent;
+
+    const hCaptcha = form.querySelector(
+        "textarea[name=h-captcha-response]"
+    ).value;
+    if (!hCaptcha) {
+        e.preventDefault();
+        alert("Please fill out captcha field");
+        return;
+    }
 
     try {
         submitButton.textContent = "Sending...";
@@ -14,19 +25,24 @@ document.getElementById("form").addEventListener("submit", async function (e) {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                Accept: "application/json",
             },
-            body: formData,
+            body: json,
         });
 
-        const result = await response.json();
-
-        if (result.success) {
-            alert("Message sent successfully!");
-            this.reset();
-        } else {
-            alert("Failed to send message. Please try again.");
-        }
+        response
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    window.location.href = "success.html";
+                }
+            })
+            .catch((error) => {
+                alert("An error occurred. Please try again.");
+            })
+            .finally(() => {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            });
     } catch (error) {
         alert("An error occurred. Please try again.");
     } finally {

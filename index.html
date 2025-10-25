@@ -15,6 +15,8 @@
 
     <script src="app.js" defer></script>
     <script src="./js/web3form.js" defer></script>
+    <!-- Step 2: Add the Web3Forms script -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <title>Rayan BOUGHALIA * Portfolio </title>
 </head>
 
@@ -169,10 +171,13 @@
                         <input type="hidden" name="from_name" value="Your Website Name">
 
                         <!-- Optional: Redirect URL after form submission -->
-                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <!-- <input type="hidden" name="redirect" value="https://web3forms.com/success"> -->
 
                         <!-- Optional: Add botcheck for basic spam protection. captcha is recommened -->
                         <input type="checkbox" name="botcheck" id="" style="display: none;">
+
+                        <!-- Step 1: Add this line -->
+                        <div class="h-captcha" data-captcha="true"></div>
 
                         <!-- Add your form fields here -->
                         <label for="name" id="name-label">Name (required)</label>
