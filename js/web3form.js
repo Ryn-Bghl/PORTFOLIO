@@ -9,9 +9,9 @@ document.getElementById("form").addEventListener("submit", async function (e) {
     const originalText = submitButton.textContent;
 
     try {
-        if (!form.querySelector("textarea[name=h-captcha-response]").value) {
+        if (!document.querySelector("textarea[name=h-captcha-response]").value) {
             e.preventDefault();
-            alert("Please fill out captcha field");
+            openPopup("Error", "Please fill out captcha field");
             return;
         }
 
@@ -29,12 +29,14 @@ document.getElementById("form").addEventListener("submit", async function (e) {
         if (response.ok) {
             const json = await response.json();
             console.log(json);
+            openPopup("Success", "Your message has been sent successfully!");
+            location.reload();
         } else {
             console.error("Error:", response.statusText);
-            alert("An error occurred. Please try again.");
+            openPopup("Error", "An error occurred. Please try again.");
         }
     } catch (error) {
-        alert("An error occurred. Please try again.");
+        openPopup("Error", "An error occurred. Please try again.");
         console.error("Error:", error);
     } finally {
         submitButton.textContent = originalText;

@@ -58,6 +58,87 @@ document.addEventListener("click", (event) => {
 });
 
 // add event listeners to buttons
+function handleTouch(carouselSlide, callback) {
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+
+    carouselSlide.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+    });
+
+    carouselSlide.addEventListener("touchmove", (e) => {
+        touchEndX = e.touches[0].clientX;
+        touchEndY = e.touches[0].clientY;
+
+        const deltaX = Math.abs(touchEndX - touchStartX);
+        const deltaY = Math.abs(touchEndY - touchStartY);
+
+        if (deltaX > deltaY) {
+            e.preventDefault();
+        }
+    });
+
+    carouselSlide.addEventListener("touchend", () => {
+        if (touchStartX - touchEndX > 75) {
+            callback(1);
+        }
+
+        if (touchStartX - touchEndX < -75) {
+            callback(-1);
+        }
+    });
+}
+
+function showProject(index, carouselSlide) {
+    if (!carouselSlide) return;
+    carouselSlide.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function updateProject(direction, currentIndex, projects, carouselSlide) {
+    currentIndex += direction;
+
+    if (currentIndex >= projects.length) {
+        currentIndex = 0;
+    } else if (currentIndex < 0) {
+        currentIndex = projects.length - 1;
+    }
+
+    showProject(currentIndex, carouselSlide);
+    return currentIndex;
+}
+
+function initCarousel() {
+    const carouselSlide = document.querySelector(".carousel-slide");
+    if (!carouselSlide) return;
+
+    const projects = document.querySelectorAll(".project");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+
+    if (projects.length <= 1) {
+        if (prevBtn) prevBtn.style.display = "none";
+        if (nextBtn) nextBtn.style.display = "none";
+        return;
+    }
+
+    let currentIndex = 0;
+
+    nextBtn.addEventListener("click", () => {
+        currentIndex = updateProject(1, currentIndex, projects, carouselSlide);
+    });
+
+    prevBtn.addEventListener("click", () => {
+        currentIndex = updateProject(-1, currentIndex, projects, carouselSlide);
+    });
+
+    handleTouch(carouselSlide, (direction) => {
+        currentIndex = updateProject(direction, currentIndex, projects, carouselSlide);
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll("section");
     buttons.forEach((button) => {
@@ -76,52 +157,5 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    const carouselSlide = document.querySelector(".carousel-slide");
-    const projects = document.querySelectorAll(".project");
-    const prevBtn = document.querySelector(".prev-btn");
-    const nextBtn = document.querySelector(".next-btn");
-
-    let currentIndex = 0;
-
-    function showProject(index) {
-        if (index >= projects.length) {
-            currentIndex = 0;
-        } else if (index < 0) {
-            currentIndex = projects.length - 1;
-        }
-        carouselSlide.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    nextBtn.addEventListener("click", () => {
-        currentIndex++;
-        showProject(currentIndex);
-    });
-
-    prevBtn.addEventListener("click", () => {
-        currentIndex--;
-        showProject(currentIndex);
-    });
-
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    carouselSlide.addEventListener("touchstart", (e) => {
-        touchStartX = e.touches[0].clientX;
-    });
-
-    carouselSlide.addEventListener("touchmove", (e) => {
-        touchEndX = e.touches[0].clientX;
-    });
-
-    carouselSlide.addEventListener("touchend", () => {
-        if (touchStartX - touchEndX > 50) {
-            currentIndex++;
-            showProject(currentIndex);
-        }
-
-        if (touchStartX - touchEndX < -50) {
-            currentIndex--;
-            showProject(currentIndex);
-        }
-    });
+    initCarousel();
 });
