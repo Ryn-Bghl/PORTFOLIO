@@ -140,11 +140,14 @@ function initCarousel() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll("section");
-    buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const sectionId = button.getAttribute("id");
-            openSection(sectionId);
+    // Event listeners for nav links
+    document.querySelectorAll("header nav a").forEach((navLink) => {
+        navLink.addEventListener("click", (event) => {
+            event.preventDefault();
+            const sectionId = navLink.getAttribute("data-section-id");
+            if (sectionId) {
+                openSection(sectionId);
+            }
         });
     });
 
@@ -153,7 +156,10 @@ document.addEventListener("DOMContentLoaded", () => {
         ctaButton.addEventListener("click", (event) => {
             event.stopPropagation(); // Empêche la propagation vers la section parent
             event.preventDefault(); // Prevent default link behavior
-            openSection(ctaButton.getAttribute("data-section-id"));
+            const sectionId = ctaButton.getAttribute("data-section-id");
+            if (sectionId) {
+                openSection(sectionId);
+            }
         });
     });
 

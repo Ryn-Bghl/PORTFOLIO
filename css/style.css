@@ -250,6 +250,27 @@ main #contact h1:first-child {
     cursor: pointer;
 }
 
+#about-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#skills ul {
+    list-style: none;
+}
+
+#skills li {
+    margin-bottom: 1rem;
+}
+
 #contact-title {
     font-size: 12.5vw;
     text-align: center;
