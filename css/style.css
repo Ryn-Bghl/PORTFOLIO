@@ -207,15 +207,33 @@ main h1 {
     align-items: center;
 }
 
-#me-picture {
-    min-width: 200px;
+#about-picture {
+    max-width: 300px; /* Adjust as needed */
+    margin: auto;
     aspect-ratio: 1/1;
 }
 
 #me-picture img {
-    filter: saturate(0);
+    /* filter: saturate(0); */
     width: 100%;
     height: auto;
+}
+
+#about-picture img {
+    filter: saturate(0);
+    /* Apply grayscale to about image */
+    width: 100%;
+    height: auto;
+    position: relative;
+    /* background-color: white;
+    border: 1px solid black;
+    -webkit-box-shadow: 5px 5px 0px 0px #000000;
+    box-shadow: 5px 5px 0px 0px #000000; */
+}
+
+#about-picture img:hover {
+    filter: saturate(1);
+    /* Saturate on hover */
 }
 
 #me-information {
@@ -255,20 +273,62 @@ main #contact h1:first-child {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem;
+    align-items: start; /* Align items to the start of the grid area */
+}
+
+#about-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; /* Add some padding around the image */
 }
 
 #about-me {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem; /* Increase gap for better readability */
+    padding: 1rem; /* Add some padding */
+    border: 1px solid var(--fg-black); /* Add a border for brutalist aesthetic */
+    box-shadow: 5px 5px 0px 0px var(--fg-black); /* Add box shadow */
+}
+
+#about-description h2,
+#skills h2 {
+    margin-bottom: 0.8rem; /* Space below headings */
+    font-size: 1.5rem; /* Slightly larger headings */
+    border-bottom: 1px solid var(--fg-black); /* Underline headings */
+    padding-bottom: 0.5rem;
 }
 
 #skills ul {
     list-style: none;
+    padding-left: 0; /* Remove default padding */
 }
 
 #skills li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* Reduce margin for tighter list */
+    font-family: var(--ff-body); /* Use body font for skills list */
+    font-size: var(--fz-body);
+}
+
+#skills li strong {
+    color: var(--fg-black); /* Emphasize skill categories */
+}
+
+@media screen and (max-width: 768px) {
+    #about-container {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        padding: 1rem;
+    }
+
+    #about-photo {
+        padding: 0; /* Remove padding on small screens */
+    }
+
+    #about-me {
+        padding: 1rem;
+        margin: 0 1rem; /* Add horizontal margin on small screens */
+    }
 }
 
 #contact-title {
