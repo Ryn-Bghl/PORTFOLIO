@@ -30,18 +30,21 @@ document.addEventListener("click", () => {
     }
 });
 
-const sections = document.querySelectorAll("main section");
+let currentOpenSection = document.querySelector(".open");
 
 function openSection(sectionId) {
-    sections.forEach((section) => {
-        if (section.id === sectionId) {
-            section.classList.remove("close");
-            section.classList.add("open");
-        } else {
-            section.classList.remove("open");
-            section.classList.add("close");
-        }
-    });
+    const targetSection = document.getElementById(sectionId);
+
+    if (!targetSection || targetSection === currentOpenSection) return;
+
+    if (currentOpenSection) {
+        currentOpenSection.classList.remove("open");
+        currentOpenSection.classList.add("close");
+    }
+
+    targetSection.classList.remove("close");
+    targetSection.classList.add("open");
+    currentOpenSection = targetSection;
 }
 
 // context menu buttons
@@ -147,6 +150,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const sectionId = navLink.getAttribute("data-section-id");
             if (sectionId) {
                 openSection(sectionId);
+            }
+        });
+    });
+
+    // Event listeners for section H1s
+    document.querySelectorAll("main section h1").forEach((h1) => {
+        h1.addEventListener("click", () => {
+            const section = h1.parentElement;
+            if (section.classList.contains("close")) {
+                openSection(section.id);
             }
         });
     });
