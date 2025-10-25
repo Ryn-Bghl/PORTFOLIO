@@ -8,16 +8,13 @@ document.getElementById("form").addEventListener("submit", async function (e) {
     const submitButton = this.querySelector('button[type="submit"]');
     const originalText = submitButton.textContent;
 
-    const hCaptcha = form.querySelector(
-        "textarea[name=h-captcha-response]"
-    ).value;
-    if (!hCaptcha) {
-        e.preventDefault();
-        alert("Please fill out captcha field");
-        return;
-    }
-
     try {
+        if (!form.querySelector("textarea[name=h-captcha-response]").value) {
+            e.preventDefault();
+            alert("Please fill out captcha field");
+            return;
+        }
+
         submitButton.textContent = "Sending...";
         submitButton.disabled = true;
 
@@ -29,22 +26,16 @@ document.getElementById("form").addEventListener("submit", async function (e) {
             body: json,
         });
 
-        response
-            .then(async (response) => {
-                let json = await response.json();
-                if (response.status == 200) {
-                    window.location.href = "success.html";
-                }
-            })
-            .catch((error) => {
-                alert("An error occurred. Please try again.");
-            })
-            .finally(() => {
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-            });
+        if (response.ok) {
+            const json = await response.json();
+            console.log(json);
+        } else {
+            console.error("Error:", response.statusText);
+            alert("An error occurred. Please try again.");
+        }
     } catch (error) {
         alert("An error occurred. Please try again.");
+        console.error("Error:", error);
     } finally {
         submitButton.textContent = originalText;
         submitButton.disabled = false;

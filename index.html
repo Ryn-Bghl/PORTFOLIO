@@ -176,8 +176,7 @@
                         <!-- Optional: Add botcheck for basic spam protection. captcha is recommened -->
                         <input type="checkbox" name="botcheck" id="" style="display: none;">
 
-                        <!-- Step 1: Add this line -->
-                        <div class="h-captcha" data-captcha="true"></div>
+
 
                         <!-- Add your form fields here -->
                         <label for="name" id="name-label">Name (required)</label>
@@ -187,6 +186,9 @@
                         <input type="email" name="email" required>
                         <label for="message">Message (required)</label>
                         <textarea name="message" required rows="4"></textarea>
+
+                        <!-- Step 1: Add this line -->
+                        <div class="h-captcha" data-captcha="true"></div>
 
                         <button type="submit">Submit Form</button>
 
