@@ -4,7 +4,7 @@ A minimalist and brutalist-inspired portfolio website. This project is designed 
 
 ## Live Demo
 
-[Link to live demo]([https://your-live-demo-link.com](https://rayan-boughalia.netlify.app/))
+[Link to live demo](https://your-live-demo-link.com](https://rayan-boughalia.netlify.app/)
 
 ## Screenshot
 
