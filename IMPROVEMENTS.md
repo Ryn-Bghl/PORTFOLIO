@@ -7,7 +7,7 @@ Voici quelques suggestions pour améliorer votre portfolio :
 L'objectif principal de votre portfolio est de présenter votre travail. La section des projets en est la partie la plus critique.
 
 * **Ajoutez de Vrais Projets :** Remplacez les projets de démonstration ("Projet 2", "Projet 3") par vos propres réalisations.
-* **Fournissez des Détails :** Pour chaque projet, incluez :
+* **Fournissez des Détails :** Pour chaque projet, incluez:
   * Un lien vers la version en ligne.
   * Un lien vers le code source (par exemple, sur GitHub).
   * Une description plus détaillée : Quel était l'objectif du projet ? Quelles technologies avez-vous utilisées ? Quels défis avez-vous rencontrés ? Comment les avez-vous surmontés ?
