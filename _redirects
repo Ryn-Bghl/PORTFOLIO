@@ -1,0 +1,22 @@
+# Netlify redirects and rewrites for multilingual routes
+/en             /en/index.html                  200
+/en/            /en/index.html                  200
+
+# EN project clean routing
+/en/dons-du-son             /en/projects/dons-du-son.html          200
+/en/dons-du-son.html        /en/projects/dons-du-son.html          200
+/en/chuckys-website         /en/projects/chuckys-website.html      200
+/en/chuckys-website.html    /en/projects/chuckys-website.html      200
+/en/upec-landing-page       /en/projects/upec-landing-page.html    200
+/en/upec-landing-page.html  /en/projects/upec-landing-page.html    200
+/en/brutalist-portfolio     /en/projects/brutalist-portfolio.html  200
+/en/brutalist-portfolio.html /en/projects/brutalist-portfolio.html 200
+/en/battleship-algo         /en/projects/battleship-algo.html      200
+/en/battleship-algo.html    /en/projects/battleship-algo.html      200
+
+# FR project clean routing
+/dons-du-son             /projects/dons-du-son.html          200
+/chuckys-website         /projects/chuckys-website.html      200
+/upec-landing-page       /projects/upec-landing-page.html    200
+/brutalist-portfolio     /projects/brutalist-portfolio.html  200
+/battleship-algo         /projects/battleship-algo.html      200

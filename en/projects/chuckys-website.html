@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="shortcut icon" href="../../assets/favicon.png" type="image/x-icon" />
+    <script src="../../js/project.js" defer></script>
+
+    <title>Chucky's Website — Project Case Study</title>
+    <meta
+      name="description"
+      content="Technical breakdown of Chucky's Website, exploring Linux server administration, SSH/FTP deployment on Alwaysdata, and native HTML/CSS/JS architecture." />
+  </head>
+
+  <body class="project-page">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <ul>
+          <li>
+            <div class="lang-switcher">
+              <a href="../../projects/chuckys-website.html">FR</a>
+              <span class="lang-sep">|</span>
+              <a href="./chuckys-website.html" class="lang-active">EN</a>
+            </div>
+          </li>
+          <li>
+            <p>Please right click ! &lt;3</p>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="project-detail-layout">
+      <!-- Breadcrumb Bar -->
+      <div class="project-top-bar">
+        <div class="project-breadcrumbs">
+          <a href="../index.html#home">Rayan Boughalia</a>
+          <span>/</span>
+          <a href="../index.html#projects">Projects</a>
+          <span>/</span>
+          <span>Chucky's Website</span>
+        </div>
+        <a href="../index.html#projects" class="btn-back">← Back to all projects</a>
+      </div>
+
+      <!-- Hero Header -->
+      <section class="project-hero">
+        <div class="project-hero-badge-row">
+          <span class="badge-tag">Academic Project</span>
+          <span class="badge-tag-outline">Server Admin & Native Web</span>
+          <span class="badge-tag-outline">BUT MMI UPEC</span>
+        </div>
+
+        <h1>Chucky's Website</h1>
+
+        <p class="project-hero-summary">
+          A themed interactive web project exploring real-world server deployment, Linux hosting environments,
+          and secure SSH/FTP protocols on <strong>Alwaysdata</strong>. Built using native HTML5, CSS3, and JavaScript
+          with a focus on performance, responsive design, and systems administration.
+        </p>
+
+        <div class="project-hero-actions">
+          <a href="https://boughalia.alwaysdata.net/TP_WEB" target="_blank" rel="noopener noreferrer" class="btn-brutalist-main">
+            ↗ Live Preview
+          </a>
+          <a href="https://github.com/Ryn-Bghl" target="_blank" rel="noopener noreferrer" class="btn-brutalist-outline">
+            &lt;/&gt; GitHub Profile
+          </a>
+        </div>
+      </section>
+
+      <!-- Featured Image Frame -->
+      <div class="project-media-frame">
+        <img
+          src="../../assets/chuckys_website.png"
+          alt="Screenshot of Chucky's Website application interface" />
+        <div class="project-media-footer">
+          <span>FIG 01. Live deployment on Alwaysdata Linux server</span>
+          <span>STATUS: Live / Academic Demo</span>
+        </div>
+      </div>
+
+      <!-- Metadata Specs Grid -->
+      <div class="project-meta-grid">
+        <div class="project-meta-item">
+          <span class="project-meta-label">Context</span>
+          <span class="project-meta-value">Academic Lab / Web & Infrastructure</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Role</span>
+          <span class="project-meta-value">Web Developer & Server Administrator</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Core Tech Stack</span>
+          <span class="project-meta-value">HTML5, CSS3, JavaScript, Alwaysdata Linux</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Infrastructure</span>
+          <span class="project-meta-value">FTP, SSH, Apache/Nginx Web Server</span>
+        </div>
+      </div>
+
+      <!-- Section 01: Overview & Objectives -->
+      <section class="project-block">
+        <h2><span class="section-num">01</span> Project Overview & Academic Goals</h2>
+        <p>
+          In modern web development, writing code is only half the battle — understanding how applications are
+          served, configured, and maintained on live remote servers is a fundamental discipline.
+        </p>
+        <p>
+          This project was conceived as an end-to-end practical exercise in remote systems administration and vanilla
+          web development. The goal was to build a complete interactive website themed around the classic horror franchise
+          and manage its lifecycle on an <strong>Alwaysdata Linux server instance</strong>.
+        </p>
+      </section>
+
+      <!-- Section 02: Systems & Server Architecture -->
+      <section class="project-block">
+        <h2><span class="section-num">02</span> Server Administration & Deployment Pipeline</h2>
+        <p>
+          The core learning outcome of this project was mastering server communication protocols and directory permissions:
+        </p>
+
+        <div class="process-grid">
+          <div class="process-step-card">
+            <div class="process-step-header">
+              <span class="process-step-num">STEP 01</span>
+              <span>Alwaysdata Setup</span>
+            </div>
+            <h3>Environment Provisioning</h3>
+            <p>
+              Configured a remote Linux hosting space on Alwaysdata, establishing subdomains and mapping web root directories.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-header">
+              <span class="process-step-num">STEP 02</span>
+              <span>Security & Access</span>
+            </div>
+            <h3>SSH Key Authentication</h3>
+            <p>
+              Generated RSA key pairs to enable secure passwordless terminal access to remote files and directory management.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-header">
+              <span class="process-step-num">STEP 03</span>
+              <span>File Transfer</span>
+            </div>
+            <h3>FTP / SFTP Workflows</h3>
+            <p>
+              Managed automated asset synchronization and staging deployments using FileZilla and terminal SFTP clients.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-header">
+              <span class="process-step-num">STEP 04</span>
+              <span>Diagnostics</span>
+            </div>
+            <h3>HTTP Headers & Permissions</h3>
+            <p>
+              Verified chmod file permissions (755 / 644), analyzed Apache server response headers, and debugged 404/500 routing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 03: Code Architecture -->
+      <section class="project-block">
+        <h2><span class="section-num">03</span> Zero-Dependency Frontend Architecture</h2>
+        <p>
+          The frontend was intentionally engineered without frameworks or third-party build tools to maximize raw performance
+          and demonstrate mastery of fundamental web standards:
+        </p>
+
+        <div class="code-preview-box">
+// Server Deployment & Tech Specifications
+Hosting Platform:  Alwaysdata Linux Cloud Instance
+Protocols:         SSHv2 (Encrypted Shell), SFTP / FTP Over TLS
+Markup / Layout:   Semantic HTML5 + CSS3 Flexbox & Grid
+Scripting:         Native JavaScript (ES6 Modules, DOM Events)
+Asset Optimization: Lossless image compression & minimal HTTP requests
+Browser Support:   Chrome, Firefox, Safari, Edge (Evergreen & Legacy)</div>
+      </section>
+
+      <!-- Section 04: Key Highlights -->
+      <section class="project-block">
+        <h2><span class="section-num">04</span> Key Takeaways & Competencies</h2>
+        <ul class="brutalist-feature-list">
+          <li class="brutalist-feature-item">
+            <strong>Full Linux Server Lifecycle</strong>
+            Hands-on expertise configuring web roots, virtual hosts, and DNS records on remote servers.
+          </li>
+          <li class="brutalist-feature-item">
+            <strong>Secure Shell (SSH) Proficiency</strong>
+            Comfortable with terminal navigation, file manipulation, and key-based authentication.
+          </li>
+          <li class="brutalist-feature-item">
+            <strong>Lightweight Vanilla Performance</strong>
+            Zero build steps, blazing fast page loads, and zero JavaScript runtime bloat.
+          </li>
+          <li class="brutalist-feature-item">
+            <strong>Multi-Device Responsive Design</strong>
+            Pixel-perfect rendering across mobile phones, tablets, and desktop resolutions.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 05: Tech Stack Pills -->
+      <section class="project-block">
+        <h2><span class="section-num">05</span> Technologies Used</h2>
+        <ul class="tech-pill-list">
+          <li class="tech-pill">HTML5</li>
+          <li class="tech-pill">CSS3</li>
+          <li class="tech-pill">JavaScript (Vanilla)</li>
+          <li class="tech-pill">Alwaysdata Linux Hosting</li>
+          <li class="tech-pill">SSH</li>
+          <li class="tech-pill">FTP / SFTP</li>
+          <li class="tech-pill">FileZilla</li>
+          <li class="tech-pill">Terminal / Bash</li>
+        </ul>
+      </section>
+
+      <!-- Project Pagination Bottom Navigation -->
+      <nav class="project-pagination-nav">
+        <a href="dons-du-son.html" class="pagination-btn pagination-prev">
+          ← Previous: Dons du Son
+        </a>
+        <a href="../index.html#projects" class="pagination-btn pagination-center">
+          [ View All Projects ]
+        </a>
+        <a href="upec-landing-page.html" class="pagination-btn pagination-next">
+          Next: IUT Landing Page →
+        </a>
+      </nav>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Rayan BOUGHALIA. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,24 +14,31 @@
     <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon" />
     <script src="../js/project.js" defer></script>
 
-    <title>BattleShip-Algo — Project Case Study</title>
+    <title>BattleShip-Algo — Étude de Cas</title>
     <meta
       name="description"
-      content="Algorithmic exploration and web simulator for Battleship game grid generation, probabilistic search heuristics, and targeting algorithms." />
+      content="Exploration algorithmique et simulateur web pour le jeu de Bataille Navale : génération de grille, heuristiques de recherche probabiliste et ciblage optimal." />
   </head>
 
   <body class="project-page">
     <header>
       <nav>
         <ul>
-          <li><a href="../index.html#home">Home</a></li>
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#home">Accueil</a></li>
+          <li><a href="../index.html#about">À propos</a></li>
+          <li><a href="../index.html#projects">Projets</a></li>
           <li><a href="../index.html#contact">Contact</a></li>
         </ul>
         <ul>
           <li>
-            <p>Please right click ! &lt;3</p>
+            <div class="lang-switcher">
+              <a href="./battleship-algo.html" class="lang-active">FR</a>
+              <span class="lang-sep">|</span>
+              <a href="../en/projects/battleship-algo.html">EN</a>
+            </div>
+          </li>
+          <li>
+            <p>Faites un clic droit ! &lt;3</p>
           </li>
         </ul>
       </nav>
@@ -43,34 +50,34 @@
         <div class="project-breadcrumbs">
           <a href="../index.html#home">Rayan Boughalia</a>
           <span>/</span>
-          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#projects">Projets</a>
           <span>/</span>
           <span>BattleShip-Algo</span>
         </div>
-        <a href="../index.html#projects" class="btn-back">← Back to all projects</a>
+        <a href="../index.html#projects" class="btn-back">← Retour aux projets</a>
       </div>
 
       <!-- Hero Header -->
       <section class="project-hero">
         <div class="project-hero-badge-row">
-          <span class="badge-tag">Algorithm & Game Dev</span>
-          <span class="badge-tag-outline">AI Heuristics & Search Simulation</span>
-          <span class="badge-tag-outline">Personal Research</span>
+          <span class="badge-tag">Algorithmique & Jeu</span>
+          <span class="badge-tag-outline">Heuristiques IA & Simulation</span>
+          <span class="badge-tag-outline">Recherche Personnelle</span>
         </div>
 
         <h1>BattleShip-Algo</h1>
 
         <p class="project-hero-summary">
-          An algorithmic game engine and interactive web simulator designed to explore ship placement algorithms,
-          probabilistic targeting heuristics, and optimal search strategies for the classic game of Battleship.
+          Un moteur de jeu algorithmique et un simulateur web interactif conçus pour analyser les stratégies
+          de placement de navires, le ciblage probabiliste et les heuristiques d'optimisation pour la Bataille Navale classique.
         </p>
 
         <div class="project-hero-actions">
           <a href="https://github.com/Ryn-Bghl/BattleShip-Algo" target="_blank" rel="noopener noreferrer" class="btn-brutalist-main">
-            &lt;/&gt; GitHub Repository & Source
+            &lt;/&gt; Dépôt GitHub & Source
           </a>
           <a href="../index.html#projects" class="btn-brutalist-outline">
-            ← Back to Projects
+            ← Retour aux projets
           </a>
         </div>
       </section>
@@ -79,100 +86,97 @@
       <div class="project-media-frame">
         <img
           src="../assets/Capture%20d'%C3%A9cran%202025-06-15%20185725.png"
-          alt="Screenshot of BattleShip-Algo game simulator" />
+          alt="Capture d'écran du simulateur de jeu BattleShip-Algo" />
         <div class="project-media-footer">
-          <span>FIG 01. Algorithm grid simulation and target tracking interface</span>
-          <span>STATUS: Open Source Project</span>
+          <span>FIG 01. Grille de simulation algorithmique et suivi de cibles</span>
+          <span>STATUT : Projet Open Source</span>
         </div>
       </div>
 
       <!-- Metadata Specs Grid -->
       <div class="project-meta-grid">
         <div class="project-meta-item">
-          <span class="project-meta-label">Domain</span>
-          <span class="project-meta-value">Algorithms & Game Heuristics</span>
+          <span class="project-meta-label">Domaine</span>
+          <span class="project-meta-value">Algorithmes & Théorie des Jeux</span>
         </div>
         <div class="project-meta-item">
-          <span class="project-meta-label">Role</span>
-          <span class="project-meta-value">Algorithm Engineer & Developer</span>
+          <span class="project-meta-label">Rôle</span>
+          <span class="project-meta-value">Développeur & Concepteur d'Algorithmes</span>
         </div>
         <div class="project-meta-item">
-          <span class="project-meta-label">Key Algorithms</span>
-          <span class="project-meta-value">Probability Density Mapping & Grid Heuristics</span>
+          <span class="project-meta-label">Algorithmes Clés</span>
+          <span class="project-meta-value">Cartographie de Densité & Heuristique de Parité</span>
         </div>
         <div class="project-meta-item">
-          <span class="project-meta-label">Tech Stack</span>
+          <span class="project-meta-label">Stack Technique</span>
           <span class="project-meta-value">JavaScript (ES6+), HTML5 Canvas/DOM, CSS3</span>
         </div>
       </div>
 
       <!-- Section 01: Overview -->
       <section class="project-block">
-        <h2><span class="section-num">01</span> Project Overview & Objectives</h2>
+        <h2><span class="section-num">01</span> Présentation du Projet & Objectifs</h2>
         <p>
-          Battleship is traditionally seen as a guessing game, but under the hood, mathematically optimal targeting
-          can be achieved through probability density matrices and parity search heuristics.
+          La Bataille Navale est souvent perçue comme un simple jeu de hasard, mais mathématiquement,
+          une stratégie de tir quasi-optimale peut être atteinte grâce à des matrices de densité de probabilité
+          et des heuristiques de balayage par parité.
         </p>
         <p>
-          I developed <strong>BattleShip-Algo</strong> to test and benchmark various placement and search algorithms
-          against randomized and strategic defensive boards, visualizing how AI agents evaluate probabilities across
-          10x10 grids in real-time.
+          J'ai développé <strong>BattleShip-Algo</strong> pour tester et comparer différents algorithmes de placement
+          et de recherche face à des plateaux adverses aléatoires ou défensifs, en visualisant en temps réel
+          l'évaluation des probabilités sur une grille 10x10.
         </p>
       </section>
 
       <!-- Section 02: Methodology & Algorithm Design -->
       <section class="project-block">
-        <h2><span class="section-num">02</span> Algorithm Design & Process</h2>
+        <h2><span class="section-num">02</span> Conception Algorithmique & Étapes</h2>
         <p>
-          The simulation was built by modeling the mathematical states of the board at each turn:
+          La simulation a été élaborée en modélisant les états mathématiques de la grille à chaque tour de tir :
         </p>
 
         <div class="process-grid">
           <div class="process-step-card">
             <div class="process-step-header">
-              <span class="process-step-num">STAGE 01</span>
-              <span>Grid Matrix</span>
+              <span class="process-step-num">PHASE 01</span>
+              <span>Matrice</span>
             </div>
-            <h3>Collision-Free Grid Generation</h3>
+            <h3>Génération Sans Collision</h3>
             <p>
-              Engineered pseudo-random ship placement algorithms enforcing boundary checks, orientation variance,
-              and distance constraints.
+              Placement pseudo-aléatoire des bateaux avec validation des bordures de grille, orientations et contraintes de distance.
             </p>
           </div>
 
           <div class="process-step-card">
             <div class="process-step-header">
-              <span class="process-step-num">STAGE 02</span>
-              <span>Hunt Phase</span>
+              <span class="process-step-num">PHASE 02</span>
+              <span>Phase de Chasse</span>
             </div>
-            <h3>Parity & Checkerboard Search</h3>
+            <h3>Recherche en Damier (Parité)</h3>
             <p>
-              Implemented parity-based coordinate scanning (firing only on alternating diagonal cells) to guarantee
-              finding the smallest remaining ship with minimum shots.
+              Balayage en damier (tirs sur cases diagonales alternées) assurant de toucher le plus petit navire restant avec un minimum de coups.
             </p>
           </div>
 
           <div class="process-step-card">
             <div class="process-step-header">
-              <span class="process-step-num">STAGE 03</span>
-              <span>Target Phase</span>
+              <span class="process-step-num">PHASE 03</span>
+              <span>Phase de Ciblage</span>
             </div>
-            <h3>Directional Probability Heuristic</h3>
+            <h3>Heuristique Directionnelle</h3>
             <p>
-              Once a hit is registered, the algorithm switches to a directional target mode, prioritizing collinear
-              adjacent cells until the ship is fully sunk.
+              Dès qu'une cible est touchée, passage immédiat en mode ciblage directionnel colinéaire jusqu'à couler le navire visé.
             </p>
           </div>
 
           <div class="process-step-card">
             <div class="process-step-header">
-              <span class="process-step-num">STAGE 04</span>
-              <span>Visualization</span>
+              <span class="process-step-num">PHASE 04</span>
+              <span>Visualisation</span>
             </div>
-            <h3>Interactive Web Dashboard</h3>
+            <h3>Tableau de Bord Interactif</h3>
             <p>
-              Built a responsive UI that displays real-time hit/miss rates, total moves taken, and probability density
-              overlays across the board.
+              Interface web responsive affichant en direct les taux de touches/tirs manqués, le nombre de coups et la carte thermique des probabilités.
             </p>
           </div>
         </div>
@@ -180,46 +184,46 @@
 
       <!-- Section 03: Code & Logic -->
       <section class="project-block">
-        <h2><span class="section-num">03</span> Mathematical Strategy Breakdown</h2>
+        <h2><span class="section-num">03</span> Décomposition de la Logique Heuristique</h2>
         <div class="code-preview-box">
-// Core Heuristic Workflow:
-1. Hunt Mode:   Calculate probability density map of all surviving ship permutations.
-2. Filter:      Eliminate impossible orientations based on previous misses and board edges.
-3. Fire:        Target coordinate with highest statistical density (Parity Optimized).
-4. Target Mode: On hit, immediately queue adjacent orthogonals (North, East, South, West).
-5. Repeat until all 5 ships (Carrier, Battleship, Cruiser, Submarine, Destroyer) are eliminated.</div>
+// Déroulement de l'Heuristique Principale :
+1. Mode Chasse :  Calcul de la carte de densité pour toutes les permutations valides restantes.
+2. Filtrage :     Élimination des configurations impossibles (tirs manqués et bordures).
+3. Tir :          Ciblage de la coordonnée ayant la probabilité statistique maximale (Optimisation Parité).
+4. Mode Cible :   En cas de touche, mise en file d'attente des cases adjacentes (Nord, Est, Sud, Ouest).
+5. Répétition jusqu'à destruction des 5 navires (Porte-avions, Croiseur, Destroyer, Sous-marin, Torpilleur).</div>
       </section>
 
       <!-- Section 04: Key Features -->
       <section class="project-block">
-        <h2><span class="section-num">04</span> Key Features & Highlights</h2>
+        <h2><span class="section-num">04</span> Fonctionnalités & Points Clés</h2>
         <ul class="brutalist-feature-list">
           <li class="brutalist-feature-item">
-            <strong>Heuristic AI Targeting</strong>
-            Significantly reduces average shot count needed to win compared to random sampling.
+            <strong>Ciblage par IA Heuristique</strong>
+            Réduit drastiquement le nombre moyen de tirs nécessaires pour remporter la partie comparé à un tir aléatoire.
           </li>
           <li class="brutalist-feature-item">
-            <strong>Dynamic Probability Density Calculation</strong>
-            Recalculates likelihood heatmaps across all remaining valid configurations every turn.
+            <strong>Calcul Dynamique de Densité</strong>
+            Recalcule à chaque tir la probabilité de présence de chaque navire restant sur chaque case.
           </li>
           <li class="brutalist-feature-item">
-            <strong>Clean Interactive Interface</strong>
-            Allows real-time visual inspection of the algorithm's decision-making process.
+            <strong>Interface Visuelle Interactive</strong>
+            Permet d'observer en temps réel le raisonnement et les décisions de l'algorithme.
           </li>
           <li class="brutalist-feature-item">
-            <strong>Lightweight Vanilla Architecture</strong>
-            Fast execution in any web browser without third-party frameworks.
+            <strong>Exécution Web Ultra-Rapide</strong>
+            Exécution native dans le navigateur avec des performances instantanées.
           </li>
         </ul>
       </section>
 
       <!-- Tech Stack Tags -->
       <section class="project-block">
-        <h2><span class="section-num">05</span> Technologies Used</h2>
+        <h2><span class="section-num">05</span> Technologies Utilisées</h2>
         <ul class="tech-pill-list">
           <li class="tech-pill">JavaScript (ES6+)</li>
-          <li class="tech-pill">Data Structures & Algorithms</li>
-          <li class="tech-pill">Probability Density Mapping</li>
+          <li class="tech-pill">Structures de Données & Algorithmes</li>
+          <li class="tech-pill">Cartographie de Probabilité</li>
           <li class="tech-pill">HTML5 & CSS3</li>
           <li class="tech-pill">Git & GitHub</li>
         </ul>
@@ -228,19 +232,19 @@
       <!-- Project Pagination Bottom Navigation -->
       <nav class="project-pagination-nav">
         <a href="brutalist-portfolio.html" class="pagination-btn pagination-prev">
-          ← Previous: Brutalist Portfolio
+          ← Précédent : Portfolio Brutaliste
         </a>
         <a href="../index.html#projects" class="pagination-btn pagination-center">
-          [ View All Projects ]
+          [ Voir tous les projets ]
         </a>
         <a href="dons-du-son.html" class="pagination-btn pagination-next">
-          Next: Dons du Son →
+          Suivant : Dons du Son →
         </a>
       </nav>
     </main>
 
     <footer>
-      <p>&copy; 2025 Rayan BOUGHALIA. All rights reserved.</p>
+      <p>&copy; 2025 Rayan BOUGHALIA. Tous droits réservés.</p>
     </footer>
   </body>
 </html>

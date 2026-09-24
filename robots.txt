@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://rayan-boughalia.netlify.app/sitemap.xml

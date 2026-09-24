@@ -1,6 +1,23 @@
 document.getElementById("form").addEventListener("submit", async function (e) {
     e.preventDefault();
 
+    const isFr = (document.documentElement.lang || "fr").startsWith("fr");
+    const msgs = isFr ? {
+        captchaErr: "Veuillez valider le captcha.",
+        sending: "Envoi en cours...",
+        successTitle: "Message envoyé",
+        successMsg: "Votre message a bien été envoyé ! Je vous répondrai dans les plus brefs délais.",
+        errTitle: "Erreur",
+        errMsg: "Une erreur est survenue lors de l'envoi. Veuillez réessayer."
+    } : {
+        captchaErr: "Please fill out captcha field",
+        sending: "Sending...",
+        successTitle: "Success",
+        successMsg: "Your message has been sent successfully!",
+        errTitle: "Error",
+        errMsg: "An error occurred. Please try again."
+    };
+
     const formData = new FormData(this);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -9,13 +26,14 @@ document.getElementById("form").addEventListener("submit", async function (e) {
     const originalText = submitButton.textContent;
 
     try {
-        if (!document.querySelector("textarea[name=h-captcha-response]").value) {
+        const captchaField = document.querySelector("textarea[name=h-captcha-response]");
+        if (!captchaField || !captchaField.value) {
             e.preventDefault();
-            openPopup("Error", "Please fill out captcha field");
+            openPopup(msgs.errTitle, msgs.captchaErr);
             return;
         }
 
-        submitButton.textContent = "Sending...";
+        submitButton.textContent = msgs.sending;
         submitButton.disabled = true;
 
         const response = await fetch("https://api.web3forms.com/submit", {
@@ -29,14 +47,14 @@ document.getElementById("form").addEventListener("submit", async function (e) {
         if (response.ok) {
             const json = await response.json();
             console.log(json);
-            openPopup("Success", "Your message has been sent successfully!");
+            openPopup(msgs.successTitle, msgs.successMsg);
             location.reload();
         } else {
             console.error("Error:", response.statusText);
-            openPopup("Error", "An error occurred. Please try again.");
+            openPopup(msgs.errTitle, msgs.errMsg);
         }
     } catch (error) {
-        openPopup("Error", "An error occurred. Please try again.");
+        openPopup(msgs.errTitle, msgs.errMsg);
         console.error("Error:", error);
     } finally {
         submitButton.textContent = originalText;

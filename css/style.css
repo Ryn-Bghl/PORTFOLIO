@@ -133,6 +133,43 @@ header ul {
     gap: 1rem;
 }
 
+.lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--ff-body);
+    font-size: var(--fz-body);
+    font-weight: 700;
+    border: 1px solid var(--fg-black);
+    padding: 0.15rem 0.45rem;
+    background-color: var(--bg-white);
+    letter-spacing: 0.05em;
+}
+
+.lang-switcher a {
+    text-decoration: none;
+    color: var(--fg-black);
+    padding: 0.1rem 0.25rem;
+    font-size: 0.85rem;
+}
+
+.lang-switcher a:hover {
+    background-color: var(--fg-black);
+    color: var(--bg-white);
+    text-decoration: none;
+}
+
+.lang-switcher a.lang-active {
+    background-color: var(--fg-black);
+    color: var(--bg-white);
+}
+
+.lang-switcher .lang-sep {
+    font-weight: 400;
+    color: var(--fg-black);
+    user-select: none;
+}
+
 header li {
     list-style: none;
 }

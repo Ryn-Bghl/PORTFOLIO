@@ -1,27 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- French (Default) Pages -->
   <url>
-    <loc>https://rayan-boughalia.com/index.html</loc>
+    <loc>https://rayan-boughalia.netlify.app/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rayan-boughalia.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rayan-boughalia.netlify.app/en/"/>
     <lastmod>2026-09-24</lastmod>
   </url>
   <url>
-    <loc>https://rayan-boughalia.com/projects/dons-du-son.html</loc>
+    <loc>https://rayan-boughalia.netlify.app/projects/dons-du-son.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rayan-boughalia.netlify.app/projects/dons-du-son.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rayan-boughalia.netlify.app/en/projects/dons-du-son.html"/>
     <lastmod>2026-09-24</lastmod>
   </url>
   <url>
-    <loc>https://rayan-boughalia.com/projects/chuckys-website.html</loc>
+    <loc>https://rayan-boughalia.netlify.app/projects/chuckys-website.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rayan-boughalia.netlify.app/projects/chuckys-website.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rayan-boughalia.netlify.app/en/projects/chuckys-website.html"/>
     <lastmod>2026-09-24</lastmod>
   </url>
   <url>
-    <loc>https://rayan-boughalia.com/projects/upec-landing-page.html</loc>
+    <loc>https://rayan-boughalia.netlify.app/projects/upec-landing-page.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rayan-boughalia.netlify.app/projects/upec-landing-page.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rayan-boughalia.netlify.app/en/projects/upec-landing-page.html"/>
     <lastmod>2026-09-24</lastmod>
   </url>
   <url>
-    <loc>https://rayan-boughalia.com/projects/brutalist-portfolio.html</loc>
+    <loc>https://rayan-boughalia.netlify.app/projects/brutalist-portfolio.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rayan-boughalia.netlify.app/projects/brutalist-portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rayan-boughalia.netlify.app/en/projects/brutalist-portfolio.html"/>
     <lastmod>2026-09-24</lastmod>
   </url>
   <url>
-    <loc>https://rayan-boughalia.com/pages/success.html</loc>
-    <lastmod>2025-10-25</lastmod>
+    <loc>https://rayan-boughalia.netlify.app/projects/battleship-algo.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rayan-boughalia.netlify.app/projects/battleship-algo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rayan-boughalia.netlify.app/en/projects/battleship-algo.html"/>
+    <lastmod>2026-09-24</lastmod>
+  </url>
+
+  <!-- English Pages -->
+  <url>
+    <loc>https://rayan-boughalia.netlify.app/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rayan-boughalia.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rayan-boughalia.netlify.app/en/"/>
+    <lastmod>2026-09-24</lastmod>
+  </url>
+  <url>
+    <loc>https://rayan-boughalia.netlify.app/en/projects/dons-du-son.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rayan-boughalia.netlify.app/projects/dons-du-son.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rayan-boughalia.netlify.app/en/projects/dons-du-son.html"/>
+    <lastmod>2026-09-24</lastmod>
+  </url>
+  <url>
+    <loc>https://rayan-boughalia.netlify.app/en/projects/chuckys-website.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rayan-boughalia.netlify.app/projects/chuckys-website.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rayan-boughalia.netlify.app/en/projects/chuckys-website.html"/>
+    <lastmod>2026-09-24</lastmod>
+  </url>
+  <url>
+    <loc>https://rayan-boughalia.netlify.app/en/projects/upec-landing-page.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rayan-boughalia.netlify.app/projects/upec-landing-page.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rayan-boughalia.netlify.app/en/projects/upec-landing-page.html"/>
+    <lastmod>2026-09-24</lastmod>
+  </url>
+  <url>
+    <loc>https://rayan-boughalia.netlify.app/en/projects/brutalist-portfolio.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rayan-boughalia.netlify.app/projects/brutalist-portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rayan-boughalia.netlify.app/en/projects/brutalist-portfolio.html"/>
+    <lastmod>2026-09-24</lastmod>
+  </url>
+  <url>
+    <loc>https://rayan-boughalia.netlify.app/en/projects/battleship-algo.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rayan-boughalia.netlify.app/projects/battleship-algo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rayan-boughalia.netlify.app/en/projects/battleship-algo.html"/>
+    <lastmod>2026-09-24</lastmod>
   </url>
 </urlset>

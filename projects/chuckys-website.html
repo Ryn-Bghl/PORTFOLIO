@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,24 +14,31 @@
     <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon" />
     <script src="../js/project.js" defer></script>
 
-    <title>Chucky's Website — Project Case Study</title>
+    <title>Chucky's Website — Étude de Cas</title>
     <meta
       name="description"
-      content="Technical breakdown of Chucky's Website, exploring Linux server administration, SSH/FTP deployment on Alwaysdata, and native HTML/CSS/JS architecture." />
+      content="Analyse technique de Chucky's Website : administration de serveur Linux, déploiement SSH/FTP sur Alwaysdata et architecture native HTML/CSS/JS." />
   </head>
 
   <body class="project-page">
     <header>
       <nav>
         <ul>
-          <li><a href="../index.html#home">Home</a></li>
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#home">Accueil</a></li>
+          <li><a href="../index.html#about">À propos</a></li>
+          <li><a href="../index.html#projects">Projets</a></li>
           <li><a href="../index.html#contact">Contact</a></li>
         </ul>
         <ul>
           <li>
-            <p>Please right click ! &lt;3</p>
+            <div class="lang-switcher">
+              <a href="./chuckys-website.html" class="lang-active">FR</a>
+              <span class="lang-sep">|</span>
+              <a href="../en/projects/chuckys-website.html">EN</a>
+            </div>
+          </li>
+          <li>
+            <p>Faites un clic droit ! &lt;3</p>
           </li>
         </ul>
       </nav>
@@ -43,35 +50,35 @@
         <div class="project-breadcrumbs">
           <a href="../index.html#home">Rayan Boughalia</a>
           <span>/</span>
-          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#projects">Projets</a>
           <span>/</span>
           <span>Chucky's Website</span>
         </div>
-        <a href="../index.html#projects" class="btn-back">← Back to all projects</a>
+        <a href="../index.html#projects" class="btn-back">← Retour aux projets</a>
       </div>
 
       <!-- Hero Header -->
       <section class="project-hero">
         <div class="project-hero-badge-row">
-          <span class="badge-tag">Academic Project</span>
-          <span class="badge-tag-outline">Server Admin & Native Web</span>
+          <span class="badge-tag">Projet Académique</span>
+          <span class="badge-tag-outline">Admin Serveur & Web Natif</span>
           <span class="badge-tag-outline">BUT MMI UPEC</span>
         </div>
 
         <h1>Chucky's Website</h1>
 
         <p class="project-hero-summary">
-          A themed interactive web project exploring real-world server deployment, Linux hosting environments,
-          and secure SSH/FTP protocols on <strong>Alwaysdata</strong>. Built using native HTML5, CSS3, and JavaScript
-          with a focus on performance, responsive design, and systems administration.
+          Un projet web interactif et thématique explorant le déploiement sur serveur de production,
+          les environnements d'hébergement Linux et les protocoles sécurisés SSH/FTP sur <strong>Alwaysdata</strong>.
+          Conçu en HTML5, CSS3 et JavaScript natifs, avec un focus sur les performances, le design adaptatif et l'administration système.
         </p>
 
         <div class="project-hero-actions">
           <a href="https://boughalia.alwaysdata.net/TP_WEB" target="_blank" rel="noopener noreferrer" class="btn-brutalist-main">
-            ↗ Live Preview
+            ↗ Démo en ligne
           </a>
           <a href="https://github.com/Ryn-Bghl" target="_blank" rel="noopener noreferrer" class="btn-brutalist-outline">
-            &lt;/&gt; GitHub Profile
+            &lt;/&gt; Profil GitHub
           </a>
         </div>
       </section>
@@ -80,174 +87,172 @@
       <div class="project-media-frame">
         <img
           src="../assets/chuckys_website.png"
-          alt="Screenshot of Chucky's Website application interface" />
+          alt="Capture d'écran de l'application Chucky's Website" />
         <div class="project-media-footer">
-          <span>FIG 01. Live deployment on Alwaysdata Linux server</span>
-          <span>STATUS: Live / Academic Demo</span>
+          <span>FIG 01. Déploiement en ligne sur serveur Linux Alwaysdata</span>
+          <span>STATUT : Démo académique en ligne</span>
         </div>
       </div>
 
       <!-- Metadata Specs Grid -->
       <div class="project-meta-grid">
         <div class="project-meta-item">
-          <span class="project-meta-label">Context</span>
-          <span class="project-meta-value">Academic Lab / Web & Infrastructure</span>
+          <span class="project-meta-label">Contexte</span>
+          <span class="project-meta-value">TP Universitaire / Web & Infrastructure</span>
         </div>
         <div class="project-meta-item">
-          <span class="project-meta-label">Role</span>
-          <span class="project-meta-value">Web Developer & Server Administrator</span>
+          <span class="project-meta-label">Rôle</span>
+          <span class="project-meta-value">Développeur Web & Administrateur Serveur</span>
         </div>
         <div class="project-meta-item">
-          <span class="project-meta-label">Hosting & Protocols</span>
-          <span class="project-meta-value">Alwaysdata (Linux), SSH, SFTP/FTP</span>
+          <span class="project-meta-label">Stack Technique</span>
+          <span class="project-meta-value">HTML5, CSS3, JavaScript, Alwaysdata Linux</span>
         </div>
         <div class="project-meta-item">
-          <span class="project-meta-label">Stack</span>
-          <span class="project-meta-value">HTML5, CSS3, Vanilla JS (Zero Dependencies)</span>
+          <span class="project-meta-label">Infrastructure</span>
+          <span class="project-meta-value">FTP, SSH, Serveur Web Apache/Nginx</span>
         </div>
       </div>
 
-      <!-- Section 01: Overview & Goals -->
+      <!-- Section 01: Overview & Objectives -->
       <section class="project-block">
-        <h2><span class="section-num">01</span> Project Overview & Academic Goals</h2>
+        <h2><span class="section-num">01</span> Présentation du Projet & Objectifs Pédagogiques</h2>
         <p>
-          This project was developed as part of the BUT MMI curriculum to master full-lifecycle web deployment
-          beyond local development sandboxes. The primary objective was not only creating an immersive themed
-          web interface celebrating the iconic "Chucky" universe, but mastering remote Linux server infrastructure,
-          secure key generation, command line access, and multi-environment file management.
+          Dans le développement web moderne, coder ne suffit pas : comprendre la façon dont les applications
+          sont hébergées, configurées et maintenues sur des serveurs distants est une compétence essentielle.
+        </p>
+        <p>
+          Ce projet a été conçu comme un travail pratique complet d'administration de systèmes distants et de
+          développement web pur. L'objectif était de construire un site interactif autour de la franchise d'horreur culte
+          et d'en piloter tout le cycle de vie sur une <strong>instance Linux Alwaysdata</strong>.
         </p>
       </section>
 
       <!-- Section 02: Systems & Server Architecture -->
       <section class="project-block">
-        <h2><span class="section-num">02</span> The Process & Systems Administration</h2>
+        <h2><span class="section-num">02</span> Administration Serveur & Chaîne de Déploiement</h2>
         <p>
-          Rather than relying on automated black-box deployment systems, this lab required hands-on configuration
-          of network protocols and server permissions:
+          L'apprentissage clé de ce projet a reposé sur la maîtrise des protocoles réseau et de la gestion des droits de fichiers :
         </p>
 
         <div class="process-grid">
           <div class="process-step-card">
             <div class="process-step-header">
-              <span class="process-step-num">STEP 01</span>
-              <span>Authentication</span>
+              <span class="process-step-num">ÉTAPE 01</span>
+              <span>Alwaysdata</span>
             </div>
-            <h3>SSH Key Pair Generation</h3>
+            <h3>Provisionnement d'Environnement</h3>
             <p>
-              Generated RSA/Ed25519 cryptographic key pairs, configured public keys on the Alwaysdata server host,
-              and established passwordless terminal sessions.
+              Configuration d'un espace d'hébergement Linux sur Alwaysdata, création de sous-domaines et pointage des répertoires racine web.
             </p>
           </div>
 
           <div class="process-step-card">
             <div class="process-step-header">
-              <span class="process-step-num">STEP 02</span>
-              <span>Protocols</span>
+              <span class="process-step-num">ÉTAPE 02</span>
+              <span>Sécurité & Accès</span>
             </div>
-            <h3>FTP / SFTP Setup</h3>
+            <h3>Authentification par Clés SSH</h3>
             <p>
-              Configured secure FTP user accounts, directory permissions (`chmod`/`chown`), and synchronization pipelines
-              for efficient file deployment and remote file tree management.
+              Génération de paires de clés RSA pour un accès terminal distant sécurisé et sans mot de passe.
             </p>
           </div>
 
           <div class="process-step-card">
             <div class="process-step-header">
-              <span class="process-step-num">STEP 03</span>
-              <span>Frontend</span>
+              <span class="process-step-num">ÉTAPE 03</span>
+              <span>Transfert de Fichiers</span>
             </div>
-            <h3>Native Web Coding</h3>
+            <h3>Workflows FTP / SFTP</h3>
             <p>
-              Crafted semantic HTML5 markup, structured responsive CSS stylesheets with fluid breakpoints,
-              and added lightweight JavaScript for DOM interactivity.
+              Synchronisation des assets et gestion des mises en production via FileZilla et commandes SFTP en terminal.
             </p>
           </div>
 
           <div class="process-step-card">
             <div class="process-step-header">
-              <span class="process-step-num">STEP 04</span>
-              <span>Audit & QA</span>
+              <span class="process-step-num">ÉTAPE 04</span>
+              <span>Diagnostics</span>
             </div>
-            <h3>Cross-Device Verification</h3>
+            <h3>En-têtes HTTP & Permissions</h3>
             <p>
-              Tested server response headers, caching configurations, and visual fidelity across mobile, tablet,
-              and desktop viewports.
+              Gestion des permissions chmod (755 / 644), analyse des en-têtes de réponse Apache et résolution des erreurs 404/500.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Section 03: Technical Architecture -->
+      <!-- Section 03: Code Architecture -->
       <section class="project-block">
-        <h2><span class="section-num">03</span> Technical Architecture & Server Workflows</h2>
+        <h2><span class="section-num">03</span> Architecture Frontend Sans Dépendance</h2>
         <p>
-          Building without bloated frameworks allowed for a deep appreciation of standard browser mechanics and
-          server response lifecycles.
+          L'interface a été délibérément conçue sans framework ni bundler tiers pour garantir des performances brutes maximales :
         </p>
 
         <div class="code-preview-box">
-// Server & Deployment Specifications
-Hosting Server: Alwaysdata Cloud Platform (Debian Linux Environment)
-Protocol:       SSH (Secure Shell) with Public Key Cryptography & SFTP
-Web Server:     Apache / NGINX with Custom .htaccess Routing Rules
-Directory:      /home/boughalia/www/TP_WEB/
-Frontend Stack: Vanilla HTML5 + CSS3 (Flexbox/Grid) + Vanilla ES6 JS</div>
+// Spécifications d'Hébergement & Technique
+Hébergeur :      Instance Cloud Linux Alwaysdata
+Protocoles :     SSHv2 (Shell Chiffré), SFTP / FTP sur TLS
+Structure :      HTML5 Sémantique + CSS3 Flexbox & Grid
+Scripts :        JavaScript ES6+ Natif (Gestionnaires d'Événements DOM)
+Optimisation :   Compression sans perte des images & réduction des requêtes HTTP
+Compatibilité :  Chrome, Firefox, Safari, Edge</div>
       </section>
 
-      <!-- Section 04: Key Features -->
+      <!-- Section 04: Key Highlights -->
       <section class="project-block">
-        <h2><span class="section-num">04</span> Key Takeaways & Learned Skills</h2>
+        <h2><span class="section-num">04</span> Compétences & Acquis Clés</h2>
         <ul class="brutalist-feature-list">
           <li class="brutalist-feature-item">
-            <strong>Server Infrastructure & SSH</strong>
-            Mastered remote command-line terminal navigation, SSH key management, and Linux directory security.
+            <strong>Gestion Complète de Serveur Linux</strong>
+            Expérience pratique de configuration d'hôtes virtuels, répertoires racines et DNS.
           </li>
           <li class="brutalist-feature-item">
-            <strong>FTP / SFTP File Pipelines</strong>
-            Gained hands-on experience synchronizing production assets and configuring server access controls.
+            <strong>Aisance avec le Terminal & SSH</strong>
+            Navigation fluide en ligne de commande et manipulation sécurisée des fichiers.
           </li>
           <li class="brutalist-feature-item">
-            <strong>Zero-Dependency Performance</strong>
-            Achieved near-instant page load speeds by leveraging lightweight native web standards.
+            <strong>Rapidité du Web Natif</strong>
+            Zéro étape de build, chargement immédiat et aucune dépendance superflue.
           </li>
           <li class="brutalist-feature-item">
-            <strong>Adaptive Responsive Design</strong>
-            Structured media queries providing a comfortable browsing experience on all screen dimensions.
+            <strong>Rendu Multi-Écrans Précis</strong>
+            Affichage soigné et fluide sur mobiles, tablettes et ordinateurs de bureau.
           </li>
         </ul>
       </section>
 
-      <!-- Tech Stack Tags -->
+      <!-- Section 05: Tech Stack Pills -->
       <section class="project-block">
-        <h2><span class="section-num">05</span> Technologies & Tools</h2>
+        <h2><span class="section-num">05</span> Technologies Utilisées</h2>
         <ul class="tech-pill-list">
           <li class="tech-pill">HTML5</li>
           <li class="tech-pill">CSS3</li>
           <li class="tech-pill">JavaScript (Vanilla)</li>
-          <li class="tech-pill">Alwaysdata</li>
+          <li class="tech-pill">Hébergement Linux Alwaysdata</li>
           <li class="tech-pill">SSH</li>
           <li class="tech-pill">FTP / SFTP</li>
-          <li class="tech-pill">Linux CLI</li>
-          <li class="tech-pill">Responsive Design</li>
+          <li class="tech-pill">FileZilla</li>
+          <li class="tech-pill">Terminal / Bash</li>
         </ul>
       </section>
 
       <!-- Project Pagination Bottom Navigation -->
       <nav class="project-pagination-nav">
         <a href="dons-du-son.html" class="pagination-btn pagination-prev">
-          ← Previous: Dons du Son
+          ← Précédent : Dons du Son
         </a>
         <a href="../index.html#projects" class="pagination-btn pagination-center">
-          [ View All Projects ]
+          [ Voir tous les projets ]
         </a>
         <a href="upec-landing-page.html" class="pagination-btn pagination-next">
-          Next: IUT Landing Page →
+          Suivant : Landing Page IUT →
         </a>
       </nav>
     </main>
 
     <footer>
-      <p>&copy; 2025 Rayan BOUGHALIA. All rights reserved.</p>
+      <p>&copy; 2025 Rayan BOUGHALIA. Tous droits réservés.</p>
     </footer>
   </body>
 </html>

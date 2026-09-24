@@ -5,14 +5,21 @@ document.addEventListener("contextmenu", (event) => {
         document.querySelector("#context_menu").remove();
     }
 
+    const isFr = (document.documentElement.lang || "fr").startsWith("fr");
+    const isEnSubdir = window.location.pathname.includes("/en/");
+    const basePath = isEnSubdir ? "../index.html" : "../index.html";
+    const labels = isFr
+        ? { home: "accueil", about: "à propos", projects: "tous les projets", contact: "contact" }
+        : { home: "home", about: "about", projects: "all projects", contact: "contact" };
+
     const contextMenu = document.createElement("div");
     contextMenu.innerHTML = `    
         <nav>
             <ul>
-                <li><button onclick="window.location.href='../index.html#home'">home</button></li>
-                <li><button onclick="window.location.href='../index.html#about'">about</button></li>
-                <li><button onclick="window.location.href='../index.html#projects'">all projects</button></li>
-                <li><button onclick="window.location.href='../index.html#contact'">contact</button></li>
+                <li><button onclick="window.location.href='${basePath}#home'">${labels.home}</button></li>
+                <li><button onclick="window.location.href='${basePath}#about'">${labels.about}</button></li>
+                <li><button onclick="window.location.href='${basePath}#projects'">${labels.projects}</button></li>
+                <li><button onclick="window.location.href='${basePath}#contact'">${labels.contact}</button></li>
             </ul>
         </nav>
     `;

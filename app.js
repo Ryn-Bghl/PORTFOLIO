@@ -5,14 +5,19 @@ document.addEventListener("contextmenu", (event) => {
         document.querySelector("#context_menu").remove();
     }
 
+    const isFr = (document.documentElement.lang || "fr").startsWith("fr");
+    const labels = isFr
+        ? { home: "accueil", about: "à propos", projects: "projets", contact: "contact" }
+        : { home: "home", about: "about", projects: "projects", contact: "contact" };
+
     const contextMenu = document.createElement("div");
     contextMenu.innerHTML = `    
         <nav>
             <ul>
-                <li><button id="context_home">home</button></li>
-                <li><button id="context_about">about</button></li>
-                <li><button id="context_projects">projects</button></li>
-                <li><button id="context_contact">contact</button></li>
+                <li><button id="context_home">${labels.home}</button></li>
+                <li><button id="context_about">${labels.about}</button></li>
+                <li><button id="context_projects">${labels.projects}</button></li>
+                <li><button id="context_contact">${labels.contact}</button></li>
             </ul>
         </nav>
     `;

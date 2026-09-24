@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,24 +14,31 @@
     <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon" />
     <script src="../js/project.js" defer></script>
 
-    <title>Association Dons du Son — Project Case Study</title>
+    <title>Association Dons du Son — Étude de Cas</title>
     <meta
       name="description"
-      content="In-depth case study of the Association Dons du Son web platform built with React, TypeScript, Tailwind CSS, and a bespoke Headless CMS." />
+      content="Étude de cas détaillée de la plateforme web de l'Association Dons du Son développée avec React, TypeScript, Tailwind CSS et un CMS Headless sur mesure." />
   </head>
 
   <body class="project-page">
     <header>
       <nav>
         <ul>
-          <li><a href="../index.html#home">Home</a></li>
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#home">Accueil</a></li>
+          <li><a href="../index.html#about">À propos</a></li>
+          <li><a href="../index.html#projects">Projets</a></li>
           <li><a href="../index.html#contact">Contact</a></li>
         </ul>
         <ul>
           <li>
-            <p>Please right click ! &lt;3</p>
+            <div class="lang-switcher">
+              <a href="./dons-du-son.html" class="lang-active">FR</a>
+              <span class="lang-sep">|</span>
+              <a href="../en/projects/dons-du-son.html">EN</a>
+            </div>
+          </li>
+          <li>
+            <p>Faites un clic droit ! &lt;3</p>
           </li>
         </ul>
       </nav>
@@ -43,36 +50,36 @@
         <div class="project-breadcrumbs">
           <a href="../index.html#home">Rayan Boughalia</a>
           <span>/</span>
-          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#projects">Projets</a>
           <span>/</span>
           <span>Dons du Son</span>
         </div>
-        <a href="../index.html#projects" class="btn-back">← Back to all projects</a>
+        <a href="../index.html#projects" class="btn-back">← Retour aux projets</a>
       </div>
 
       <!-- Hero Header -->
       <section class="project-hero">
         <div class="project-hero-badge-row">
-          <span class="badge-tag">Client Project</span>
-          <span class="badge-tag-outline">Web Platform & Headless CMS</span>
+          <span class="badge-tag">Projet Client</span>
+          <span class="badge-tag-outline">Plateforme Web & CMS Headless</span>
           <span class="badge-tag-outline">2024 – 2025</span>
         </div>
 
         <h1>Association Dons du Son</h1>
 
         <p class="project-hero-summary">
-          A modern, high-performance web platform built for the non-profit association
-          <strong>Dons du Son</strong>. Designed from the ground up to elevate their digital presence,
-          educate the public about auditory health, and empower non-technical team members with a bespoke
-          homemade Headless CMS for effortless updates.
+          Une plateforme web moderne et performante conçue pour l'association
+          <strong>Dons du Son</strong>. Pensée pour valoriser leur présence numérique,
+          sensibiliser le public à la santé auditive et offrir aux membres non techniques
+          un CMS Headless fait maison pour administrer le site en toute autonomie.
         </p>
 
         <div class="project-hero-actions">
           <a href="https://donsduson.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-brutalist-main">
-            ↗ Live Preview
+            ↗ Démo en ligne
           </a>
           <a href="https://github.com/Ryn-Bghl" target="_blank" rel="noopener noreferrer" class="btn-brutalist-outline">
-            &lt;/&gt; Source Code / Profile
+            &lt;/&gt; Code Source / Profil
           </a>
         </div>
       </section>
@@ -81,67 +88,66 @@
       <div class="project-media-frame">
         <img
           src="../assets/donsduson.png"
-          alt="Association Dons du Son website interface showcase" />
+          alt="Aperçu de l'interface du site de l'Association Dons du Son" />
         <div class="project-media-footer">
-          <span>FIG 01. Live interface of Dons du Son platform</span>
-          <span>STATUS: Live in Production</span>
+          <span>FIG 01. Interface en ligne de la plateforme Dons du Son</span>
+          <span>STATUT : En production</span>
         </div>
       </div>
 
       <!-- Metadata Specs Grid -->
       <div class="project-meta-grid">
         <div class="project-meta-item">
-          <span class="project-meta-label">Client / Organization</span>
+          <span class="project-meta-label">Client / Organisation</span>
           <span class="project-meta-value">Association Dons du Son</span>
         </div>
         <div class="project-meta-item">
-          <span class="project-meta-label">Role</span>
-          <span class="project-meta-value">Lead Full-Stack Developer & UI Designer</span>
+          <span class="project-meta-label">Rôle</span>
+          <span class="project-meta-value">Lead Développeur Full-Stack & UI Designer</span>
         </div>
         <div class="project-meta-item">
-          <span class="project-meta-label">Core Tech Stack</span>
+          <span class="project-meta-label">Stack Technique</span>
           <span class="project-meta-value">React, TypeScript, Tailwind CSS, Vercel</span>
         </div>
         <div class="project-meta-item">
           <span class="project-meta-label">Architecture</span>
-          <span class="project-meta-value">Single-Page App + Homemade Headless CMS</span>
+          <span class="project-meta-value">Single-Page App + CMS Headless sur mesure</span>
         </div>
       </div>
 
       <!-- Section 01: Overview & Goals -->
       <section class="project-block">
-        <h2><span class="section-num">01</span> Project Overview & Objectives</h2>
+        <h2><span class="section-num">01</span> Présentation du Projet & Objectifs</h2>
         <p>
-          The <strong>Dons du Son</strong> association works tirelessly to advocate for auditory health,
-          organize community music initiatives, and coordinate charity equipment donations. Their previous
-          communication strategy lacked a central digital touchpoint where supporters, partners, and event
-          attendees could easily access verified information, event schedules, and donation options.
+          L'association <strong>Dons du Son</strong> œuvre activement pour la prévention des risques auditifs,
+          l'organisation d'initiatives musicales citoyennes et la redistribution de matériel caritatif.
+          Leur stratégie de communication initiale manquait d'un point de contact centralisé permettant aux adhérents,
+          partenaires et participants de retrouver les informations vérifiées, l'agenda des événements et les modalités de dons.
         </p>
         <p>
-          I was entrusted with full ownership of the project from conception to deployment. The core mission
-          was twofold: construct an elegant, fast, and accessible public interface, and provide an intuitive
-          content management mechanism so association leaders can update content without writing a single line of code.
+          J'ai assuré la prise en charge complète du projet, de la conception au déploiement. L'objectif était double :
+          concevoir une interface élégante, rapide et accessible, tout en dotant l'équipe d'un outil de gestion de contenu
+          simple d'utilisation ne nécessitant aucune ligne de code.
         </p>
       </section>
 
       <!-- Section 02: Design & Process -->
       <section class="project-block">
-        <h2><span class="section-num">02</span> The Process & Methodology</h2>
+        <h2><span class="section-num">02</span> Démarche & Méthodologie</h2>
         <p>
-          To ensure the final product fulfilled both user expectations and technical durability, the project
-          followed a structured 4-phase agile methodology:
+          Pour garantir un rendu conforme aux attentes utilisateurs et aux exigences techniques, le projet s'est articulé autour de 4 phases méthodologiques :
         </p>
 
         <div class="process-grid">
           <div class="process-step-card">
             <div class="process-step-header">
               <span class="process-step-num">PHASE 01</span>
-              <span>Discovery</span>
+              <span>Cadrage</span>
             </div>
-            <h3>Requirements Analysis</h3>
+            <h3>Analyse des Besoins</h3>
             <p>
-              Conducted stakeholder interviews with association volunteers to identify essential content types
-              (announcements, concert schedules, team bios, press kits) and defined the accessibility standards.
+              Interviews des bénévoles de l'association pour identifier les typologies de contenus clés
+              (annonces, programmations, bios de l'équipe, espace presse) et cadrer les standards d'accessibilité.
             </p>
           </div>
 
@@ -150,34 +156,34 @@
               <span class="process-step-num">PHASE 02</span>
               <span>UX & Wireframing</span>
             </div>
-            <h3>Design Systems</h3>
+            <h3>Design System & UI</h3>
             <p>
-              Prototyped user flows in Figma focusing on high-contrast readability, responsive breakpoints,
-              and seamless call-to-actions for memberships and event attendance.
+              Prototypage sous Figma axé sur le contraste élevé, la lisibilité typographique, les breakpoints mobiles
+              et les appels à l'action pour les adhésions et billetteries.
             </p>
           </div>
 
           <div class="process-step-card">
             <div class="process-step-header">
               <span class="process-step-num">PHASE 03</span>
-              <span>Development</span>
+              <span>Développement</span>
             </div>
-            <h3>React + Headless CMS</h3>
+            <h3>React + CMS Headless</h3>
             <p>
-              Built modular components using React and TypeScript for strict type guarantees. Engineered a custom
-              lightweight Headless CMS layer separating content schema from view logic.
+              Création de composants modulaires en React et TypeScript garantissant une forte robustesse.
+              Développement d'une couche CMS Headless légère séparant la donnée de l'affichage.
             </p>
           </div>
 
           <div class="process-step-card">
             <div class="process-step-header">
               <span class="process-step-num">PHASE 04</span>
-              <span>QA & Deployment</span>
+              <span>Recette & Déploiement</span>
             </div>
-            <h3>Optimization & Handoff</h3>
+            <h3>Optimisation & Livraison</h3>
             <p>
-              Tuned Core Web Vitals, automated continuous deployment pipeline with Vercel, and produced
-              user-friendly documentation for the board members.
+              Audit Core Web Vitals, mise en place d'un pipeline de déploiement continu sur Vercel et rédaction
+              d'un guide d'utilisation clair pour les membres de l'association.
             </p>
           </div>
         </div>
@@ -185,81 +191,80 @@
 
       <!-- Section 03: Technical Deep Dive & Headless CMS -->
       <section class="project-block">
-        <h2><span class="section-num">03</span> Technical Architecture & The Homemade CMS</h2>
+        <h2><span class="section-num">03</span> Architecture Technique & CMS Fait Maison</h2>
         <p>
-          A central challenge was empowering non-developers to edit website content without introducing costly
-          third-party SaaS subscriptions or heavy database setups that would require continuous maintenance.
+          L'enjeu central résidait dans l'autonomie éditoriale de l'équipe sans imposer d'abonnements SaaS onéreux
+          ni d'infrastructures de bases de données lourdes nécessitant une maintenance permanente.
         </p>
         <p>
-          I engineered a <strong>bespoke homemade Headless CMS engine</strong>. The system reads structured JSON schemas
-          and renders dynamic content blocks at runtime. When content needs updating, editors use a clean, validated
-          administrative interface that updates the data layer directly, triggering immediate site updates without risk
-          of layout breakage.
+          J'ai ainsi développé un <strong>moteur CMS Headless sur mesure</strong>. Le système exploite des schémas JSON
+          validés et génère dynamiquement les blocs de contenu. Lors des mises à jour, les rédacteurs utilisent une interface
+          d'administration guidée qui modifie les données de façon sécurisée sans risque de briser la mise en page.
         </p>
 
         <div class="code-preview-box">
-// Core Architecture Overview
-Frontend:       React 18 + TypeScript (Strict Type Checking)
-Styling:        Tailwind CSS (Utility-First, Zero Runtime Overhead)
-State & Data:   Custom Headless CMS Engine with JSON Schema Validation
-Hosting & CI:   Vercel Edge Network with Automated Git Triggers
-Performance:    Sub-second First Contentful Paint (FCP) & 100/100 Lighthouse Best Practices</div>
+// Synthèse de l'Architecture Technique
+Frontend :      React 18 + TypeScript (Typage Strict)
+Style :         Tailwind CSS (Approche Utilitaires, Zéro Surcharge Runtime)
+Données & CMS : Moteur Headless sur mesure avec validation de schémas JSON
+Hébergement :   Vercel Edge Network avec déploiement automatique Git
+Performances :  FCP sous la seconde & score 100/100 Lighthouse</div>
       </section>
 
       <!-- Section 04: Key Features -->
       <section class="project-block">
-        <h2><span class="section-num">04</span> Key Features & Highlights</h2>
+        <h2><span class="section-num">04</span> Fonctionnalités Clés & Points Forts</h2>
         <ul class="brutalist-feature-list">
           <li class="brutalist-feature-item">
-            <strong>Bespoke Homemade Headless CMS</strong>
-            Empowers association organizers to independently update text, events, and media without touching code.
+            <strong>CMS Headless sur Mesure</strong>
+            Permet aux responsables associatifs d'actualiser textes, événements et médias en totale indépendance.
           </li>
           <li class="brutalist-feature-item">
-            <strong>100% Responsive & Cross-Platform</strong>
-            Flawlessly adapts to smartphones, tablets, laptops, and ultra-wide desktop monitors.
+            <strong>100% Responsive & Multi-Supports</strong>
+            S'adapte avec précision aux smartphones, tablettes, ordinateurs portables et moniteurs ultra-larges.
           </li>
           <li class="brutalist-feature-item">
-            <strong>Type-Safe Component Ecosystem</strong>
-            Built with TypeScript to eliminate runtime bugs and ensure maintainability.
+            <strong>Écosystème Typé & Robuste</strong>
+            Développé en TypeScript pour supprimer les erreurs runtime et faciliter la maintenance.
           </li>
           <li class="brutalist-feature-item">
-            <strong>Accessibility & High Contrast</strong>
-            Designed following WCAG color contrast and semantic HTML guidelines for maximum legibility.
+            <strong>Accessibilité & Fort Contraste</strong>
+            Conçu selon les critères WCAG pour assurer une clarté et un confort de lecture exemplaires.
           </li>
         </ul>
       </section>
 
       <!-- Tech Stack Tags -->
       <section class="project-block">
-        <h2><span class="section-num">05</span> Technologies Used</h2>
+        <h2><span class="section-num">05</span> Technologies Utilisées</h2>
         <ul class="tech-pill-list">
           <li class="tech-pill">React.js</li>
           <li class="tech-pill">TypeScript</li>
           <li class="tech-pill">Tailwind CSS</li>
-          <li class="tech-pill">Custom Headless CMS</li>
+          <li class="tech-pill">CMS Headless Sur Mesure</li>
           <li class="tech-pill">Vercel</li>
           <li class="tech-pill">Git & GitHub</li>
           <li class="tech-pill">Figma</li>
-          <li class="tech-pill">Responsive Design</li>
+          <li class="tech-pill">Design Responsive</li>
         </ul>
       </section>
 
       <!-- Project Pagination Bottom Navigation -->
       <nav class="project-pagination-nav">
         <a href="brutalist-portfolio.html" class="pagination-btn pagination-prev">
-          ← Previous: Brutalist Portfolio
+          ← Précédent : Portfolio Brutaliste
         </a>
         <a href="../index.html#projects" class="pagination-btn pagination-center">
-          [ View All Projects ]
+          [ Voir tous les projets ]
         </a>
         <a href="chuckys-website.html" class="pagination-btn pagination-next">
-          Next: Chucky's Website →
+          Suivant : Chucky's Website →
         </a>
       </nav>
     </main>
 
     <footer>
-      <p>&copy; 2025 Rayan BOUGHALIA. All rights reserved.</p>
+      <p>&copy; 2025 Rayan BOUGHALIA. Tous droits réservés.</p>
     </footer>
   </body>
 </html>
