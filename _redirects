@@ -1,22 +1,69 @@
-# Netlify redirects and rewrites for multilingual routes
-/en             /en/index.html                  200
-/en/            /en/index.html                  200
+# Netlify redirects and rewrites for multilingual and clean routes
 
-# EN project clean routing
+# Root EN routing
+/en                         /en/index.html                      200
+/en/                        /en/index.html                      200
+
+# FR Projects - Clean URLs under /projects/
+/projects/dons-du-son       /projects/dons-du-son.html          200
+/projects/dons-du-son/      /projects/dons-du-son.html          200
+/projects/chuckys-website   /projects/chuckys-website.html      200
+/projects/chuckys-website/  /projects/chuckys-website.html      200
+/projects/upec-landing-page /projects/upec-landing-page.html    200
+/projects/upec-landing-page/ /projects/upec-landing-page.html   200
+/projects/brutalist-portfolio /projects/brutalist-portfolio.html 200
+/projects/brutalist-portfolio/ /projects/brutalist-portfolio.html 200
+/projects/battleship-algo   /projects/battleship-algo.html      200
+/projects/battleship-algo/  /projects/battleship-algo.html      200
+
+# EN Projects - Clean URLs under /en/projects/
+/en/projects/dons-du-son       /en/projects/dons-du-son.html          200
+/en/projects/dons-du-son/      /en/projects/dons-du-son.html          200
+/en/projects/chuckys-website   /en/projects/chuckys-website.html      200
+/en/projects/chuckys-website/  /en/projects/chuckys-website.html      200
+/en/projects/upec-landing-page /en/projects/upec-landing-page.html    200
+/en/projects/upec-landing-page/ /en/projects/upec-landing-page.html   200
+/en/projects/brutalist-portfolio /en/projects/brutalist-portfolio.html 200
+/en/projects/brutalist-portfolio/ /en/projects/brutalist-portfolio.html 200
+/en/projects/battleship-algo   /en/projects/battleship-algo.html      200
+/en/projects/battleship-algo/  /en/projects/battleship-algo.html      200
+
+# FR Projects - Short URL aliases
+/dons-du-son                /projects/dons-du-son.html          200
+/dons-du-son/               /projects/dons-du-son.html          200
+/dons-du-son.html           /projects/dons-du-son.html          200
+/chuckys-website            /projects/chuckys-website.html      200
+/chuckys-website/           /projects/chuckys-website.html      200
+/chuckys-website.html       /projects/chuckys-website.html      200
+/upec-landing-page          /projects/upec-landing-page.html    200
+/upec-landing-page/         /projects/upec-landing-page.html    200
+/upec-landing-page.html     /projects/upec-landing-page.html    200
+/brutalist-portfolio        /projects/brutalist-portfolio.html  200
+/brutalist-portfolio/       /projects/brutalist-portfolio.html  200
+/brutalist-portfolio.html   /projects/brutalist-portfolio.html  200
+/battleship-algo            /projects/battleship-algo.html      200
+/battleship-algo/           /projects/battleship-algo.html      200
+/battleship-algo.html       /projects/battleship-algo.html      200
+
+# EN Projects - Short URL aliases
 /en/dons-du-son             /en/projects/dons-du-son.html          200
+/en/dons-du-son/            /en/projects/dons-du-son.html          200
 /en/dons-du-son.html        /en/projects/dons-du-son.html          200
 /en/chuckys-website         /en/projects/chuckys-website.html      200
+/en/chuckys-website/        /en/projects/chuckys-website.html      200
 /en/chuckys-website.html    /en/projects/chuckys-website.html      200
 /en/upec-landing-page       /en/projects/upec-landing-page.html    200
+/en/upec-landing-page/      /en/projects/upec-landing-page.html    200
 /en/upec-landing-page.html  /en/projects/upec-landing-page.html    200
 /en/brutalist-portfolio     /en/projects/brutalist-portfolio.html  200
+/en/brutalist-portfolio/    /en/projects/brutalist-portfolio.html  200
 /en/brutalist-portfolio.html /en/projects/brutalist-portfolio.html 200
 /en/battleship-algo         /en/projects/battleship-algo.html      200
+/en/battleship-algo/        /en/projects/battleship-algo.html      200
 /en/battleship-algo.html    /en/projects/battleship-algo.html      200
 
-# FR project clean routing
-/dons-du-son             /projects/dons-du-son.html          200
-/chuckys-website         /projects/chuckys-website.html      200
-/upec-landing-page       /projects/upec-landing-page.html    200
-/brutalist-portfolio     /projects/brutalist-portfolio.html  200
-/battleship-algo         /projects/battleship-algo.html      200
+# Generic fallback parameter rules for any other /projects/ routes
+/projects/:slug             /projects/:slug.html                200
+/projects/:slug/            /projects/:slug.html                200
+/en/projects/:slug          /en/projects/:slug.html             200
+/en/projects/:slug/         /en/projects/:slug.html             200

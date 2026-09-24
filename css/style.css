@@ -114,6 +114,7 @@ body {
 header {
     position: sticky;
     top: 0;
+    z-index: 1000;
     display: flex;
     background-color: var(--bg-white);
     color: var(--fg-black);
@@ -1150,7 +1151,7 @@ footer {
     position: relative;
     background-color: white;
     border: 1px solid black;
-    z-index: 100;
+    z-index: 1100;
     -webkit-box-shadow: 5px 5px 0px 0px #000000;
     box-shadow: 5px 5px 0px 0px #000000;
 }
@@ -1190,7 +1191,7 @@ footer {
     background-color: var(--bg-white);
     border: 1px solid var(--fg-black);
     box-shadow: 5px 5px 0px 0px #000000;
-    z-index: 1000;
+    z-index: 2000;
     text-align: center;
 }
 
