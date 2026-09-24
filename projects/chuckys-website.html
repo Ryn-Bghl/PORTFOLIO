@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon" />
+    <script src="../js/project.js" defer></script>
+
+    <title>Chucky's Website — Project Case Study</title>
+    <meta
+      name="description"
+      content="Technical breakdown of Chucky's Website, exploring Linux server administration, SSH/FTP deployment on Alwaysdata, and native HTML/CSS/JS architecture." />
+  </head>
+
+  <body class="project-page">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <ul>
+          <li>
+            <p>Please right click ! &lt;3</p>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="project-detail-layout">
+      <!-- Breadcrumb Bar -->
+      <div class="project-top-bar">
+        <div class="project-breadcrumbs">
+          <a href="../index.html#home">Rayan Boughalia</a>
+          <span>/</span>
+          <a href="../index.html#projects">Projects</a>
+          <span>/</span>
+          <span>Chucky's Website</span>
+        </div>
+        <a href="../index.html#projects" class="btn-back">← Back to all projects</a>
+      </div>
+
+      <!-- Hero Header -->
+      <section class="project-hero">
+        <div class="project-hero-badge-row">
+          <span class="badge-tag">Academic Project</span>
+          <span class="badge-tag-outline">Server Admin & Native Web</span>
+          <span class="badge-tag-outline">BUT MMI UPEC</span>
+        </div>
+
+        <h1>Chucky's Website</h1>
+
+        <p class="project-hero-summary">
+          A themed interactive web project exploring real-world server deployment, Linux hosting environments,
+          and secure SSH/FTP protocols on <strong>Alwaysdata</strong>. Built using native HTML5, CSS3, and JavaScript
+          with a focus on performance, responsive design, and systems administration.
+        </p>
+
+        <div class="project-hero-actions">
+          <a href="https://boughalia.alwaysdata.net/TP_WEB" target="_blank" rel="noopener noreferrer" class="btn-brutalist-main">
+            ↗ Live Preview
+          </a>
+          <a href="https://github.com/Ryn-Bghl" target="_blank" rel="noopener noreferrer" class="btn-brutalist-outline">
+            &lt;/&gt; GitHub Profile
+          </a>
+        </div>
+      </section>
+
+      <!-- Featured Image Frame -->
+      <div class="project-media-frame">
+        <img
+          src="../assets/chuckys_website.png"
+          alt="Screenshot of Chucky's Website application interface" />
+        <div class="project-media-footer">
+          <span>FIG 01. Live deployment on Alwaysdata Linux server</span>
+          <span>STATUS: Live / Academic Demo</span>
+        </div>
+      </div>
+
+      <!-- Metadata Specs Grid -->
+      <div class="project-meta-grid">
+        <div class="project-meta-item">
+          <span class="project-meta-label">Context</span>
+          <span class="project-meta-value">Academic Lab / Web & Infrastructure</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Role</span>
+          <span class="project-meta-value">Web Developer & Server Administrator</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Hosting & Protocols</span>
+          <span class="project-meta-value">Alwaysdata (Linux), SSH, SFTP/FTP</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Stack</span>
+          <span class="project-meta-value">HTML5, CSS3, Vanilla JS (Zero Dependencies)</span>
+        </div>
+      </div>
+
+      <!-- Section 01: Overview & Goals -->
+      <section class="project-block">
+        <h2><span class="section-num">01</span> Project Overview & Academic Goals</h2>
+        <p>
+          This project was developed as part of the BUT MMI curriculum to master full-lifecycle web deployment
+          beyond local development sandboxes. The primary objective was not only creating an immersive themed
+          web interface celebrating the iconic "Chucky" universe, but mastering remote Linux server infrastructure,
+          secure key generation, command line access, and multi-environment file management.
+        </p>
+      </section>
+
+      <!-- Section 02: Systems & Server Architecture -->
+      <section class="project-block">
+        <h2><span class="section-num">02</span> The Process & Systems Administration</h2>
+        <p>
+          Rather than relying on automated black-box deployment systems, this lab required hands-on configuration
+          of network protocols and server permissions:
+        </p>
+
+        <div class="process-grid">
+          <div class="process-step-card">
+            <div class="process-step-header">
+              <span class="process-step-num">STEP 01</span>
+              <span>Authentication</span>
+            </div>
+            <h3>SSH Key Pair Generation</h3>
+            <p>
+              Generated RSA/Ed25519 cryptographic key pairs, configured public keys on the Alwaysdata server host,
+              and established passwordless terminal sessions.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-header">
+              <span class="process-step-num">STEP 02</span>
+              <span>Protocols</span>
+            </div>
+            <h3>FTP / SFTP Setup</h3>
+            <p>
+              Configured secure FTP user accounts, directory permissions (`chmod`/`chown`), and synchronization pipelines
+              for efficient file deployment and remote file tree management.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-header">
+              <span class="process-step-num">STEP 03</span>
+              <span>Frontend</span>
+            </div>
+            <h3>Native Web Coding</h3>
+            <p>
+              Crafted semantic HTML5 markup, structured responsive CSS stylesheets with fluid breakpoints,
+              and added lightweight JavaScript for DOM interactivity.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-header">
+              <span class="process-step-num">STEP 04</span>
+              <span>Audit & QA</span>
+            </div>
+            <h3>Cross-Device Verification</h3>
+            <p>
+              Tested server response headers, caching configurations, and visual fidelity across mobile, tablet,
+              and desktop viewports.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 03: Technical Architecture -->
+      <section class="project-block">
+        <h2><span class="section-num">03</span> Technical Architecture & Server Workflows</h2>
+        <p>
+          Building without bloated frameworks allowed for a deep appreciation of standard browser mechanics and
+          server response lifecycles.
+        </p>
+
+        <div class="code-preview-box">
+// Server & Deployment Specifications
+Hosting Server: Alwaysdata Cloud Platform (Debian Linux Environment)
+Protocol:       SSH (Secure Shell) with Public Key Cryptography & SFTP
+Web Server:     Apache / NGINX with Custom .htaccess Routing Rules
+Directory:      /home/boughalia/www/TP_WEB/
+Frontend Stack: Vanilla HTML5 + CSS3 (Flexbox/Grid) + Vanilla ES6 JS</div>
+      </section>
+
+      <!-- Section 04: Key Features -->
+      <section class="project-block">
+        <h2><span class="section-num">04</span> Key Takeaways & Learned Skills</h2>
+        <ul class="brutalist-feature-list">
+          <li class="brutalist-feature-item">
+            <strong>Server Infrastructure & SSH</strong>
+            Mastered remote command-line terminal navigation, SSH key management, and Linux directory security.
+          </li>
+          <li class="brutalist-feature-item">
+            <strong>FTP / SFTP File Pipelines</strong>
+            Gained hands-on experience synchronizing production assets and configuring server access controls.
+          </li>
+          <li class="brutalist-feature-item">
+            <strong>Zero-Dependency Performance</strong>
+            Achieved near-instant page load speeds by leveraging lightweight native web standards.
+          </li>
+          <li class="brutalist-feature-item">
+            <strong>Adaptive Responsive Design</strong>
+            Structured media queries providing a comfortable browsing experience on all screen dimensions.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Tech Stack Tags -->
+      <section class="project-block">
+        <h2><span class="section-num">05</span> Technologies & Tools</h2>
+        <ul class="tech-pill-list">
+          <li class="tech-pill">HTML5</li>
+          <li class="tech-pill">CSS3</li>
+          <li class="tech-pill">JavaScript (Vanilla)</li>
+          <li class="tech-pill">Alwaysdata</li>
+          <li class="tech-pill">SSH</li>
+          <li class="tech-pill">FTP / SFTP</li>
+          <li class="tech-pill">Linux CLI</li>
+          <li class="tech-pill">Responsive Design</li>
+        </ul>
+      </section>
+
+      <!-- Project Pagination Bottom Navigation -->
+      <nav class="project-pagination-nav">
+        <a href="dons-du-son.html" class="pagination-btn pagination-prev">
+          ← Previous: Dons du Son
+        </a>
+        <a href="../index.html#projects" class="pagination-btn pagination-center">
+          [ View All Projects ]
+        </a>
+        <a href="upec-landing-page.html" class="pagination-btn pagination-next">
+          Next: IUT Landing Page →
+        </a>
+      </nav>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Rayan BOUGHALIA. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

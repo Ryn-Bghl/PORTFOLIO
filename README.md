@@ -13,9 +13,9 @@ A minimalist and brutalist-inspired portfolio website. This project is designed 
 ## Features
 
 * **Brutalist Design:** A raw and minimalist design that prioritizes content and functionality.
+* **Dedicated Project Case Studies:** In-depth internal pages for each project covering context, live preview links, source code, design & development process, and architecture breakdowns.
 * **Custom Context Menu:** A custom context menu that appears on right-click, providing a unique navigation experience.
 * **Expanding Sections:** Sections that expand and collapse to reveal content, keeping the interface clean and focused.
-* **Carousel:** A simple carousel to showcase projects.
 * **Responsive:** The portfolio is responsive and works on different screen sizes.
 
 ## Tech Stack

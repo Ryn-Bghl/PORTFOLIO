@@ -143,6 +143,19 @@ function initCarousel() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    // If URL contains a hash, open the corresponding section
+    const checkHash = () => {
+        if (window.location.hash) {
+            const hashId = window.location.hash.replace("#", "");
+            if (["home", "about", "projects", "contact"].includes(hashId)) {
+                openSection(hashId);
+            }
+        }
+    };
+
+    checkHash();
+    window.addEventListener("hashchange", checkHash);
+
     // Event listeners for nav links
     document.querySelectorAll("header nav a").forEach((navLink) => {
         navLink.addEventListener("click", (event) => {

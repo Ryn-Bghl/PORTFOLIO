@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon" />
+    <script src="../js/project.js" defer></script>
+
+    <title>Brutalist Portfolio — Project Case Study</title>
+    <meta
+      name="description"
+      content="Comprehensive case study of Rayan Boughalia's brutalist portfolio featuring custom right-click context menu, kinetic accordion sections, and pure vanilla web stack." />
+  </head>
+
+  <body class="project-page">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <ul>
+          <li>
+            <p>Please right click ! &lt;3</p>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="project-detail-layout">
+      <!-- Breadcrumb Bar -->
+      <div class="project-top-bar">
+        <div class="project-breadcrumbs">
+          <a href="../index.html#home">Rayan Boughalia</a>
+          <span>/</span>
+          <a href="../index.html#projects">Projects</a>
+          <span>/</span>
+          <span>Brutalist Portfolio</span>
+        </div>
+        <a href="../index.html#projects" class="btn-back">← Back to all projects</a>
+      </div>
+
+      <!-- Hero Header -->
+      <section class="project-hero">
+        <div class="project-hero-badge-row">
+          <span class="badge-tag">Personal Identity</span>
+          <span class="badge-tag-outline">Creative Technologist</span>
+          <span class="badge-tag-outline">2025</span>
+        </div>
+
+        <h1>Brutalist Portfolio</h1>
+
+        <p class="project-hero-summary">
+          An unapologetic, raw, and minimalist portfolio website designed to showcase my creative and technical
+          abilities through a brutalist design aesthetic. Featuring a custom right-click context menu, kinetic
+          sliding accordion sections, zero-dependency vanilla performance, and serverless contact integrations.
+        </p>
+
+        <div class="project-hero-actions">
+          <a href="../index.html" class="btn-brutalist-main">
+            ↗ Live Portfolio Experience
+          </a>
+          <a href="https://github.com/Ryn-Bghl" target="_blank" rel="noopener noreferrer" class="btn-brutalist-outline">
+            &lt;/&gt; GitHub Repository
+          </a>
+        </div>
+      </section>
+
+      <!-- Featured Image Frame -->
+      <div class="project-media-frame">
+        <img
+          src="../assets/portfolio.png"
+          alt="Brutalist portfolio homepage design showcase" />
+        <div class="project-media-footer">
+          <span>FIG 01. Minimalist brutalist layout & interactive UI</span>
+          <span>STATUS: Live & Open Source</span>
+        </div>
+      </div>
+
+      <!-- Metadata Specs Grid -->
+      <div class="project-meta-grid">
+        <div class="project-meta-item">
+          <span class="project-meta-label">Project Type</span>
+          <span class="project-meta-value">Personal Portfolio & Creative Identity</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Role</span>
+          <span class="project-meta-value">Designer & Frontend Developer</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Design Philosophy</span>
+          <span class="project-meta-value">Web Brutalism, Monospace & High Contrast</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Deployment</span>
+          <span class="project-meta-value">Netlify CI/CD, Web3Forms API</span>
+        </div>
+      </div>
+
+      <!-- Section 01: The Vision & Philosophy -->
+      <section class="project-block">
+        <h2><span class="section-num">01</span> Design Vision & Philosophy</h2>
+        <p>
+          Most contemporary web portfolios follow identical cookie-cutter design templates with soft gradients,
+          rounded cards, and generic animations. My goal was to rebel against this visual monotony by embracing
+          <strong>Web Brutalism</strong>: an aesthetic celebrating raw functionalism, stark black-and-white contrast,
+          monospaced typography, solid 1px geometric borders, and crisp tactile drop shadows.
+        </p>
+        <p>
+          Beyond aesthetics, the site is designed to feel alive and interactive with bespoke touches—like a custom
+          operating-system style right-click context menu, kinetic accordion navigation, and subtle grayscale-to-color
+          image hover interactions.
+        </p>
+      </section>
+
+      <!-- Section 02: Development & Interactive Architecture -->
+      <section class="project-block">
+        <h2><span class="section-num">02</span> Interactive Architecture & Development</h2>
+        <p>
+          Every interaction was hand-coded using vanilla JavaScript and modern CSS with zero heavy third-party libraries:
+        </p>
+
+        <div class="process-grid">
+          <div class="process-step-card">
+            <div class="process-step-header">
+              <span class="process-step-num">FEATURE 01</span>
+              <span>Context Menu</span>
+            </div>
+            <h3>Custom Right-Click Navigation</h3>
+            <p>
+              Intercepts the browser's native `contextmenu` event to render a custom styled floating brutalist navigation
+              box at the exact click coordinates.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-header">
+              <span class="process-step-num">FEATURE 02</span>
+              <span>Accordion UI</span>
+            </div>
+            <h3>Kinetic Section Transitions</h3>
+            <p>
+              Engineered CSS keyframe animations (`openSection`/`closeSection`) allowing seamless toggling between
+              Home, About, Projects, and Contact sections in a single unified viewport.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-header">
+              <span class="process-step-num">FEATURE 03</span>
+              <span>Serverless Forms</span>
+            </div>
+            <h3>Contact API & Spam Protection</h3>
+            <p>
+              Integrated Web3Forms API paired with hCaptcha and custom modal popup notifications for real-time
+              message delivery without requiring a dedicated backend server.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-header">
+              <span class="process-step-num">FEATURE 04</span>
+              <span>Performance</span>
+            </div>
+            <h3>Zero Dependency Speed</h3>
+            <p>
+              By leveraging native HTML5/CSS3/ES6 JS, the entire website bundle is ultra-lightweight, achieving
+              near-instantaneous load times on any network connection.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 03: Code & Implementation -->
+      <section class="project-block">
+        <h2><span class="section-num">03</span> Technical Implementation Highlights</h2>
+        <p>
+          Here is an example snippet showing how the custom right-click context menu is created dynamically on coordinates:
+        </p>
+
+        <div class="code-preview-box">
+// Custom Brutalist Context Menu Implementation
+document.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    if (document.querySelector("#context_menu")) {
+        document.querySelector("#context_menu").remove();
+    }
+
+    const contextMenu = document.createElement("div");
+    contextMenu.id = "context_menu";
+    contextMenu.style.position = "absolute";
+    contextMenu.style.top = `${event.pageY}px`;
+    contextMenu.style.left = `${event.pageX}px`;
+    contextMenu.innerHTML = `
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;button id="context_home"&gt;home&lt;/button&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;button id="context_about"&gt;about&lt;/button&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;button id="context_projects"&gt;projects&lt;/button&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;button id="context_contact"&gt;contact&lt;/button&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    `;
+    document.body.appendChild(contextMenu);
+});</div>
+      </section>
+
+      <!-- Section 04: Key Features -->
+      <section class="project-block">
+        <h2><span class="section-num">04</span> Key Features & Highlights</h2>
+        <ul class="brutalist-feature-list">
+          <li class="brutalist-feature-item">
+            <strong>Bespoke Context Menu Navigation</strong>
+            Provides users with an unconventional, desktop-app-like interactive navigation model.
+          </li>
+          <li class="brutalist-feature-item">
+            <strong>Smooth Kinetic Accordion</strong>
+            Dynamically collapses and expands full-height sections with smooth easing curves.
+          </li>
+          <li class="brutalist-feature-item">
+            <strong>Dedicated Case Study Pages</strong>
+            Individual intern project pages providing rich technical context, live preview links, and process steps.
+          </li>
+          <li class="brutalist-feature-item">
+            <strong>Serverless Contact Submissions</strong>
+            Direct inbox routing with automated validation, hCaptcha protection, and confirmation popups.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Tech Stack Tags -->
+      <section class="project-block">
+        <h2><span class="section-num">05</span> Technologies Used</h2>
+        <ul class="tech-pill-list">
+          <li class="tech-pill">Semantic HTML5</li>
+          <li class="tech-pill">Raw CSS3</li>
+          <li class="tech-pill">Vanilla JavaScript (ES6+)</li>
+          <li class="tech-pill">Web3Forms API</li>
+          <li class="tech-pill">hCaptcha</li>
+          <li class="tech-pill">Netlify CI/CD</li>
+          <li class="tech-pill">Brutalist Design System</li>
+        </ul>
+      </section>
+
+      <!-- Project Pagination Bottom Navigation -->
+      <nav class="project-pagination-nav">
+        <a href="upec-landing-page.html" class="pagination-btn pagination-prev">
+          ← Previous: IUT Landing Page
+        </a>
+        <a href="../index.html#projects" class="pagination-btn pagination-center">
+          [ View All Projects ]
+        </a>
+        <a href="dons-du-son.html" class="pagination-btn pagination-next">
+          Next: Dons du Son →
+        </a>
+      </nav>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Rayan BOUGHALIA. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
