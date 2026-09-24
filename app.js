@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("hashchange", checkHash);
 
     // Event listeners for nav links
-    document.querySelectorAll("header nav a").forEach((navLink) => {
+    document.querySelectorAll("header nav a[data-section-id]").forEach((navLink) => {
         navLink.addEventListener("click", (event) => {
             event.preventDefault();
             const sectionId = navLink.getAttribute("data-section-id");
