@@ -11,7 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&display=swap"
       rel="stylesheet" />
 
-    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon" />
 
     <script src="../app.js" defer></script>
     <script src="../js/web3form.js" defer></script>
@@ -69,8 +72,8 @@
       <nav>
         <ul>
           <li><a id="nav_home" data-section-id="home">Home</a></li>
-          <li><a id="nav_about" data-section-id="about">About</a></li>
           <li><a id="nav_projects" data-section-id="projects">Projects</a></li>
+          <li><a id="nav_about" data-section-id="about">About</a></li>
           <li><a id="nav_contact" data-section-id="contact">Contact</a></li>
         </ul>
         <ul>
@@ -182,81 +185,279 @@
         <h1>ABOUT</h1>
         <div id="about-container">
           <div id="about-photo">
-            <picture id="about-picture">
-              <img
-                src="../assets/austria.jpg"
-                alt="Picture of Austrian building taken by Rayan BOUGHALIA" />
-            </picture>
+            <div class="about-photo-card">
+              <div class="about-card-badge">
+                <span class="status-dot"></span>
+                <span>AVAILABLE • 2-YEAR APPRENTICESHIP</span>
+              </div>
+              <picture id="about-picture">
+                <img
+                  src="../assets/austria.jpg"
+                  alt="Architectural photograph in Austria captured by Rayan BOUGHALIA" />
+              </picture>
+              <div class="about-photo-caption">
+                <span class="caption-tag">[35MM_PERSPECTIVE]</span>
+                <p>
+                  Vienna, Austria — Shot by Rayan Boughalia. Exploring geometric
+                  lines, architectural brutalism, and contrast directly inspires
+                  my approach to front-end engineering and interaction design.
+                </p>
+              </div>
+              <div class="about-quick-links">
+                <a
+                  href="https://github.com/Ryn-Bghl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-card-secondary"
+                  >GitHub ↗</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/rayan-boughalia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-card-secondary"
+                  >LinkedIn ↗</a
+                >
+                <a
+                  href="https://leetcode.com/u/Duck_Noris/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-card-secondary"
+                  >LeetCode ↗</a
+                >
+              </div>
+            </div>
           </div>
           <div id="about-me">
+            <div class="about-stat-bar">
+              <div class="stat-item">
+                <span class="stat-label">Education</span>
+                <span class="stat-value">MMI Degree (UPEC)</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Specialization</span>
+                <span class="stat-value">Frontend React & UI/UX</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Seeking</span>
+                <span class="stat-value">2-Year Apprenticeship</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Location</span>
+                <span class="stat-value">Paris Region / Hybrid</span>
+              </div>
+            </div>
+
             <div id="about-description">
-              <h2>Who am I?</h2>
+              <h2>Who am I & What is my vision?</h2>
               <p>
-                As a MMI (Métiers du Multimédia et de l'Internet) student at
-                UPEC, I blend technical expertise with creative vision. My
-                journey in web development started with a fascination for
-                creating interactive experiences, and has evolved into a passion
-                for building accessible, performant, and visually striking
-                applications.
+                Currently studying for a
+                <strong>BUT in Multimedia and Internet (MMI)</strong> at
+                <strong>IUT Sénart Fontainebleau (UPEC)</strong>, I operate at
+                the intersection of
+                <strong>rigorous web engineering</strong> and
+                <strong>bold interaction design</strong>.
               </p>
-
               <p>
-                Photography, as seen in the image from Austria, is one of my
-                creative outlets that influences my design approach - finding
-                beauty in architecture and composition translates directly to my
-                web development work.
+                Driven by a passion for high-performance, memorable digital
+                experiences, I craft modern, accessible, and user-centric
+                interfaces. My workflow pairs deep technical execution (React,
+                TypeScript, modern CSS Grid/Flexbox) with a strong aesthetic
+                perspective drawn from architectural brutalism: intentional
+                typography, clear visual hierarchy, and polished
+                micro-interactions.
               </p>
-
               <p>
-                Currently seeking a two-year web development apprenticeship to
-                deepen my expertise and contribute to meaningful projects.
+                Through real-world and academic projects — including a complete
+                website development for the non-profit <em>Dons du Son</em> and
+                Linux remote server architectures —, I have fostered strong
+                autonomy in component-driven development, methodical problem
+                solving, and collaborative workflows.
               </p>
-
-              <a
-                class="cta"
-                id="cta_contact_about"
-                data-section-id="contact"
-                href="#contact"
-                >Contact me</a
-              >
             </div>
 
             <div id="skills">
-              <h2>Technical Skills</h2>
-              <ul>
-                <li>
-                  <strong>Frontend Development:</strong> HTML5, CSS3
-                  (Flexbox/Grid), JavaScript (ES6+), React.js
-                </li>
-                <li>
-                  <strong>Backend Technologies:</strong> PHP, MySQL, API
-                  Integration
-                </li>
-                <li>
-                  <strong>Design Tools:</strong> Figma, Adobe Creative Suite
-                </li>
-                <li><strong>Version Control:</strong> Git, GitHub</li>
-              </ul>
+              <h2>Skills & Specializations</h2>
+              <div class="skills-grid">
+                <div class="skill-category-card">
+                  <div class="skill-category-header">
+                    <span class="skill-icon">⚡</span>
+                    <h3>Frontend & UI</h3>
+                  </div>
+                  <div class="skill-tags">
+                    <span class="skill-tag">React.js</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">JavaScript (ES6+)</span>
+                    <span class="skill-tag">Semantic HTML5</span>
+                    <span class="skill-tag">CSS3 / Grid & Flexbox</span>
+                    <span class="skill-tag">Tailwind CSS</span>
+                    <span class="skill-tag">Responsive Design</span>
+                  </div>
+                </div>
 
-              <h2>Core Strengths</h2>
-              <ul>
-                <li>
-                  <strong>UI/UX Design:</strong> Wireframing, Prototyping, User
-                  Research
-                </li>
-                <li>
-                  <strong>Creative Direction:</strong> Photography, Visual
-                  Design, Brutalist Web Design
-                </li>
-                <li>
-                  <strong>Problem Solving:</strong> Analytical Thinking,
-                  Solution Architecture
-                </li>
-                <li>
-                  <strong>Soft Skills:</strong> Team Collaboration, Project
-                  Management, Clear Communication
-                </li>
-              </ul>
+                <div class="skill-category-card">
+                  <div class="skill-category-header">
+                    <span class="skill-icon">⚙️</span>
+                    <h3>Backend & Architecture</h3>
+                  </div>
+                  <div class="skill-tags">
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Headless CMS</span>
+                    <span class="skill-tag">Node.js (Basics)</span>
+                    <span class="skill-tag">MVC Architecture</span>
+                  </div>
+                </div>
+
+                <div class="skill-category-card">
+                  <div class="skill-category-header">
+                    <span class="skill-icon">🎨</span>
+                    <h3>Design & Creative</h3>
+                  </div>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Wireframing & Prototyping</span>
+                    <span class="skill-tag">Brutalist Design</span>
+                    <span class="skill-tag">Adobe Photoshop</span>
+                    <span class="skill-tag">Adobe Illustrator</span>
+                    <span class="skill-tag">Adobe Premiere Pro</span>
+                    <span class="skill-tag">Photography</span>
+                  </div>
+                </div>
+
+                <div class="skill-category-card">
+                  <div class="skill-category-header">
+                    <span class="skill-icon">🛠️</span>
+                    <h3>Tools & DevOps</h3>
+                  </div>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Git & GitHub</span>
+                    <span class="skill-tag">Linux / Terminal</span>
+                    <span class="skill-tag">SSH & FTP</span>
+                    <span class="skill-tag">Vercel & Netlify</span>
+                    <span class="skill-tag">Vite</span>
+                    <span class="skill-tag">Agile / Scrum Methods</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-timeline-section">
+              <h2>Career Path & Key Milestones</h2>
+              <div class="timeline-container">
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <span class="timeline-period">2023 - 2026 (Ongoing)</span>
+                      <span class="timeline-tag">Education</span>
+                    </div>
+                    <h4>BUT Multimedia and Internet (MMI)</h4>
+                    <p class="timeline-location">
+                      IUT Sénart Fontainebleau — Université Paris-Est Créteil
+                      (UPEC)
+                    </p>
+                    <p class="timeline-desc">
+                      Specialization in web engineering, UI/UX interaction
+                      design, front-end architecture, relational databases, and
+                      multimedia project management.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <span class="timeline-period">2024 - 2025</span>
+                      <span class="timeline-tag">Client Project</span>
+                    </div>
+                    <h4>Frontend Developer — Dons du Son Non-Profit</h4>
+                    <p class="timeline-location">
+                      Team project for a non-profit organization
+                    </p>
+                    <p class="timeline-desc">
+                      Full design and development of the web platform with
+                      React.js, TypeScript, and Tailwind CSS, integrated with a
+                      headless CMS for seamless content management.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <span class="timeline-period">2023 - 2024</span>
+                      <span class="timeline-tag">Systems & Web</span>
+                    </div>
+                    <h4>Academic Systems & Web Hosting Projects</h4>
+                    <p class="timeline-location">IUT & Personal Projects</p>
+                    <p class="timeline-desc">
+                      Remote Linux server deployment (Alwaysdata), SSH
+                      authentication and FTP workflows, responsive UI
+                      engineering, and regular algorithmic problem-solving
+                      (LeetCode).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-mindset">
+              <h2>What I Bring to a Team</h2>
+              <div class="mindset-grid">
+                <div class="mindset-card">
+                  <span class="mindset-num">01</span>
+                  <h4>Technical Rigor</h4>
+                  <p>
+                    Clean, semantic code, modular reusable architecture, and
+                    continuous performance optimization.
+                  </p>
+                </div>
+                <div class="mindset-card">
+                  <span class="mindset-num">02</span>
+                  <h4>Design Sensitivity</h4>
+                  <p>
+                    Deep appreciation for grid layouts, typographical hierarchy,
+                    contrast, and intuitive user experiences.
+                  </p>
+                </div>
+                <div class="mindset-card">
+                  <span class="mindset-num">03</span>
+                  <h4>Curiosity & Proactivity</h4>
+                  <p>
+                    Constant tech monitoring, active problem-solving practice on
+                    LeetCode, and high adaptability.
+                  </p>
+                </div>
+                <div class="mindset-card">
+                  <span class="mindset-num">04</span>
+                  <h4>Communication & Teamwork</h4>
+                  <p>
+                    Proficiency with Git-based collaboration, active listening,
+                    constructive feedback, and clear communication.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-actions-cta">
+              <a
+                class="cta btn-about-primary"
+                id="cta_contact_about"
+                data-section-id="contact"
+                href="#contact"
+                >Start a Conversation / Contact Me →</a
+              >
+              <a
+                class="cta btn-about-secondary"
+                id="cta_projects_about"
+                data-section-id="projects"
+                href="#projects"
+                >Explore My Projects →</a
+              >
             </div>
           </div>
         </div>
@@ -276,14 +477,29 @@
             </a>
             <h3><a href="projects/dons-du-son">Association Dons du Son</a></h3>
             <p>
-              I made this website for the association Dons du Son to promote their mission.
-              Built with ReactJS (TypeScript) and Tailwind CSS, it features a homemade
-              Headless CMS allowing the team to edit content with zero technical knowledge.
+              I made this website for the association Dons du Son to promote
+              their mission. Built with ReactJS (TypeScript) and Tailwind CSS,
+              it features a homemade Headless CMS allowing the team to edit
+              content with zero technical knowledge.
             </p>
             <div class="project-card-actions">
-              <a href="projects/dons-du-son" class="btn-card-primary">Explore Project →</a>
-              <a href="https://donsduson.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-card-secondary">Preview ↗</a>
-              <a href="https://github.com/Ryn-Bghl/dds" target="_blank" rel="noopener noreferrer" class="btn-card-secondary">Code ↗</a>
+              <a href="projects/dons-du-son" class="btn-card-primary"
+                >Explore Project →</a
+              >
+              <a
+                href="https://donsduson.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-card-secondary"
+                >Preview ↗</a
+              >
+              <a
+                href="https://github.com/Ryn-Bghl/dds"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-card-secondary"
+                >Code ↗</a
+              >
             </div>
           </article>
 
@@ -299,13 +515,29 @@
             </a>
             <h3><a href="projects/chuckys-website">Chucky's Website</a></h3>
             <p>
-              An academic project to learn remote Linux server hosting on Alwaysdata via FTP and SSH key management.
-              Built with native HTML5, CSS3, and JavaScript, fully responsive across mobile, tablet, and desktop.
+              An academic project to learn remote Linux server hosting on
+              Alwaysdata via FTP and SSH key management. Built with native
+              HTML5, CSS3, and JavaScript, fully responsive across mobile,
+              tablet, and desktop.
             </p>
             <div class="project-card-actions">
-              <a href="projects/chuckys-website" class="btn-card-primary">Explore Project →</a>
-              <a href="https://boughalia.alwaysdata.net/TP_WEB" target="_blank" rel="noopener noreferrer" class="btn-card-secondary">Preview ↗</a>
-              <a href="https://github.com/Ryn-Bghl/Chuckys_website" target="_blank" rel="noopener noreferrer" class="btn-card-secondary">Code ↗</a>
+              <a href="projects/chuckys-website" class="btn-card-primary"
+                >Explore Project →</a
+              >
+              <a
+                href="https://boughalia.alwaysdata.net/TP_WEB"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-card-secondary"
+                >Preview ↗</a
+              >
+              <a
+                href="https://github.com/Ryn-Bghl/Chuckys_website"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-card-secondary"
+                >Code ↗</a
+              >
             </div>
           </article>
 
@@ -319,15 +551,34 @@
                 src="../assets/upec_landingpage.png"
                 alt="Screenshot of The Landing page for UPEC website" />
             </a>
-            <h3><a href="projects/upec-landing-page">Landing Page IUT Sénart Fontainebleau</a></h3>
+            <h3>
+              <a href="projects/upec-landing-page"
+                >Landing Page IUT Sénart Fontainebleau</a
+              >
+            </h3>
             <p>
-              A creative challenge rethinking the departmental landing page for the IUT of Sénart Fontainebleau.
-              Crafted with responsive CSS Grid layouts, strong visual hierarchy, and optimized student journeys.
+              A creative challenge rethinking the departmental landing page for
+              the IUT of Sénart Fontainebleau. Crafted with responsive CSS Grid
+              layouts, strong visual hierarchy, and optimized student journeys.
             </p>
             <div class="project-card-actions">
-              <a href="projects/upec-landing-page" class="btn-card-primary">Explore Project →</a>
-              <a href="https://boughalia.alwaysdata.net/IUT" target="_blank" rel="noopener noreferrer" class="btn-card-secondary">Preview ↗</a>
-              <a href="https://github.com/Ryn-Bghl/iut_website" target="_blank" rel="noopener noreferrer" class="btn-card-secondary">Code ↗</a>
+              <a href="projects/upec-landing-page" class="btn-card-primary"
+                >Explore Project →</a
+              >
+              <a
+                href="https://boughalia.alwaysdata.net/IUT"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-card-secondary"
+                >Preview ↗</a
+              >
+              <a
+                href="https://github.com/Ryn-Bghl/iut_website"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-card-secondary"
+                >Code ↗</a
+              >
             </div>
           </article>
 
@@ -341,15 +592,27 @@
                 src="../assets/portfolio.png"
                 alt="Brutalist Portfolio project screenshot" />
             </a>
-            <h3><a href="projects/brutalist-portfolio">Brutalist Portfolio</a></h3>
+            <h3>
+              <a href="projects/brutalist-portfolio">Brutalist Portfolio</a>
+            </h3>
             <p>
-              A brutalist portfolio website designed to showcase work in a raw and unapologetic way.
-              Built with native HTML, CSS, and JS, featuring a custom right-click context menu and kinetic accordion sections.
+              A brutalist portfolio website designed to showcase work in a raw
+              and unapologetic way. Built with native HTML, CSS, and JS,
+              featuring a custom right-click context menu and kinetic accordion
+              sections.
             </p>
             <div class="project-card-actions">
-              <a href="projects/brutalist-portfolio" class="btn-card-primary">Explore Project →</a>
+              <a href="projects/brutalist-portfolio" class="btn-card-primary"
+                >Explore Project →</a
+              >
               <a href="./index.html" class="btn-card-secondary">Preview ↗</a>
-              <a href="https://github.com/Ryn-Bghl/PORTFOLIO" target="_blank" rel="noopener noreferrer" class="btn-card-secondary">Code ↗</a>
+              <a
+                href="https://github.com/Ryn-Bghl/PORTFOLIO"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-card-secondary"
+                >Code ↗</a
+              >
             </div>
           </article>
         </div>
