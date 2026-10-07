@@ -344,10 +344,13 @@ main #contact h1:first-child {
 }
 
 @keyframes statusPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
         transform: scale(1);
     }
+
     50% {
         opacity: 0.4;
         transform: scale(0.85);
@@ -366,7 +369,6 @@ main #contact h1:first-child {
     filter: saturate(0);
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 5;
     object-fit: cover;
     display: block;
     transition: filter 0.3s ease, transform 0.3s ease;
