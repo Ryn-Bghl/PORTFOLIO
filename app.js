@@ -47,6 +47,24 @@ document.addEventListener("click", () => {
 
 let currentOpenSection = document.querySelector(".open");
 
+// Section order for peek logic
+const sectionOrder = ["home", "projects", "about", "contact"];
+
+// Shows only the next section's header as a peek at the bottom
+function updatePeek(openId) {
+  document.querySelectorAll("main section").forEach((s) =>
+    s.classList.remove("next-peek")
+  );
+  const currentIdx = sectionOrder.indexOf(openId);
+  const nextIdx = currentIdx + 1;
+  // If last section, nothing peeks below
+  if (nextIdx >= sectionOrder.length) return;
+  const nextSection = document.getElementById(sectionOrder[nextIdx]);
+  if (nextSection && nextSection.classList.contains("close")) {
+    nextSection.classList.add("next-peek");
+  }
+}
+
 function openSection(sectionId) {
   const targetSection = document.getElementById(sectionId);
 
@@ -58,8 +76,12 @@ function openSection(sectionId) {
   }
 
   targetSection.classList.remove("close");
+  targetSection.classList.remove("next-peek");
   targetSection.classList.add("open");
   currentOpenSection = targetSection;
+
+  updatePeek(sectionId);
+  targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 // context menu buttons
@@ -173,8 +195,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  // Init: set peek for the initially open section
+  const initialOpen = document.querySelector("main section.open");
+  if (initialOpen) updatePeek(initialOpen.id);
+
   checkHash();
   window.addEventListener("hashchange", checkHash);
+
 
   // Event listeners for nav links
   document
@@ -189,10 +216,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-  // Event listeners for section H1s
-  document.querySelectorAll("main section h1").forEach((h1) => {
-    h1.addEventListener("click", () => {
-      const section = h1.parentElement;
+  // Clicking anywhere on a closed section opens it
+  document.querySelectorAll("main section").forEach((section) => {
+    section.addEventListener("click", () => {
       if (section.classList.contains("close")) {
         openSection(section.id);
       }

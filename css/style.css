@@ -31,15 +31,33 @@
 
 /* PSEUDO CLASS */
 .close {
-    height: 56px;
-    overflow-x: hidden;
+    flex: 0 0 56px;
+    overflow: hidden;
     background-color: var(--bg-white);
     color: var(--fg-black);
     font-family: var(--ff-header);
     font-weight: var(--fw-header);
     font-style: var(--fs-header);
-    animation: closeSection 0.7s ease-in-out forwards;
-    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Subtle expand indicator on the next section */
+.close.next-peek::after {
+    content: '↓';
+    position: absolute;
+    bottom: 4px;
+    right: 0.75rem;
+    font-family: var(--ff-body);
+    font-size: 11px;
+    font-weight: 700;
+    opacity: 0.35;
+    pointer-events: none;
+    line-height: 1;
+}
+
+.close.next-peek:hover::after {
+    opacity: 0.8;
 }
 
 .close .prev-btn,
@@ -48,35 +66,16 @@
 }
 
 .open {
-    height: 100dvh;
+    flex: 0 0 calc(100% - 56px);
+    min-height: 0;
     overflow-x: hidden;
     overflow-y: auto;
     color: var(--fg-black);
     font-family: var(--ff-header);
     font-weight: var(--fw-header);
     font-style: var(--fs-header);
-    animation: openSection 0.7s ease-in-out forwards;
 }
 
-@keyframes openSection {
-    from {
-        height: 56px;
-    }
-
-    to {
-        height: 100dvh;
-    }
-}
-
-@keyframes closeSection {
-    from {
-        height: 100dvh;
-    }
-
-    to {
-        height: 56px;
-    }
-}
 
 .monospace {
     font-family: monospace;
@@ -103,7 +102,9 @@ html {
 
 body {
     height: 100dvh;
-    overflow-x: hidden;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     background-color: var(--bg-white);
     color: var(--fg-black);
     font-family: var(--ff-header);
@@ -191,11 +192,22 @@ header nav p {
     align-self: center;
 }
 
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 0;
+}
+
 section {
     position: relative;
     background-color: var(--bg-white);
     z-index: 1;
     scroll-padding: 55px;
+    /* Smooth open/close transition via flex */
+    transition: flex 0.7s ease-in-out;
 }
 
 main p {
@@ -272,19 +284,6 @@ main #about,
 main #projects,
 main #contact {
     border-bottom: var(--border-bottom-width) solid var(--border-bottom-black);
-    scroll-margin-top: 52px;
-}
-
-main #projects {
-    display: flex;
-    flex-direction: column;
-}
-
-main #home h1:first-child,
-main #about h1:first-child,
-main #projects h1:first-child,
-main #contact h1:first-child {
-    cursor: pointer;
 }
 
 /* =========================================
