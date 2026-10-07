@@ -1220,3 +1220,9 @@ footer {
     color: var(--bg-white);
     cursor: pointer;
 }
+
+strong {
+    font-size: 1rem;
+    font-family: var(--ff-header);
+    letter-spacing: 0.5px;
+}
