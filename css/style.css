@@ -66,10 +66,9 @@
 }
 
 .open {
-    flex: 0 0 calc(100% - 56px);
+    flex: 0 0 auto;
     min-height: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: visible;
     color: var(--fg-black);
     font-family: var(--ff-header);
     font-weight: var(--fw-header);
@@ -206,8 +205,7 @@ section {
     background-color: var(--bg-white);
     z-index: 1;
     scroll-padding: 55px;
-    /* Smooth open/close transition via flex */
-    transition: flex 0.7s ease-in-out;
+    transition: flex-basis 0.7s ease-in-out;
 }
 
 main p {

@@ -46,15 +46,17 @@ document.addEventListener("click", () => {
 });
 
 let currentOpenSection = document.querySelector(".open");
+const sectionTransitionHandlers = new WeakMap();
+let sectionScrollTimeout;
 
 // Section order for peek logic
 const sectionOrder = ["home", "projects", "about", "contact"];
 
 // Shows only the next section's header as a peek at the bottom
 function updatePeek(openId) {
-  document.querySelectorAll("main section").forEach((s) =>
-    s.classList.remove("next-peek")
-  );
+  document
+    .querySelectorAll("main section")
+    .forEach((s) => s.classList.remove("next-peek"));
   const currentIdx = sectionOrder.indexOf(openId);
   const nextIdx = currentIdx + 1;
   // If last section, nothing peeks below
@@ -65,23 +67,55 @@ function updatePeek(openId) {
   }
 }
 
+function setSectionOpen(section, isOpen) {
+  const currentHeight = section.getBoundingClientRect().height;
+  const previousHandler = sectionTransitionHandlers.get(section);
+  if (previousHandler) {
+    section.removeEventListener("transitionend", previousHandler);
+  }
+
+  section.style.flexBasis = `${currentHeight}px`;
+  void section.offsetHeight;
+  section.classList.toggle("open", isOpen);
+  section.classList.toggle("close", !isOpen);
+
+  if (isOpen) section.scrollTop = 0;
+
+  const targetHeight = isOpen ? section.scrollHeight : 56;
+  if (Math.abs(currentHeight - targetHeight) < 1) {
+    section.style.flexBasis = "";
+    return;
+  }
+
+  const finishTransition = (event) => {
+    if (event.target !== section || event.propertyName !== "flex-basis") return;
+    section.style.flexBasis = "";
+    section.removeEventListener("transitionend", finishTransition);
+    sectionTransitionHandlers.delete(section);
+  };
+  sectionTransitionHandlers.set(section, finishTransition);
+  section.addEventListener("transitionend", finishTransition);
+  section.style.flexBasis = `${targetHeight}px`;
+}
+
 function openSection(sectionId) {
   const targetSection = document.getElementById(sectionId);
 
   if (!targetSection || targetSection === currentOpenSection) return;
 
   if (currentOpenSection) {
-    currentOpenSection.classList.remove("open");
-    currentOpenSection.classList.add("close");
+    setSectionOpen(currentOpenSection, false);
   }
 
-  targetSection.classList.remove("close");
   targetSection.classList.remove("next-peek");
-  targetSection.classList.add("open");
+  setSectionOpen(targetSection, true);
   currentOpenSection = targetSection;
 
   updatePeek(sectionId);
-  targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  clearTimeout(sectionScrollTimeout);
+  sectionScrollTimeout = setTimeout(() => {
+    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 700);
 }
 
 // context menu buttons
@@ -201,7 +235,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   checkHash();
   window.addEventListener("hashchange", checkHash);
-
 
   // Event listeners for nav links
   document
