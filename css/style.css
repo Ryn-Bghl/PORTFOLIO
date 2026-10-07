@@ -42,24 +42,6 @@
     position: relative;
 }
 
-/* Subtle expand indicator on the next section */
-.close.next-peek::after {
-    content: '↓';
-    position: absolute;
-    bottom: 4px;
-    right: 0.75rem;
-    font-family: var(--ff-body);
-    font-size: 11px;
-    font-weight: 700;
-    opacity: 0.35;
-    pointer-events: none;
-    line-height: 1;
-}
-
-.close.next-peek:hover::after {
-    opacity: 0.8;
-}
-
 .close .prev-btn,
 .close .next-btn {
     display: none;
@@ -67,7 +49,7 @@
 
 .open {
     flex: 0 0 auto;
-    min-height: 0;
+    min-height: 100%;
     overflow: visible;
     color: var(--fg-black);
     font-family: var(--ff-header);

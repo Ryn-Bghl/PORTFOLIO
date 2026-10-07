@@ -49,24 +49,6 @@ let currentOpenSection = document.querySelector(".open");
 const sectionTransitionHandlers = new WeakMap();
 let sectionScrollTimeout;
 
-// Section order for peek logic
-const sectionOrder = ["home", "projects", "about", "contact"];
-
-// Shows only the next section's header as a peek at the bottom
-function updatePeek(openId) {
-  document
-    .querySelectorAll("main section")
-    .forEach((s) => s.classList.remove("next-peek"));
-  const currentIdx = sectionOrder.indexOf(openId);
-  const nextIdx = currentIdx + 1;
-  // If last section, nothing peeks below
-  if (nextIdx >= sectionOrder.length) return;
-  const nextSection = document.getElementById(sectionOrder[nextIdx]);
-  if (nextSection && nextSection.classList.contains("close")) {
-    nextSection.classList.add("next-peek");
-  }
-}
-
 function setSectionOpen(section, isOpen) {
   const currentHeight = section.getBoundingClientRect().height;
   const previousHandler = sectionTransitionHandlers.get(section);
@@ -81,7 +63,9 @@ function setSectionOpen(section, isOpen) {
 
   if (isOpen) section.scrollTop = 0;
 
-  const targetHeight = isOpen ? section.scrollHeight : 56;
+  const targetHeight = isOpen
+    ? Math.max(section.scrollHeight, section.parentElement.clientHeight)
+    : 56;
   if (Math.abs(currentHeight - targetHeight) < 1) {
     section.style.flexBasis = "";
     return;
@@ -107,11 +91,9 @@ function openSection(sectionId) {
     setSectionOpen(currentOpenSection, false);
   }
 
-  targetSection.classList.remove("next-peek");
   setSectionOpen(targetSection, true);
   currentOpenSection = targetSection;
 
-  updatePeek(sectionId);
   clearTimeout(sectionScrollTimeout);
   sectionScrollTimeout = setTimeout(() => {
     targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -228,10 +210,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   };
-
-  // Init: set peek for the initially open section
-  const initialOpen = document.querySelector("main section.open");
-  if (initialOpen) updatePeek(initialOpen.id);
 
   checkHash();
   window.addEventListener("hashchange", checkHash);
