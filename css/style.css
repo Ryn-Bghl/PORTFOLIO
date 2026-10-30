@@ -1360,6 +1360,80 @@ body.project-page {
     white-space: pre;
 }
 
+
+/* Project Visual Gallery & Illustrations */
+.project-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.project-gallery-item {
+    border: 1px solid var(--fg-black);
+    box-shadow: 4px 4px 0px 0px var(--fg-black);
+    background-color: var(--bg-white);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-gallery-item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px var(--fg-black);
+}
+
+.project-gallery-item img {
+    width: 100%;
+    height: 220px;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0);
+    transition: filter 0.25s ease;
+}
+
+.project-gallery-item:hover img {
+    filter: saturate(1);
+}
+
+.project-gallery-caption {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--fg-black);
+    background-color: var(--bg-white);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.project-gallery-caption .caption-tag {
+    font-family: var(--ff-body);
+    font-size: 10px;
+    font-weight: bold;
+    background-color: var(--fg-black);
+    color: var(--bg-white);
+    padding: 2px 6px;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.project-gallery-caption .caption-title {
+    font-family: var(--ff-header);
+    font-size: 13.5px;
+    color: var(--fg-black);
+    margin: 0;
+}
+
+.project-gallery-caption .caption-desc {
+    font-family: var(--ff-body);
+    font-size: 12px;
+    line-height: 1.45;
+    color: #444;
+    margin: 0;
+}
+
 /* Project Pagination Navigation */
 .project-pagination-nav {
     display: grid;
@@ -1564,4 +1638,217 @@ strong {
     font-size: 1rem;
     font-family: var(--ff-header);
     letter-spacing: 0.5px;
+}
+
+
+/* ==========================================================================
+   Project Details - Contextual Section Figures & Lightbox Modal
+   ========================================================================== */
+
+/* Contextual Section Figure */
+.project-figure {
+    border: 1px solid var(--fg-black);
+    box-shadow: 4px 4px 0px 0px var(--fg-black);
+    background-color: var(--fg-black);
+    margin-top: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-figure:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 6px 6px 0px 0px var(--fg-black);
+}
+
+/* Image container with fixed height and black letterboxing background */
+.project-figure-media {
+    width: 100%;
+    height: 320px;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: zoom-in;
+    overflow: hidden;
+}
+
+/* Ensures ANY dimension fits without distortion or cropping, letterboxed with black bars */
+.project-figure-media img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: saturate(0);
+    transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.project-figure-media:hover img {
+    filter: saturate(1);
+    transform: scale(1.015);
+}
+
+/* Caption bar under each figure */
+.project-figure-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.9rem;
+    background-color: var(--bg-white);
+    border-top: 1px solid var(--fg-black);
+    font-family: var(--ff-body);
+    font-size: 12px;
+}
+
+.project-figure-zoom-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: var(--fg-black);
+    color: var(--bg-white);
+    padding: 2px 7px;
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* Make Hero Featured Image also zoomable */
+.project-media-frame img {
+    cursor: zoom-in;
+}
+
+/* ==========================================================================
+   Full-Screen 1st-Plan Lightbox Modal
+   ========================================================================== */
+.project-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, 0.88);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.project-lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.project-lightbox-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 92vw;
+    max-height: 92vh;
+    border: 2px solid var(--fg-black);
+    box-shadow: 8px 8px 0px 0px #ffffff, 9px 9px 0px 0px var(--fg-black);
+    background-color: #000000;
+    position: relative;
+    transform: scale(0.96);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+}
+
+.project-lightbox.active .project-lightbox-content {
+    transform: scale(1);
+}
+
+.project-lightbox-img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    max-width: 90vw;
+    max-height: calc(88vh - 55px);
+    overflow: hidden;
+}
+
+.project-lightbox-img-wrap img {
+    max-width: 88vw;
+    max-height: calc(82vh - 55px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    cursor: zoom-out;
+}
+
+.project-lightbox-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.65rem 1rem;
+    background-color: var(--bg-white);
+    border-top: 2px solid var(--fg-black);
+    font-family: var(--ff-body);
+    font-size: 13px;
+    color: var(--fg-black);
+}
+
+.project-lightbox-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.project-lightbox-close {
+    background-color: var(--fg-black);
+    color: var(--bg-white);
+    border: none;
+    font-family: var(--ff-body);
+    font-weight: 700;
+    font-size: 12px;
+    padding: 5px 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.project-lightbox-close:hover {
+    background-color: #e63946;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    .project-figure-media {
+        height: 220px;
+    }
+
+    .project-lightbox {
+        padding: 0.75rem;
+    }
+
+    .project-lightbox-content {
+        max-width: 98vw;
+        max-height: 95vh;
+    }
+
+    .project-lightbox-img-wrap img {
+        max-width: 95vw;
+        max-height: calc(80vh - 55px);
+    }
+
+    .project-lightbox-bar {
+        padding: 0.5rem 0.75rem;
+        font-size: 12px;
+    }
 }
