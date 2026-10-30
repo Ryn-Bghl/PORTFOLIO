@@ -42,7 +42,7 @@ document.addEventListener("click", () => {
    ========================================================================== */
 (() => {
     const isFr = (document.documentElement.lang || "fr").startsWith("fr");
-    const closeBtnLabel = isFr ? "[ ✕ FERMER ]" : "[ ✕ CLOSE ]";
+    const closeBtnLabel = isFr ? "FERMER" : "CLOSE";
 
     // Create lightbox DOM elements once
     let lightbox = document.querySelector("#project_lightbox");
@@ -61,13 +61,15 @@ document.addEventListener("click", () => {
                 <div class="project-lightbox-bar">
                     <span class="project-lightbox-title"></span>
                     <button type="button" class="project-lightbox-close" aria-label="${isFr ? 'Fermer la vue agrandie' : 'Close enlarged view'}">
-                        ${closeBtnLabel}
+                        <i data-lucide="x" class="icon" aria-hidden="true"></i> ${closeBtnLabel}
                     </button>
                 </div>
             </div>
         `;
         document.body.appendChild(lightbox);
     }
+
+    lucide.createIcons();
 
     const lightboxImg = lightbox.querySelector(".project-lightbox-img");
     const lightboxTitle = lightbox.querySelector(".project-lightbox-title");

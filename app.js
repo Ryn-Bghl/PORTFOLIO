@@ -250,3 +250,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initCarousel();
 });
+
+lucide.createIcons();

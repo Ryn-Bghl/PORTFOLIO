@@ -489,7 +489,17 @@ main #contact {
 }
 
 .skill-icon {
-    font-size: 1.1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    flex-shrink: 0;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    stroke-width: 2;
+    flex: 0 0 auto;
+    vertical-align: middle;
 }
 
 .skill-category-header h3 {
