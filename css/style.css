@@ -1651,59 +1651,93 @@ strong {
 }
 
 
-/* ==========================================================================
-   Project Details - Contextual Section Figures & Lightbox Modal
-   ========================================================================== */
-
-/* Contextual Section Figure */
-.project-figure {
+.project-screenshot-carousel {
+    margin: 2rem 0 2.5rem;
     border: 1px solid var(--fg-black);
-    box-shadow: 4px 4px 0px 0px var(--fg-black);
-    background-color: var(--fg-black);
-    margin-top: 1rem;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.project-figure:hover {
-    transform: translate(-1px, -1px);
     box-shadow: 6px 6px 0px 0px var(--fg-black);
+    background-color: var(--bg-white);
 }
 
-/* Image container with fixed height and black letterboxing background */
-.project-figure-media {
-    width: 100%;
-    height: 320px;
+.project-screenshot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--bg-white);
+    border-bottom: 1px solid var(--fg-black);
+}
+
+.project-screenshot-header h2 {
+    margin: 0;
+    font-family: var(--ff-header);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.project-screenshot-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.project-screenshot-controls button {
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid var(--fg-black);
+    box-shadow: 2px 2px 0px 0px var(--fg-black);
+    background-color: var(--bg-white);
+    color: var(--fg-black);
+    font: 700 1.2rem var(--ff-body);
+    cursor: pointer;
+}
+
+.project-screenshot-controls button:hover {
+    background-color: var(--fg-black);
+    color: var(--bg-white);
+}
+
+.project-screenshot-viewport {
+    overflow: hidden;
     background-color: #000000;
+}
+
+.project-screenshot-track {
+    --slides-visible: 3;
+    display: flex;
+    transition: transform 0.35s ease;
+}
+
+.project-screenshot-slide {
+    flex: 0 0 calc(100% / var(--slides-visible));
+    min-width: 0;
+    margin: 0;
+    background-color: #000000;
+}
+
+.project-screenshot-media {
+    width: 100%;
+    height: 240px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    cursor: zoom-in;
     overflow: hidden;
+    cursor: zoom-in;
 }
 
-/* Ensures ANY dimension fits without distortion or cropping, letterboxed with black bars */
-.project-figure-media img {
-    max-width: 100%;
-    max-height: 100%;
+.project-screenshot-media img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    display: block;
     filter: saturate(0);
-    transition: filter 0.25s ease, transform 0.25s ease;
+    transition: filter 0.25s ease;
 }
 
-.project-figure-media:hover img {
+.project-screenshot-media:hover img {
     filter: saturate(1);
-    transform: scale(1.015);
 }
 
-/* Caption bar under each figure */
-.project-figure-caption {
+.project-screenshot-caption {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1713,6 +1747,16 @@ strong {
     border-top: 1px solid var(--fg-black);
     font-family: var(--ff-body);
     font-size: 12px;
+}
+
+.project-screenshot-counter {
+    margin: 0;
+    padding: 0.4rem 1rem;
+    border-top: 1px solid var(--fg-black);
+    font-family: var(--ff-body);
+    font-size: 11px;
+    font-weight: 700;
+    text-align: right;
 }
 
 .project-figure-zoom-hint {
@@ -1839,8 +1883,20 @@ strong {
 }
 
 @media screen and (max-width: 768px) {
-    .project-figure-media {
-        height: 220px;
+    .project-screenshot-track {
+        --slides-visible: 2;
+    }
+
+    .project-screenshot-media {
+        height: 200px;
+    }
+
+    .project-screenshot-header {
+        padding: 0.6rem 0.75rem;
+    }
+
+    .project-screenshot-header h2 {
+        font-size: 0.95rem;
     }
 
     .project-lightbox {
@@ -1860,5 +1916,17 @@ strong {
     .project-lightbox-bar {
         padding: 0.5rem 0.75rem;
         font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .project-screenshot-track {
+        --slides-visible: 3;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project-screenshot-track {
+        --slides-visible: 1;
     }
 }

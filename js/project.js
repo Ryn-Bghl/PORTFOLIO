@@ -94,16 +94,74 @@ document.addEventListener("click", () => {
         }, 200);
     };
 
-    // Click handler for zoomable project figures and hero frames
+    document.querySelectorAll(".project-screenshot-carousel").forEach((carousel) => {
+        const track = carousel.querySelector(".project-screenshot-track");
+        const slides = carousel.querySelectorAll(".project-screenshot-slide");
+        const counter = carousel.querySelector(".project-screenshot-counter");
+        const previousButton = carousel.querySelector(".project-screenshot-prev");
+        const nextButton = carousel.querySelector(".project-screenshot-next");
+
+        if (!track || !counter || !previousButton || !nextButton || slides.length < 1) return;
+
+        const slideCount = slides.length;
+        slides.forEach((slide) => {
+            const clone = slide.cloneNode(true);
+            clone.setAttribute("aria-hidden", "true");
+            track.appendChild(clone);
+        });
+        for (let index = slideCount - 1; index >= 0; index -= 1) {
+            const clone = slides[index].cloneNode(true);
+            clone.setAttribute("aria-hidden", "true");
+            track.insertBefore(clone, track.firstChild);
+        }
+
+        let currentIndex = slideCount;
+        let isMoving = false;
+        const updatePosition = () => {
+            const slideWidth = track.querySelector(".project-screenshot-slide").getBoundingClientRect().width;
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            const firstVisible = ((currentIndex - slideCount) % slideCount + slideCount) % slideCount;
+            counter.textContent = `${String(firstVisible + 1).padStart(2, "0")} / ${String(slideCount).padStart(2, "0")}`;
+        };
+        const move = (direction) => {
+            if (isMoving) return;
+            isMoving = true;
+            currentIndex += direction;
+            updatePosition();
+        };
+
+        track.addEventListener("transitionend", (event) => {
+            if (event.target !== track) return;
+            if (currentIndex >= slideCount * 2) {
+                currentIndex -= slideCount;
+            } else if (currentIndex < slideCount) {
+                currentIndex += slideCount;
+            }
+            track.style.transition = "none";
+            updatePosition();
+            track.offsetHeight;
+            track.style.transition = "";
+            isMoving = false;
+        });
+
+        previousButton.addEventListener("click", () => move(-1));
+        nextButton.addEventListener("click", () => move(1));
+        window.addEventListener("resize", updatePosition);
+        track.style.transition = "none";
+        updatePosition();
+        track.offsetHeight;
+        track.style.transition = "";
+    });
+
+    // Click handler for zoomable project screenshots and hero frames
     document.addEventListener("click", (event) => {
-        // Find if user clicked inside a figure media, zoom hint, or hero media
-        const figure = event.target.closest(".project-figure");
+        const figure = event.target.closest(".project-figure, .project-screenshot-slide");
         const heroMedia = event.target.closest(".project-media-frame");
 
         if (figure) {
             const img = figure.querySelector("img");
             if (!img) return;
-            const captionSpan = figure.querySelector(".project-figure-caption span:first-child");
+            const captionSpan = figure.querySelector(".project-figure-caption span:first-child, .project-screenshot-caption span:first-child");
             const caption = captionSpan ? captionSpan.textContent.trim() : (img.alt || "");
             openLightbox(img.currentSrc || img.src, caption);
             return;
